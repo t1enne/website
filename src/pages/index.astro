@@ -1,0 +1,163 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {Linkedin, Phone, Mail} from "lucide-astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const CONTACTS = [
+	{
+		icon: Phone,
+		href: 'tel:+393281934728'
+	},
+	{
+		icon: Mail,
+		href: 'mailto:nasir.taov@gmail'
+	},
+	{
+		icon: Linkedin,
+		href: 'https://www.linkedin.com/in/nasir-taov/',
+		target: '_blank'
+	}
+]
+const WORK_EXP = [
+	{
+		company: "Raintonic",
+		location: "Padova (PD)",
+		title: "Full Stack Developer",
+		description: `Working on ERP systems for large enterprise clients.
+Currently responsible for upgrading the FE for ATMs in Europe for a leading italian bank`,
+		dates: "2022 - present",
+		tags: ['angular', 'react', 'nestjs', 'deno', 'node']
+	},
+	{
+		company: "Cortek",
+		location: "Perugia (PG)",
+		title: "Full Stack Developer",
+		description: `I played a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform. Additionally, I spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta. My contributions directly contributed to the growth and success of the company's online presence.`,
+		dates: "2021 - 2022",
+		tags: ['node', 'nextjs', 'react', 'nosql']
+	},
+	{
+		company: "Brunello Cucinelli",
+		location: "Solomeo (PG)",
+		title: "Boutique Coordinator",
+		description: `During my tenure at Brunello Cucinelli, I excelled in various roles, primarily as a Boutique Coordinator. In this capacity, I provided guided tours of the company's production facilities to high profile international clients (Forbes 100) in Italian, English, Russian and French. Additionally, I specialized in Made to Measure services and offered comprehensive customer consultation and service throughout the sales process. I was proficient in utilizing AS400/Salesforce systems. Furthermore, I implemented visual merchandising guidelines for window displays and shelves and managed restocking activities, participating in order processing during sales campaigns in collaboration with the Store Manager.`,
+		dates: "2017 - 2021",
+		tags: ['sales', 'pr', 'management', 'vm']
+	}
+]
+
+const EDUCATION = [
+	{
+		location: "Duke University",
+		title: 'Rust fundamentals',
+		dates: '2024'
+	},
+	{
+		location: 'IULM University - Milan',
+		title: "Bachelor's Degree in Linguistic Mediation",
+		dates: '2011-2014'
+	}
+]
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<main class="p-6 max-w-3xl mx-auto text-sm">
+			<div class="flex items-center justify-between">
+				<div class="pr-4">
+					<h1 class="font-bold text-3xl">Nasir Taov</h1>
+					<div class="" />
+					<p class="text-md font-mono"> Full-stack Node.js Developer </p>
+					<div class="py-2" />
+					<ul class="contact-means flex gap-2">
+						<li>
+							<a href="mailto:nasir.taov@gmail.com">
+								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Mail size={18} />
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="tel:+393281934728">
+								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Phone size={18} />
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/nasir-taov" target="_blank">
+								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Linkedin size={18} />
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="overflow-hidden rounded-lg">
+					<img class="w-36 h-36" src="self.jpeg" />
+				</div>
+			</div>
+			<div class="py-4" />
+			<h2 class="font-bold text-2xl">About</h2>
+			<div class="py-2" />
+			<p class="text-muted font-mono">
+				Dynamic Full-stack Developer specializing in JavaScript/TypeScript technologies including Angular, React, Next.js, Node, and Deno, with a passion for constantly experimenting and pushing my knowledge further.
+				I do enjoy dabbling with Go and Rust for my side projects as well.
+				Proven expertise in front-end development for e-commerce platforms, web applications, desktop applications (using Electron, Wails), and ERP systems.
+			</p>
+			<div class="py-4" />
+			<h1 class="font-bold text-2xl">Work Experience</h1>
+			<div class="py-2" />
+			<ul class='w-full'>
+				{WORK_EXP.map((exp) => 
+					<li >
+						<div class="flex justify-between">
+							<div class="flex flex-col">
+								<div class="flex gap-2 items-center">
+									<h3 class="font-bold text-lg"> {exp.title} </h3>
+									<div class="hidden sm:flex flex-wrap gap-2">
+										{exp.tags?.map(tag => 
+											<div class="bg-gray-100 px-2 rounded-lg">
+												<code class="text-xs text-muted font-mono">{tag}</code>
+										</div>)}
+									</div>
+								</div>
+								<h4 class="text-md ">{exp.company} - {exp.location}</h4>
+							</div>
+							<div>{exp.dates}</div>
+						</div>
+						<div class="py-2" />
+						<p class="text-muted font-mono">{exp.description}</p>
+						<div class="py-2" />
+					</li>
+				)}
+			</ul>
+			<div class="py-4" />
+			<h2 class="font-bold text-2xl">Education</h2>
+			<div class="py-2" />
+			<div class="flex justify-between">
+				<ul class="w-full">
+					{EDUCATION.map((edu) => 
+						<li>
+							<div class="flex justify-between">
+								<div class="flex flex-col">
+									<div class="flex gap-2 items-center">
+										<h3 class="font-bold text-lg">{edu.title}</h3>
+									</div>
+									<h4 class="text-md">{edu.location}</h4>
+								</div>
+								<div>{edu.dates}</div>
+							</div>
+							<div class="py-2" />
+						</li>
+					)}
+				</ul>
+		</main>
+	</body>
+</html>
