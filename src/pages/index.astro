@@ -40,7 +40,7 @@ const EDUCATION = [
 	{
 		location: 'IULM University - Milan',
 		title: "Bachelor's Degree in Linguistic Mediation",
-		dates: '2011-2014'
+		dates: '2014'
 	}
 ]
 ---
@@ -56,7 +56,7 @@ const EDUCATION = [
 				<div class="pr-4">
 					<h1 class="font-bold text-3xl">Nasir Taov</h1>
 					<div class="" />
-					<p class="text-md font-mono"> Full-stack Node.js Developer </p>
+					<p class="text-md text-muted"> Full-stack Node.js Developer </p>
 					<div class="py-2" />
 					<ul class="contact-means flex gap-2">
 						<li>
@@ -83,7 +83,7 @@ const EDUCATION = [
 					</ul>
 				</div>
 				<div class="overflow-hidden rounded-lg">
-					<img class="w-36 h-36" src="self.jpeg" />
+					<img class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" src="self.jpeg" />
 				</div>
 			</div>
 			<div class="py-4" />
@@ -91,8 +91,8 @@ const EDUCATION = [
 			<div class="py-2" />
 			<p class="text-muted font-mono">
 				Dynamic Full-stack Developer specializing in JavaScript/TypeScript technologies including Angular, React, Next.js, Node, and Deno, with a passion for constantly experimenting and pushing my knowledge further.
-				I do enjoy dabbling with Go and Rust for my side projects as well.
 				Proven expertise in front-end development for e-commerce platforms, web applications, desktop applications (using Electron, Wails), and ERP systems.
+				I do enjoy dabbling with Go and Rust for my side projects as well.
 			</p>
 			<div class="py-4" />
 			<h1 class="font-bold text-2xl">Work Experience</h1>
@@ -101,9 +101,15 @@ const EDUCATION = [
 				{WORK_EXP.map((exp) => 
 					<li >
 						<div class="flex justify-between">
-							<div class="flex flex-col">
-								<div class="flex gap-2 items-center">
+							<div class="flex flex-col w-full">
+								<div class="flex items-center justify-between">
 									<h3 class="font-bold text-lg"> {exp.title} </h3>
+									<div class="align-right font-mono text-muted">{exp.dates}</div>
+								</div>
+
+								<div class="py-1" />
+								<div class="flex items-center gap-4">
+									<h4 class="text-md ">{exp.company} - {exp.location}</h4>
 									<div class="hidden sm:flex flex-wrap gap-2">
 										{exp.tags?.map(tag => 
 											<div class="bg-gray-100 px-2 rounded-lg">
@@ -111,9 +117,7 @@ const EDUCATION = [
 										</div>)}
 									</div>
 								</div>
-								<h4 class="text-md ">{exp.company} - {exp.location}</h4>
 							</div>
-							<div>{exp.dates}</div>
 						</div>
 						<div class="py-2" />
 						<p class="text-muted font-mono">{exp.description}</p>
@@ -128,14 +132,13 @@ const EDUCATION = [
 				<ul class="w-full">
 					{EDUCATION.map((edu) => 
 						<li>
-							<div class="flex justify-between">
-								<div class="flex flex-col">
-									<div class="flex gap-2 items-center">
-										<h3 class="font-bold text-lg">{edu.title}</h3>
-									</div>
-									<h4 class="text-md">{edu.location}</h4>
+							<div class="flex flex-col">
+								<div class="flex items-center justify-between">
+									<h3 class="font-bold text-lg">{edu.title}</h3>
+									<div class="font-mono text-muted">{edu.dates}</div>
 								</div>
-								<div>{edu.dates}</div>
+								<div class="py-1" />
+								<h4 class="text-md">{edu.location}</h4>
 							</div>
 							<div class="py-2" />
 						</li>
