@@ -7,7 +7,7 @@ const WORK_EXP = [
 	{
 		company: "Raintonic",
 		location: "Padova (PD)",
-		title: "Full Stack Developer",
+		title: "Full-stack Developer",
 		description: `Working on ERP systems for large enterprise clients.
 Currently responsible for upgrading the FE for ATMs in Europe for a leading italian bank`,
 		dates: "2022 - present",
@@ -16,7 +16,7 @@ Currently responsible for upgrading the FE for ATMs in Europe for a leading ital
 	{
 		company: "Cortek",
 		location: "Perugia (PG)",
-		title: "Full Stack Developer",
+		title: "Full-stack Developer",
 		description: `I played a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform. Additionally, I spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta. My contributions directly contributed to the growth and success of the company's online presence.`,
 		dates: "2021 - 2022",
 		tags: ['node', 'nextjs', 'react', 'nosql']
@@ -43,6 +43,25 @@ const EDUCATION = [
 		dates: '2014'
 	}
 ]
+
+const LANGUAGES = [
+	{
+		name: "English",
+		level: "Very Fluent"
+	},
+	{
+		name: "Russian",
+		level: "Bilingual"
+	},
+	{
+		name: "Italian",
+		level: "Bilingual"
+	},
+	{
+		name: "French",
+		level: "Fluent"
+	}
+]
 ---
 
 <!doctype html>
@@ -58,23 +77,25 @@ const EDUCATION = [
 					<div class="" />
 					<p class="text-md text-muted"> Full-stack Node.js Developer </p>
 					<div class="py-2" />
-					<ul class="contact-means flex gap-2">
+					<ul class="contact-means flex gap-2 print:flex-col">
 						<li>
 							<a href="mailto:nasir.taov@gmail.com">
-								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+								<div class="print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
 									<Mail size={18} />
 								</div>
+								<div class="hidden print:block text-muted">mail: nasir.taov@gmail.com</div>
 							</a>
 						</li>
 						<li>
 							<a href="tel:+393281934728">
-								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+								<div class="print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
 									<Phone size={18} />
 								</div>
+								<div class="hidden print:block text-muted">phone: +39 328 1934728</div>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.linkedin.com/in/nasir-taov" target="_blank">
+							<a class="print:hidden" href="https://www.linkedin.com/in/nasir-taov" target="_blank">
 								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
 									<Linkedin size={18} />
 								</div>
@@ -102,15 +123,14 @@ const EDUCATION = [
 					<li >
 						<div class="flex justify-between">
 							<div class="flex flex-col w-full">
-								<div class="flex items-center justify-between">
-									<h3 class="font-bold text-lg"> {exp.title} </h3>
-									<div class="align-right font-mono text-muted">{exp.dates}</div>
+								<div class="flex items-center flex-wrap justify-between">
+									<h3 class="font-bold text-lg w-full sm:w-auto"> {exp.title} </h3>
+									<div class="align-right font-mono">{exp.dates}</div>
 								</div>
-
 								<div class="py-1" />
 								<div class="flex items-center gap-4">
 									<h4 class="text-md ">{exp.company} - {exp.location}</h4>
-									<div class="hidden sm:flex flex-wrap gap-2">
+									<div class="print:hidden hidden sm:flex flex-wrap gap-2">
 										{exp.tags?.map(tag => 
 											<div class="bg-gray-100 px-2 rounded-lg">
 												<code class="text-xs text-muted font-mono">{tag}</code>
@@ -133,9 +153,9 @@ const EDUCATION = [
 					{EDUCATION.map((edu) => 
 						<li>
 							<div class="flex flex-col">
-								<div class="flex items-center justify-between">
-									<h3 class="font-bold text-lg">{edu.title}</h3>
-									<div class="font-mono text-muted">{edu.dates}</div>
+								<div class="flex items-center flex-wrap justify-between">
+									<h3 class="font-bold text-lg w-full sm:w-auto">{edu.title}</h3>
+									<div class="font-mono">{edu.dates}</div>
 								</div>
 								<div class="py-1" />
 								<h4 class="text-md">{edu.location}</h4>
@@ -144,6 +164,20 @@ const EDUCATION = [
 						</li>
 					)}
 				</ul>
+			</div>
+			<div class="py-4" />
+			<h2 class="font-bold text-2xl">Languages</h2>
+			<div class="py-2" />
+			<div class="flex justify-between">
+					<ul class="w-full">
+						{LANGUAGES.map((lang) => 
+							<li class="grid grid-cols-2">
+								<p><b>{lang.name}</b>: </p><p class="text-muted">{lang.level}</p>
+							</li>
+						)}
+					</ul>
+			</div>
+			<div class="py-4" />
 		</main>
 	</body>
 </html>
