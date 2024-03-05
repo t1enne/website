@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import {Linkedin, Phone, Mail} from "lucide-astro";
+import {Linkedin, Phone, Mail, Printer} from "lucide-astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const WORK_EXP = [
@@ -9,7 +9,8 @@ const WORK_EXP = [
 		location: "Padova (PD)",
 		title: "Full-stack Developer",
 		description: `Working on ERP systems for large enterprise clients.
-Currently responsible for upgrading the FE for ATMs in Europe for a leading italian bank`,
+Currently responsible for upgrading the FE for ATMs in Europe for a leading italian bank.
+Set up Jenkins CI/CD pipelines. Helped with containerizing our apps and SysAdmin tasks.`,
 		dates: "2022 - present",
 		tags: ['angular', 'react', 'nestjs', 'deno', 'node']
 	},
@@ -101,6 +102,13 @@ const LANGUAGES = [
 								</div>
 							</a>
 						</li>
+						<li>
+							<a title="Press to print" class="print:hidden cursor-pointer" onclick="window.print()" target="_blank">
+								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Printer size={18} />
+								</div>
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="overflow-hidden rounded-lg">
@@ -113,7 +121,7 @@ const LANGUAGES = [
 			<p class="text-muted font-mono">
 				Dynamic Full-stack Developer specializing in JavaScript/TypeScript technologies including Angular, React, Next.js, Node, and Deno, with a passion for constantly experimenting and pushing my knowledge further.
 				Proven expertise in front-end development for e-commerce platforms, web applications, desktop applications (using Electron, Wails), and ERP systems.
-				I do enjoy dabbling with Go and Rust for my side projects as well.
+				I do enjoy dabbling with Go and Rust for my side projects as well. Linux and NVIM enthusiast. Passionate about open-source.
 			</p>
 			<div class="py-4" />
 			<h1 class="font-bold text-2xl">Work Experience</h1>
@@ -169,9 +177,9 @@ const LANGUAGES = [
 			<h2 class="font-bold text-2xl">Languages</h2>
 			<div class="py-2" />
 			<div class="flex justify-between">
-					<ul class="w-full">
+					<ul class="w-full divide-y divide-gray-200">
 						{LANGUAGES.map((lang) => 
-							<li class="grid grid-cols-2">
+							<li class="grid grid-cols-2 py-2">
 								<p><b>{lang.name}</b>: </p><p class="text-muted">{lang.level}</p>
 							</li>
 						)}
