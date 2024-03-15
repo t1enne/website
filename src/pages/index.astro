@@ -3,14 +3,17 @@ import BaseHead from '../components/BaseHead.astro';
 import {Linkedin, Phone, Mail, Printer} from "lucide-astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
+const ABOUT_ME = `
+
+`
 const WORK_EXP = [
 	{
 		company: "Raintonic",
 		location: "Padova (PD)",
 		title: "Full-stack Developer",
-		description: `Working on ERP systems for large enterprise clients.
-Currently responsible for upgrading the FE for ATMs in Europe for a leading italian bank.
-Set up Jenkins CI/CD pipelines. Helped with containerizing our apps and SysAdmin tasks.`,
+		description: `Worked on ERP systems for large enterprise clients with Node and Python.
+Currently responsible for upgrading the FE for ATMs in Europe for a leading Italian bank.
+Helped with build processes and containerizing our apps and SysAdmin tasks and set up Jenkins CI/CD pipelines`,
 		dates: "2022 - present",
 		tags: ['angular', 'react', 'nestjs', 'deno', 'node']
 	},
@@ -119,9 +122,9 @@ const LANGUAGES = [
 			<h2 class="font-bold text-2xl">About</h2>
 			<div class="py-2" />
 			<p class="text-muted font-mono">
-				Dynamic Full-stack Developer specializing in JavaScript/TypeScript technologies including Angular, React, Next.js, Node, and Deno, with a passion for constantly experimenting and pushing my knowledge further.
-				Proven expertise in front-end development for e-commerce platforms, web applications, desktop applications (using Electron, Wails), and ERP systems.
-				I do enjoy dabbling with Go and Rust for my side projects as well. Linux and NVIM enthusiast. Passionate about open-source.
+				Dynamic Full Stack Developer with experience in different stacks, like <b>Angular, React</b> + <b>Nest</b> or <b>HTMX</b> + <b>Django</b>, with a passion for constantly experimenting and pushing my knowledge further.
+				Proven expertise in development for e-commerce platforms, web applications, desktop applications via WebUI, and ERP systems.
+				I do enjoy dabbling with Go and Rust for my side projects as well. Proficient <b>Linux</b> and <b>NVIM</b> user. Passionate about open-source.
 			</p>
 			<div class="py-4" />
 			<h1 class="font-bold text-2xl">Work Experience</h1>

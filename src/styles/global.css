@@ -7,7 +7,7 @@
 :root {
 	--primary: 220.9 39.3% 11%;
 	--primaryFg: 210 20% 98%;
-	--muted: 220 10% 55%;
+	--muted: 220 10% 45%;
 }
 body {
 	font-family: 'Arial', 'Helvetica', sans-serif;
@@ -26,3 +26,4 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+
