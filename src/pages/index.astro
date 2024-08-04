@@ -7,7 +7,7 @@ const WORK_EXP = [
 	{
 		company: "Raintonic",
 		location: "Padova (PD)",
-		title: "Full-stack Developer",
+		title: "Full Stack Developer",
 		description: `Worked on development and enhanments of ERP systems for large enterprise clients, mainly leveraging Node. Working as the company's lead developer for a new front-end for ATMs across Europe for a leading Italian bank. Oversaw architectural planning and provided strategic direction for the project. Managed a small development team (1 to 4 people), conducted thorough code reviews, and ensured high-quality deliverables. Acted as the primary technical liaison with the client's project manager, facilitating clear and effective communication. Additionally, optimized build processes, containerized some of our apps with Docker, performed SysAdmin tasks, and established Jenkins CI/CD pipelines to streamline development workflows.`,
 		dates: "2022 - present",
 		tags: ['angular', 'react', 'nestjs', 'node']
@@ -15,8 +15,8 @@ const WORK_EXP = [
 	{
 		company: "Cortek",
 		location: "Perugia (PG)",
-		title: "Full-stack Developer",
-		description: `I played a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform. Additionally, I spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta. My contributions directly contributed to the growth and success of the company's online presence.`,
+		title: "Full Stack Developer",
+		description: `I played a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform. Also worked on tools to help with day to day operations. Additionally, I spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta. My contributions directly contributed to the growth and success of the company's online presence.`,
 		dates: "2020 - 2022",
 		tags: ['node', 'nextjs', 'react', 'nosql']
 	},
@@ -32,14 +32,27 @@ const WORK_EXP = [
 
 const EDUCATION = [
 	{
-		location: "Duke University",
+		location: 'University of California, Santa Cruz',
+		title: 'C for Everyone: Structured Programming',
+		dates: 'Jul 2024',
+		summary: 'Course on simple DSAs in C, memory allocation, pointers and an introduction to C++'
+	},
+	{
+		location: 'Duke University',
+		title: 'Python and Rust with Linux CLI Tools',
+		dates: 'Mar 2024',
+		summary: 'Course on orchestrating Python commands via Rust and Bash'
+	},
+	{
+		location: 'Duke University',
 		title: 'Rust fundamentals',
-		dates: '2024'
+		dates: 'Jan 2024',
+		summary: 'Introduction to Rust and its ecosystem'
 	},
 	{
 		location: 'IULM University - Milan',
 		title: "Bachelor's Degree in Linguistic Mediation",
-		dates: '2014'
+		dates: '2011 - 2014'
 	}
 ]
 
@@ -63,7 +76,7 @@ const LANGUAGES = [
 ]
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -74,7 +87,7 @@ const LANGUAGES = [
 				<div class="pr-4">
 					<h1 class="font-bold text-3xl">Nasir Taov</h1>
 					<div class="" />
-					<p class="text-md text-muted"> Full-stack Node.js Developer </p>
+					<span class="text-md text-muted"> Full Stack Node.js Developer</span>
 					<div class="py-2" />
 					<ul class="contact-means flex gap-2 print:flex-col">
 						<li>
@@ -110,43 +123,45 @@ const LANGUAGES = [
 					</ul>
 				</div>
 				<div class="overflow-hidden rounded-lg">
-					<img class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" src="self.jpeg" />
+					<img class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" src="self_2.jpeg" />
 				</div>
 			</div>
 			<div class="py-4" />
 			<h2 class="font-bold text-2xl">About</h2>
 			<div class="py-2" />
-			<p class="text-muted font-mono">
+			<span class="text-muted font-mono">
 				Experienced Software Dev with a robust background in frontend development and a strong track record in delivering complex projects. Adept at guiding small teams and driving innovation within e-commerce platforms, web applications and ERP systems. Demonstrated the ability to lead small teams, and effectively communicate with both stakeholders and colleagues, fostering an environment of continuous learning and improvement. Proficient in creating strategic technical roadmaps and ensuring the alignment of technology with business goals. A passionate advocate for open-source and a committed Linux and NVIM user.
-			</p>
+			</span>
 			<div class="py-4" />
 			<h1 class="font-bold text-2xl">Work Experience</h1>
 			<div class="py-2" />
 			<ul class='w-full'>
 				{WORK_EXP.map((exp) => 
 					<li >
-						<div class="flex justify-between">
-							<div class="flex flex-col w-full">
-								<div class="flex items-center flex-wrap justify-between">
-									<h3 class="font-bold text-lg w-full sm:w-auto"> {exp.title} </h3>
-									<div class="align-right font-mono">{exp.dates}</div>
-								</div>
-								<div class="py-1" />
-								<div class="flex items-center gap-4">
-									<h4 class="text-md ">{exp.company} - {exp.location}</h4>
-									<div class="print:hidden hidden sm:flex flex-wrap gap-2">
-										{exp.tags?.map(tag => 
-											<div class="bg-gray-100 px-2 rounded-lg">
-												<code class="text-xs text-muted font-mono">{tag}</code>
-										</div>)}
-									</div>
+					<div class="flex justify-between">
+						<div class="flex flex-col w-full">
+							<div class="flex items-center flex-wrap justify-between">
+								<h3 class="font-bold text-lg w-full sm:w-auto"> {exp.title} </h3>
+								<div class="align-right text-muted">{exp.dates}</div>
+							</div>
+							<div class="hidden sm:block print:block pt-2" />
+							<div class="flex items-center gap-4">
+								<h4 class="text-md ">{exp.company} - {exp.location}</h4>
+								<div class="print:hidden hidden sm:flex flex-wrap gap-2">
+									{exp.tags?.map(tag => 
+										<div class="bg-gray-100 px-2 rounded-lg"> <code class="text-xs font-mono font-bold">{tag}</code> </div>
+									)}
 								</div>
 							</div>
+							<div class="flex sm:hidden print:flex flex-wrap gap-2 pt-4">
+								<span class="text-sm font-mono text-muted">Technologies: {exp.tags?.join(', ')} </span>
+							</div>
 						</div>
-						<div class="py-2" />
-						<p class="text-muted font-mono">{exp.description}</p>
-						<div class="py-2" />
-					</li>
+					</div>
+					<div class="py-2" />
+					<span class="text-muted font-mono">{exp.description}</span>
+					<div class="py-4" />
+				</li>
 				)}
 			</ul>
 			<div class="py-4" />
@@ -156,16 +171,18 @@ const LANGUAGES = [
 				<ul class="w-full">
 					{EDUCATION.map((edu) => 
 						<li>
-							<div class="flex flex-col">
-								<div class="flex items-center flex-wrap justify-between">
-									<h3 class="font-bold text-lg w-full sm:w-auto">{edu.title}</h3>
-									<div class="font-mono">{edu.dates}</div>
-								</div>
-								<div class="py-1" />
-								<h4 class="text-md">{edu.location}</h4>
+						<div class="flex flex-col">
+							<div class="flex items-center flex-wrap justify-between">
+								<h3 class="font-bold text-lg w-full sm:w-auto">{edu.title}</h3>
+								<div class="text-muted">{edu.dates}</div>
 							</div>
-							<div class="py-2" />
-						</li>
+							<div class="py-1" />
+							<h4 class="text-md">{edu.location}</h4>
+							<div class="py-1" />
+							<p class="font-mono text-muted text-sm">{edu.summary}</p>
+						</div>
+						<div class="py-4" />
+					</li>
 					)}
 				</ul>
 			</div>
@@ -173,13 +190,13 @@ const LANGUAGES = [
 			<h2 class="font-bold text-2xl">Languages</h2>
 			<div class="py-2" />
 			<div class="flex justify-between">
-					<ul class="w-full divide-y divide-gray-200">
-						{LANGUAGES.map((lang) => 
-							<li class="grid grid-cols-2 py-2">
-								<p><b>{lang.name}</b>: </p><p class="text-muted">{lang.level}</p>
-							</li>
-						)}
-					</ul>
+				<ul class="w-full divide-y divide-gray-100">
+					{LANGUAGES.map((lang) => 
+						<li class="grid grid-cols-2 py-2">
+							<span><b>{lang.name}</b></span><span class="text-muted">{lang.level}</span>
+						</li>
+					)}
+				</ul>
 			</div>
 			<div class="py-4" />
 		</main>
