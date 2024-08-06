@@ -1,0 +1,225 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import {Languages, Linkedin, Phone, Mail, Printer} from "lucide-astro";
+import { SITE_TITLE, SITE_DESCRIPTION, ui } from '../consts';
+
+
+export async function getStaticPaths() {
+  const p =  ['en', 'it'].map(lang => {
+    return { params: { lang}};
+  })
+	return p
+}
+
+const { lang } = Astro.params;
+const t= ui[lang as 'en' | 'it'];
+
+const WORK_EXP = [
+	{
+		company: "Raintonic",
+		location: t[ 'location.padua' ],
+		title: t[ 'title.fullstack' ],
+		description: t[ 'work.rt.desc' ], //,
+		dates: "2022 - present",
+		tags: ['angular', 'react', 'nestjs', 'node']
+	},
+	{
+		company: "Cortek",
+		location: t[ 'location.perugia' ],
+		title: t[ 'title.fullstack' ],
+		description: t[ 'work.cortek.desc' ], 
+		dates: "2020 - 2022",
+		tags: ['node', 'nextjs', 'react', 'nosql']
+	},
+	{
+		company: "Brunello Cucinelli",
+		location: t[ 'location.solomeo' ],
+		title: t[ 'title.boutique' ],
+		description: t[ 'work.bc.desc' ], 
+		dates: "2017 - 2020",
+		tags: ['sales', 'pr', 'management', 'vm']
+	}
+]
+
+const EDUCATION = [
+	{
+		location: 'University of California, Santa Cruz',
+		title: 'C for Everyone: Structured Programming',
+		dates: 'Jul 2024',
+		summary: 'Course on simple DSAs in C, memory allocation, pointers and an introduction to C++'
+	},
+	{
+		location: 'Duke University',
+		title: 'Python and Rust with Linux CLI Tools',
+		dates: 'Mar 2024',
+		summary: 'Course on orchestrating Python commands via Rust and Bash'
+	},
+	{
+		location: 'Duke University',
+		title: 'Rust fundamentals',
+		dates: 'Jan 2024',
+		summary: 'Introduction to Rust and its ecosystem'
+	},
+	{
+		location: 'IULM University - Milan',
+		title: t[ 'edu.bd.title' ],
+		dates: '2011 - 2014'
+	}
+]
+
+const LANGUAGES = [
+	{
+		name: t[ 'langs.en' ],
+		level: t[ 'langs.lvl.vf' ]
+	},
+	{
+		name: t[ 'langs.ru' ],
+		level: t[ 'langs.lvl.bi' ]
+	},
+	{
+		name: t[ 'langs.it' ],
+		level: t[ 'langs.lvl.bi' ]
+	},
+	{
+		name: t[ 'langs.fr' ],
+		level: t[ 'langs.lvl.f' ]
+	}
+]
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<main class="p-6 max-w-3xl mx-auto text-sm">
+			<div class="flex items-center justify-between">
+				<div class="pr-4">
+					<h1 class="font-bold text-3xl">Nasir Taov</h1>
+					<div class="" />
+					<span class="text-md text-muted">Full Stack Node.js Developer</span>
+					<div class="py-2" />
+					<ul class="contact-means flex gap-2 print:flex-col">
+						<li>
+							<a href="mailto:nasir.taov@gmail.com">
+								<div class="print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Mail size={18} />
+								</div>
+								<div class="hidden print:block text-muted">mail: nasir.taov@gmail.com</div>
+							</a>
+						</li>
+						<li>
+							<a href="tel:+393281934728">
+								<div class="print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Phone size={18} />
+								</div>
+								<div class="hidden print:block text-muted">phone: +39 328 1934728</div>
+							</a>
+						</li>
+						<li>
+							<a class="print:hidden" href="https://www.linkedin.com/in/nasir-taov" target="_blank">
+								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Linkedin size={18} />
+								</div>
+							</a>
+						</li>
+						<li>
+							<a title="Press to print" class="print:hidden cursor-pointer" onclick="window.print()" target="_blank">
+								<div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
+									<Printer size={18} />
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="overflow-hidden rounded-lg">
+					<img class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" src="../self_2.jpeg" />
+				</div>
+			</div>
+			<div class="py-2" />
+			<!-- language picker  -->
+			<div class="flex items-center">
+				<div class="flex items-center justify-center"><Languages size={12} /></div>
+				<ul class="flex divide-x text-sm text-muted">
+					{['en', 'it'].map((l) => (
+						<li>
+							<a class="p-2" href={`/${l}`}>{l.toUpperCase()}</a>
+						</li>
+					))}
+				</ul>
+			</div>
+			<div class="py-4" />
+			<h2 class="font-bold text-2xl">{t[ 'about.title' ]}</h2>
+			<div class="py-2" />
+			<span class="text-muted font-mono">{t[ 'about.content' ]}</span>
+			<div class="py-4" />
+			<h1 class="font-bold text-2xl">{t[ 'work.title' ]}</h1>
+			<div class="py-2" />
+			<ul class='w-full'>
+				{WORK_EXP.map((exp) => 
+					<li >
+					<div class="flex justify-between">
+						<div class="flex flex-col w-full">
+							<div class="flex items-center flex-wrap justify-between">
+								<h3 class="font-bold text-lg w-full sm:w-auto"> {exp.title} </h3>
+								<div class="align-right text-muted">{exp.dates}</div>
+							</div>
+							<div class="hidden sm:block print:block pt-2" />
+							<div class="flex items-center gap-4">
+								<h4 class="text-md ">{exp.company} - {exp.location}</h4>
+								<div class="print:hidden hidden sm:flex flex-wrap gap-2">
+									{exp.tags?.map(tag => 
+										<div class="bg-gray-100 px-2 rounded-lg"> <code class="text-xs font-mono font-bold">{tag}</code> </div>
+									)}
+								</div>
+							</div>
+							<div class="flex sm:hidden print:flex flex-wrap gap-2 pt-4">
+								<span class="text-sm font-mono text-muted">Technologies: {exp.tags?.join(', ')} </span>
+							</div>
+						</div>
+					</div>
+					<div class="py-2" />
+					<span class="text-muted font-mono">{exp.description}</span>
+					<div class="py-4" />
+				</li>
+				)}
+			</ul>
+			<div class="py-4" />
+			<h2 class="font-bold text-2xl">Education</h2>
+			<div class="py-2" />
+			<div class="flex justify-between">
+				<ul class="w-full">
+					{EDUCATION.map((edu) => 
+						<li>
+						<div class="flex flex-col">
+							<div class="flex items-center flex-wrap justify-between">
+								<h3 class="font-bold text-lg w-full sm:w-auto">{edu.title}</h3>
+								<div class="text-muted">{edu.dates}</div>
+							</div>
+							<div class="py-1" />
+							<h4 class="text-md">{edu.location}</h4>
+							<div class="py-1" />
+							<p class="font-mono text-muted text-sm">{edu.summary}</p>
+						</div>
+						<div class="py-4" />
+					</li>
+					)}
+				</ul>
+			</div>
+			<div class="py-4" />
+			<h2 class="font-bold text-2xl">{t[ 'langs.title' ]}</h2>
+			<div class="py-2" />
+			<div class="flex justify-between">
+				<ul class="w-full divide-y divide-gray-100">
+					{LANGUAGES.map((lang) => 
+						<li class="grid grid-cols-2 py-2">
+							<span><b>{lang.name}</b></span><span class="text-muted">{lang.level}</span>
+						</li>
+					)}
+				</ul>
+			</div>
+			<div class="py-4" />
+		</main>
+	</body>
+</html>
