@@ -14,8 +14,8 @@ export const defaultLang = "en";
 export const ui = {
   en: {
     "about.title": "About",
-    "about.content": `
-The most important thing to know about me is that I love what I do, and I put a lot of passion in my job doing the best possible work. 
+    "about.content":
+      `The most important thing to know about me is that I love what I do, and I put passion in whatever I do. 
 
 I like my CLI, remote machines and maximizing productivity on my machine. 
 More formally, I've developed a UI framework for a leading Italian bank,
@@ -34,12 +34,21 @@ Familiar with Next/Angular and more broadly with the whole TS ecosystem.`,
     "title.boutique": "Boutique Coordinator",
 
     "work.rt.desc":
-      "Worked on development and enhanments of ERP systems for large enterprise clients, mainly leveraging Node. Working as the company's lead developer for a new front-end for ATMs across Europe for a leading Italian bank. Oversaw architectural planning and provided strategic direction for the project. Managed a small dev team, conducted thorough code reviews, and ensured high-quality deliverables. Acted as the primary technical liaison with the client's project manager, facilitating clear and effective communication. Additionally, optimized build processes, containerized some of our apps with Docker, performed SysAdmin tasks, and established Jenkins CI/CD pipelines to streamline development workflows.",
+      `Worked on development and enhanments of ERP systems for large enterprise clients, mainly leveraging Node.
+Led the development of a new front-end for ATMs across Europe for a leading Italian bank.
+Oversaw architectural planning and provided strategic direction for the project.
+Managed a small dev team, with code reviews and training session.
+Acted as the primary technical liaison with the client's project manager, facilitating clear and effective communication. Additionally, optimized build processes, containerized some of our apps with Docker, performed SysAdmin tasks, and established Jenkins CI/CD pipelines to streamline development workflows.`,
     "work.cortek.desc":
-      "I played a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform. Also worked on tools to help with day to day operations. Additionally, I spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta. My contributions directly contributed to the growth and success of the company's online presence.",
+      `Had a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform.
+Also worked on tools to help with day to day operations.
+Spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta`,
     "work.bc.desc":
-      "During my tenure at Brunello Cucinelli, I excelled in various roles, primarily as a Boutique Coordinator. In this capacity, I provided guided tours of the company's production facilities to high profile international clients (Forbes 100) in Italian, English, Russian and French. Additionally, I specialized in Made to Measure services and offered comprehensive customer consultation and service throughout the sales process. I was proficient in utilizing AS400/Salesforce systems. Furthermore, I implemented visual merchandising guidelines for window displays and shelves and managed restocking activities, participating in order processing during sales campaigns in collaboration with the Store Manager.",
-
+      `During my tenure at Brunello Cucinelli, I excelled in various roles, primarily as a Boutique Coordinator.
+In this capacity, I provided guided tours of the company's production facilities to high profile international clients (Forbes 100) in Italian, English, Russian and French.
+Additionally, I specialized in Made to Measure services and offered comprehensive customer consultation and service throughout the sales process.
+I was proficient in utilizing AS400/Salesforce systems.
+Furthermore, I implemented visual merchandising guidelines for window displays and shelves and managed restocking activities, participating in order processing during sales campaigns in collaboration with the Store Manager.`,
     "edu.bd.title": "Bachelor's Degree in Linguistic Mediation",
 
     "langs.en": "English",
