@@ -14,8 +14,14 @@ export const defaultLang = "en";
 export const ui = {
   en: {
     "about.title": "About",
-    "about.content":
-      "Experienced Software Dev with a robust background in frontend development and a strong track record in delivering complex projects. Adept at guiding small teams and driving innovation within e-commerce platforms, web applications and ERP systems. Demonstrated the ability to lead small teams, and effectively communicate with both stakeholders and colleagues, fostering an environment of continuous learning and improvement. Proficient in creating strategic technical roadmaps and ensuring the alignment of technology with business goals. A fan of OSS and Linux",
+    "about.content": `
+The most important thing to know about me is that I love what I do, and I put a lot of passion in my job doing the best possible work. 
+
+I like my CLI, remote machines and maximizing productivity on my machine. 
+More formally, I've developed a UI framework for a leading Italian bank,
+led the development of CRM's and worked with governmental entities for a variety of software projects.
+
+Familiar with Next/Angular and more broadly with the whole TS ecosystem.`,
     "work.title": "Work Experience",
     "education.title": "Education",
     "langs.title": "Languages",
@@ -28,7 +34,7 @@ export const ui = {
     "title.boutique": "Boutique Coordinator",
 
     "work.rt.desc":
-      "Worked on development and enhanments of ERP systems for large enterprise clients, mainly leveraging Node. Working as the company's lead developer for a new front-end for ATMs across Europe for a leading Italian bank. Oversaw architectural planning and provided strategic direction for the project. Managed a small development team (1 to 4 people), conducted thorough code reviews, and ensured high-quality deliverables. Acted as the primary technical liaison with the client's project manager, facilitating clear and effective communication. Additionally, optimized build processes, containerized some of our apps with Docker, performed SysAdmin tasks, and established Jenkins CI/CD pipelines to streamline development workflows.",
+      "Worked on development and enhanments of ERP systems for large enterprise clients, mainly leveraging Node. Working as the company's lead developer for a new front-end for ATMs across Europe for a leading Italian bank. Oversaw architectural planning and provided strategic direction for the project. Managed a small dev team, conducted thorough code reviews, and ensured high-quality deliverables. Acted as the primary technical liaison with the client's project manager, facilitating clear and effective communication. Additionally, optimized build processes, containerized some of our apps with Docker, performed SysAdmin tasks, and established Jenkins CI/CD pipelines to streamline development workflows.",
     "work.cortek.desc":
       "I played a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform. Also worked on tools to help with day to day operations. Additionally, I spearheaded content creation for e-commerce platforms and expanded sales channels to include platforms such as Amazon and Meta. My contributions directly contributed to the growth and success of the company's online presence.",
     "work.bc.desc":
@@ -49,8 +55,14 @@ export const ui = {
   },
   it: {
     "about.title": "Chi sono",
-    "about.content":
-      "Sviluppatore software esperto con una solida esperienza nello sviluppo frontend e una comprovata esperienza nella consegna di progetti complessi. Abile nel guidare piccoli team e promuovere l'innovazione all'interno delle piattaforme di e-commerce, applicazioni web e sistemi ERP. Dimostrata capacità di guidare piccoli team e comunicare efficacemente con stakeholder e colleghi, favorendo un ambiente di apprendimento e miglioramento continuo. Competente nella creazione di roadmap tecniche strategiche e nell'allineare la tecnologia con gli obiettivi aziendali. Appassionato di OSS e Linux.",
+    "about.content": `
+La cosa piu' importante da sapere su di me e' che amo cio' che faccio e metto passione per portare a casa il miglior risultato possibile.
+
+Mi piace la CLI, le macchine remote e massimizzare la produttivita' nel mio ambiente.
+Piu' formalmente, ho sviluppato un framework UI per una banca italiana,
+guidato sviluppi di CRM e lavorato con entita' governative su progetti di grandi dimensioni.
+
+Familiarizzato con Next/Angular e in generale con l'ecosistema TS.`,
     "work.title": "Esperienza Lavorativa",
     "education.title": "Formazione",
     "langs.title": "Lingue",
@@ -60,7 +72,7 @@ export const ui = {
     "title.fullstack": "Sviluppatore Full Stack",
     "title.boutique": "Coordinatore di Boutique",
     "work.rt.desc":
-      "Lavorato allo sviluppo e miglioramento dei sistemi ERP per clienti aziendali di grandi dimensioni, principalmente utilizzando Node. Lavoro come sviluppatore principale dell'azienda per un nuovo front-end per ATM in tutta Europa (600.000 macchine) per una grande banca italiana. Supervisionato la pianificazione architettonica e fornito direzione strategica per il progetto. Gestito un piccolo team di sviluppo (da 1 a 4 persone), condotto PR e garantito consegne di alta qualità. Agito come principale referente tecnico con il project manager del cliente, facilitando una comunicazione chiara ed efficace. Inoltre, ottimizzato i processi di build, containerizzato alcune delle nostre applicazioni con Docker, eseguito compiti di amministrazione di sistema e stabilito pipeline CI/CD con Jenkins per ottimizzare i flussi di lavoro di sviluppo.",
+      "Lavorato allo sviluppo e miglioramento dei sistemi ERP per clienti aziendali di grandi dimensioni, principalmente utilizzando Node. Lavoro come sviluppatore principale dell'azienda per un nuovo front-end per ATM in tutta Europa (600.000 macchine) per una grande banca italiana. Supervisionato la pianificazione architettonica e fornito direzione strategica per il progetto. Gestito un piccolo team di sviluppo (4 persone), con training delle risorse assegnate. Agito come principale referente tecnico con il project manager del cliente, facilitando una comunicazione chiara ed efficace. Inoltre, ottimizzato i processi di build, containerizzato alcune delle nostre applicazioni con Docker, eseguito compiti di amministrazione di sistema e stabilito pipeline CI/CD con Jenkins per ottimizzare i flussi di lavoro di sviluppo.",
     "work.cortek.desc":
       "Ho svolto un ruolo fondamentale nell'orchestrare l'infrastruttura di e-commerce, utilizzando principalmente la piattaforma Shopify. Ho anche lavorato su strumenti per aiutare con le operazioni quotidiane. Inoltre, ho guidato la creazione di contenuti per piattaforme di e-commerce e ampliato i canali di vendita includendo piattaforme come Amazon e Meta. I miei contributi hanno direttamente contribuito alla crescita e al successo della presenza online dell'azienda.",
     "work.bc.desc":

@@ -137,9 +137,8 @@ const LANGUAGES = [
 					<img class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" src="../self_2.jpeg" />
 				</div>
 			</div>
-			<div class="py-2" />
 			<!-- language picker  -->
-			<div class="flex items-center">
+			<div class="flex items-center print:hidden pt-4">
 				<div class="flex items-center justify-center"><Languages size={12} /></div>
 				<ul class="flex divide-x text-sm text-muted">
 					{['en', 'it'].map((l) => (
@@ -152,7 +151,7 @@ const LANGUAGES = [
 			<div class="py-4" />
 			<h2 class="font-bold text-2xl">{t[ 'about.title' ]}</h2>
 			<div class="py-2" />
-			<span class="text-muted font-mono">{t[ 'about.content' ]}</span>
+			<span class="text-muted font-mono whitespace-break-spaces">{t[ 'about.content' ]}</span>
 			<div class="py-4" />
 			<h1 class="font-bold text-2xl">{t[ 'work.title' ]}</h1>
 			<div class="py-2" />
