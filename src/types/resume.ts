@@ -1,0 +1,20 @@
+export interface WorkExperience {
+  company: string;
+  location: string;
+  title: string;
+  description: string;
+  dates: string;
+  tags: string[];
+}
+
+export interface Education {
+  location: string;
+  title: string;
+  dates: string;
+  summary?: string;
+}
+
+export interface Language {
+  name: string;
+  level: string;
+}
