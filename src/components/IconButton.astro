@@ -1,0 +1,25 @@
+---
+interface Props {
+  href?: string;
+  onclick?: string;
+  title?: string;
+  target?: string;
+  class?: string;
+	label?: string;
+}
+
+const { href, label, onclick, title, target, class: className = '' } = Astro.props;
+---
+
+<a 
+  href={href} 
+  onclick={onclick}
+  title={title}
+  target={target}
+	class="cursor-pointer"
+>
+	<div class={`print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition ${className}`}>
+		<slot />
+	</div>
+	<div class="hidden print:block text-muted">{label}</div>
+</a>

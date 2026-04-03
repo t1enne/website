@@ -1,0 +1,18 @@
+---
+interface Props {
+  size?: 'xs' | 'sm' | 'md' | 'lg' | number;
+}
+
+const { size = 'md' } = Astro.props;
+
+const sizeClasses: Record<string, string> = {
+  xs: 'py-0.5',
+  sm: 'py-2',
+  md: 'py-4',
+  lg: 'py-8',
+};
+
+const sizeClass = typeof size === 'number' ? `py-[${size}px]` : sizeClasses[size];
+---
+
+<div class={sizeClass} />

@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  location: string;
+  dates: string;
+  summary?: string;
+}
+
+const { title, location, dates, summary } = Astro.props;
+---
+
+<li>
+  <div class="flex flex-col">
+    <div class="flex items-center flex-wrap justify-between">
+      <h3 class="font-bold text-lg w-full sm:w-auto">{title}</h3>
+      <div class="text-muted">{dates}</div>
+    </div>
+    <div class="py-1" />
+    <h4 class="text-md">{location}</h4>
+    {summary && (
+      <>
+        <div class="py-1" />
+        <p class="font-mono text-muted text-sm">{summary}</p>
+      </>
+    )}
+  </div>
+  <div class="py-4" />
+</li>

@@ -1,0 +1,38 @@
+---
+import Tag from './Tag.astro';
+
+interface Props {
+  title: string;
+  company: string;
+  location: string;
+  dates: string;
+  description: string;
+  tags?: string[];
+}
+
+const { title, company, location, dates, description, tags = [] } = Astro.props;
+---
+
+<li>
+  <div class="flex justify-between">
+    <div class="flex flex-col w-full">
+      <div class="flex items-center flex-wrap justify-between">
+        <h3 class="font-bold text-lg w-full sm:w-auto">{title}</h3>
+        <div class="align-right text-muted">{dates}</div>
+      </div>
+      <div class="hidden sm:block print:block pt-2" />
+      <div class="flex items-center gap-4">
+        <h4 class="text-md">{company} - {location}</h4>
+        <div class="print:hidden hidden sm:flex flex-wrap gap-2">
+          {tags.map(tag => <Tag text={tag} />)}
+        </div>
+      </div>
+      <div class="flex sm:hidden print:flex flex-wrap gap-2 pt-4">
+        <span class="text-sm font-mono text-muted">Technologies: {tags.join(', ')}</span>
+      </div>
+    </div>
+  </div>
+  <div class="py-2" />
+  <span class="text-muted font-mono whitespace-break-spaces">{description}</span>
+  <div class="py-4" />
+</li>

@@ -1,5 +1,11 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import IconButton from '../components/IconButton.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import Spacer from '../components/Spacer.astro';
+import WorkExperienceItem from '../components/WorkExperienceItem.astro';
+import EducationItem from '../components/EducationItem.astro';
+import LanguageItem from '../components/LanguageItem.astro';
 import { Languages, Linkedin, Phone, Mail, Printer } from 'lucide-astro';
 import { SITE_TITLE, SITE_DESCRIPTION, ui } from '../consts';
 import { WORK_EXP, EDUCATION, LANGUAGES } from '../data/index';
@@ -27,6 +33,11 @@ const translatedLanguages = LANGUAGES.map(lang => ({
   name: t[lang.name],
   level: t[lang.level]
 }));
+
+const contactItems = [
+  { href: 'mailto:nasir.taov@gmail.com', icon: Mail, label: 'mail: nasir.taov@gmail.com' },
+  { href: 'tel:+393281934728', icon: Phone, label: 'phone: +39 328 1934728' },
+];
 ---
 
 <!DOCTYPE html>
@@ -39,39 +50,24 @@ const translatedLanguages = LANGUAGES.map(lang => ({
       <div class="flex items-center justify-between">
         <div class="pr-4">
           <h1 class="font-bold text-3xl">Nasir Taov</h1>
-          <div class="" />
+          <div />
           <span class="text-md text-muted">Full Stack Node.js Developer</span>
-          <div class="py-2" />
+          <Spacer size="sm" />
+					<div class="hidden print:block py-2" />
           <ul class="contact-means flex gap-2 print:flex-col">
-            <li>
-              <a href="mailto:nasir.taov@gmail.com">
-                <div class="print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
-                  <Mail size={18} />
-                </div>
-                <div class="hidden print:block text-muted">mail: nasir.taov@gmail.com</div>
-              </a>
+            {contactItems.map(item => (
+              <li>
+								<IconButton {...item}><item.icon size={18} /></IconButton>
+              </li>
+            ))}
+            <li class="print:hidden">
+							<IconButton target="_blank" href="https://www.linkedin.com/in/nasir-taov"><Linkedin size={18} /></IconButton>
             </li>
-            <li>
-              <a href="tel:+393281934728">
-                <div class="print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
-                  <Phone size={18} />
-                </div>
-                <div class="hidden print:block text-muted">phone: +39 328 1934728</div>
-              </a>
-            </li>
-            <li>
-              <a class="print:hidden" href="https://www.linkedin.com/in/nasir-taov" target="_blank">
-                <div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
-                  <Linkedin size={18} />
-                </div>
-              </a>
-            </li>
-            <li>
-              <a title="Press to print" class="print:hidden cursor-pointer" onclick="window.print()" target="_blank">
-                <div class="text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition">
-                  <Printer size={18} />
-                </div>
-              </a>
+						<li class="hidden print:block">
+							<div class="text-muted">LinkedIn: www.linkedin.com/in/nasir-taov</div>
+						</li>
+            <li class="print:hidden">
+              <IconButton onclick="window.print()" title="Press to print"><Printer size={18} /></IconButton>
             </li>
           </ul>
         </div>
@@ -79,7 +75,8 @@ const translatedLanguages = LANGUAGES.map(lang => ({
           <img class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28" src="../self_2.jpeg" />
         </div>
       </div>
-      <div class="flex items-center print:hidden pt-4">
+      <Spacer size="sm" />
+      <div class="flex items-center print:hidden">
         <div class="flex items-center justify-center"><Languages size={12} /></div>
         <ul class="flex divide-x text-sm text-muted">
           {['en', 'it'].map((l) => (
@@ -89,81 +86,47 @@ const translatedLanguages = LANGUAGES.map(lang => ({
           ))}
         </ul>
       </div>
-      <div class="py-4" />
-      <h2 class="font-bold text-2xl">{t['about.title']}</h2>
-      <div class="py-2" />
+      <Spacer />
+      <SectionTitle text={t['about.title']} />
       <span class="text-muted font-mono whitespace-break-spaces">{t['about.content']}</span>
-      <div class="py-4" />
-      <h1 class="font-bold text-2xl">{t['work.title']}</h1>
-      <div class="py-2" />
+      <Spacer />
+      <SectionTitle text={t['work.title']} />
       <ul class="w-full">
-        {translatedWorkExp.map((exp) =>
-          <li>
-            <div class="flex justify-between">
-              <div class="flex flex-col w-full">
-                <div class="flex items-center flex-wrap justify-between">
-                  <h3 class="font-bold text-lg w-full sm:w-auto"> {exp.title} </h3>
-                  <div class="align-right text-muted">{exp.dates}</div>
-                </div>
-                <div class="hidden sm:block print:block pt-2" />
-                <div class="flex items-center gap-4">
-                  <h4 class="text-md ">{exp.company} - {exp.location}</h4>
-                  <div class="print:hidden hidden sm:flex flex-wrap gap-2">
-                    {exp.tags?.map(tag =>
-                      <div class="bg-gray-100 px-2 rounded-lg"> <code class="text-xs font-mono font-bold">{tag}</code> </div>
-                    )}
-                  </div>
-                </div>
-                <div class="flex sm:hidden print:flex flex-wrap gap-2 pt-4">
-                  <span class="text-sm font-mono text-muted">Technologies: {exp.tags?.join(', ')} </span>
-                </div>
-              </div>
-            </div>
-            <div class="py-2" />
-            <span class="text-muted font-mono whitespace-break-spaces">{exp.description}</span>
-            <div class="py-4" />
-          </li>
+        {translatedWorkExp.map(exp =>
+          <WorkExperienceItem
+            title={exp.title}
+            company={exp.company}
+            location={exp.location}
+            dates={exp.dates}
+            description={exp.description}
+            tags={exp.tags}
+          />
         )}
       </ul>
-      <div class="py-4" />
-      <h2 class="font-bold text-2xl">{t['education.title']}</h2>
-      <div class="py-2" />
+      <Spacer />
+      <SectionTitle text={t['education.title']} />
       <div class="flex justify-between">
         <ul class="w-full">
-          {translatedEducation.map((edu) =>
-            <li>
-              <div class="flex flex-col">
-                <div class="flex items-center flex-wrap justify-between">
-                  <h3 class="font-bold text-lg w-full sm:w-auto">{edu.title}</h3>
-                  <div class="text-muted">{edu.dates}</div>
-                </div>
-                <div class="py-1" />
-                <h4 class="text-md">{edu.location}</h4>
-                {edu.summary && (
-                  <>
-                    <div class="py-1" />
-                    <p class="font-mono text-muted text-sm">{edu.summary}</p>
-                  </>
-                )}
-              </div>
-              <div class="py-4" />
-            </li>
+          {translatedEducation.map(edu =>
+            <EducationItem
+              title={edu.title}
+              location={edu.location}
+              dates={edu.dates}
+              summary={edu.summary}
+            />
           )}
         </ul>
       </div>
-      <div class="py-4" />
-      <h2 class="font-bold text-2xl">{t['langs.title']}</h2>
-      <div class="py-2" />
+      <Spacer />
+      <SectionTitle text={t['langs.title']} />
       <div class="flex justify-between">
         <ul class="w-full divide-y divide-gray-100">
-          {translatedLanguages.map((lang) =>
-            <li class="grid grid-cols-2 py-2">
-              <span><b>{lang.name}</b></span><span class="text-muted">{lang.level}</span>
-            </li>
+          {translatedLanguages.map(lang =>
+            <LanguageItem name={lang.name} level={lang.level} />
           )}
         </ul>
       </div>
-      <div class="py-4" />
+      <Spacer />
     </main>
   </body>
 </html>

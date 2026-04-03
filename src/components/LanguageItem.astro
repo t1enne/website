@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+  level: string;
+}
+
+const { name, level } = Astro.props;
+---
+
+<li class="grid grid-cols-2 py-2">
+  <span><b>{name}</b></span>
+  <span class="text-muted">{level}</span>
+</li>
