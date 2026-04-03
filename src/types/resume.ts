@@ -18,3 +18,10 @@ export interface Language {
   name: string;
   level: string;
 }
+
+export interface Course {
+  provider: string;
+  title: string;
+  dates: string;
+  summary?: string;
+}

@@ -21,6 +21,7 @@ Working on full stack Node.js applications with governmental institutions and ba
 Passionate about OSS, Linux, testing and functional programming.`,
     "work.title": "Work Experience",
     "education.title": "Education",
+    "courses.title": "Courses & Certifications",
     "langs.title": "Languages",
 
     "location.padua": "Padua, Italy",
@@ -73,6 +74,7 @@ Mi piace l'OSS, Linux, il testing e la programmazione funzionale.
 `,
     "work.title": "Esperienza Lavorativa",
     "education.title": "Formazione",
+    "courses.title": "Corsi e Certificazioni",
     "langs.title": "Lingue",
     "location.padua": "Padova (PD)",
     "location.perugia": "Perugia (PG)",

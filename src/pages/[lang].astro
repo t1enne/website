@@ -5,10 +5,11 @@ import SectionTitle from '../components/SectionTitle.astro';
 import Spacer from '../components/Spacer.astro';
 import WorkExperienceItem from '../components/WorkExperienceItem.astro';
 import EducationItem from '../components/EducationItem.astro';
+import CourseItem from '../components/CourseItem.astro';
 import LanguageItem from '../components/LanguageItem.astro';
 import { Languages, Linkedin, Phone, Mail, Printer } from 'lucide-astro';
 import { SITE_TITLE, SITE_DESCRIPTION, ui } from '../consts';
-import { WORK_EXP, EDUCATION, LANGUAGES } from '../data/index';
+import { WORK_EXP, EDUCATION, COURSES, LANGUAGES } from '../data/index';
 
 export async function getStaticPaths() {
   return ['en', 'it'].map(lang => ({ params: { lang } }));
@@ -27,6 +28,11 @@ const translatedWorkExp = WORK_EXP.map(exp => ({
 const translatedEducation = EDUCATION.map(edu => ({
   ...edu,
   title: t[edu.title] ?? edu.title
+}));
+
+const translatedCourses = COURSES.map(course => ({
+  ...course,
+  title: course.title
 }));
 
 const translatedLanguages = LANGUAGES.map(lang => ({
@@ -113,6 +119,20 @@ const contactItems = [
               location={edu.location}
               dates={edu.dates}
               summary={edu.summary}
+            />
+          )}
+        </ul>
+      </div>
+      <Spacer />
+      <SectionTitle text={t['courses.title']} />
+      <div class="flex justify-between">
+        <ul class="w-full">
+          {translatedCourses.map(course =>
+            <CourseItem
+              title={course.title}
+              provider={course.provider}
+              dates={course.dates}
+              summary={course.summary}
             />
           )}
         </ul>
