@@ -12,11 +12,12 @@ const { title, period, description, technologies } = Astro.props;
 ---
 
 <li class="mb-3 print:mb-1">
-  <p class="text-sm print:text-xs">
-    <span class="font-semibold">{title}</span>
-    <span class="text-muted hidden print:block"> ({period}) | {technologies.join(', ')}</span>
-		  <!-- Tag chips (screen only) -->
-  </p>
+  <div class="flex justify-between text-sm print:text-xs">
+    <div class="font-semibold">{title}</div>
+		<div class="font-mono text-muted">{period}</div>
+  </div>
+	<!-- Tag chips (screen only) -->
+	<p class="text-muted hidden print:block"> {technologies.join(', ')}</p>
 	<div class="print:hidden flex flex-wrap gap-1 my-2">
 		{technologies.map(tag => <Tag text={tag} />)}
 	</div>

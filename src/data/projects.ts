@@ -8,7 +8,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     title: "projects.atm.title",
-    period: "2023–present",
+    period: "2024–present",
     technologies: [
       "React",
       "TypeScript",
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "projects.iot.title",
-    period: "2024–present",
+    period: "2023–2024",
     technologies: [
       "Angular",
       "Nest.js",
@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "projects.pipeline.title",
-    period: "2021",
+    period: "2021-2022",
     technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
     description: "projects.pipeline.desc",
   },
