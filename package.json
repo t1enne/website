@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "postbuild": "npm run generate-pdfs",
+    "postbuild": "npx playwright install chromium-headless-shell && npm run generate-pdfs",
     "preview": "astro preview",
     "astro": "astro",
     "generate-pdfs": "tsx scripts/generate-pdfs.ts"
