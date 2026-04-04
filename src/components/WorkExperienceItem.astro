@@ -11,28 +11,30 @@ interface Props {
 }
 
 const { title, company, location, dates, description, tags = [] } = Astro.props;
+
+// Split description into bullet points
+const bullets = description.trim().split('\n').filter(line => line.trim());
 ---
 
-<li>
-  <div class="flex justify-between">
-    <div class="flex flex-col w-full">
-      <div class="flex items-center flex-wrap justify-between">
-        <h3 class="font-bold text-lg w-full sm:w-auto">{title}</h3>
-        <div class="align-right text-muted">{dates}</div>
-      </div>
-      <div class="hidden sm:block print:block pt-2" />
-      <div class="flex items-center gap-4">
-        <h4 class="text-md">{company} - {location}</h4>
-        <div class="print:hidden hidden sm:flex flex-wrap gap-2">
-          {tags.map(tag => <Tag text={tag} />)}
-        </div>
-      </div>
-      <div class="flex sm:hidden print:flex flex-wrap gap-2 pt-4">
-        <span class="text-sm font-mono text-muted">Technologies: {tags.join(', ')}</span>
-      </div>
-    </div>
+<li class="mb-6" itemscope itemtype="https://schema.org/OrganizationRole">
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
+    <h3 class="font-bold text-lg" itemprop="roleName">{title}</h3>
+    <time class="text-muted font-mono text-sm">{dates}</time>
   </div>
-  <div class="py-2" />
-  <span class="text-muted font-mono whitespace-break-spaces">{description}</span>
-  <div class="py-4" />
+  <h4 class="text-sm text-muted mb-1">
+    <span itemprop="name">{company}</span> — {location}
+  </h4>
+  <!-- Tag chips (screen only) -->
+  <div class="print:hidden flex flex-wrap gap-1 my-2">
+    {tags.map(tag => <Tag text={tag} />)}
+  </div>
+	<div class="py-2" />
+  <!-- Bullets -->
+  <ul class="list-disc list-outside ml-4 space-y-2">
+    {bullets.map(bullet => (
+      <li class="font-mono text-muted text-xs leading-relaxed">
+        {bullet.replace(/^[-•]\s*/, '').trim()}
+      </li>
+    ))}
+  </ul>
 </li>

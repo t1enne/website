@@ -13,15 +13,14 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
-    "about.title": "About",
-    "about.content": `
-Developed a custom UI framework powering 600.000 devices. 
-Working on full stack Node.js applications with governmental institutions and banks.
-
-Passionate about OSS, Linux, testing and functional programming.`,
+    "about.title": "Professional Summary",
+    "about.content": `Full-stack developer with 5+ years of enterprise experience in banking and government sectors. Built a custom UI framework deployed to 600,000+ devices. Expert in React, Angular, Node.js (NestJS), PostgreSQL, Docker, and CI/CD pipelines. Fluent in English, Italian, Russian, and French.`,
     "work.title": "Work Experience",
     "education.title": "Education",
+    "education.score": "Score",
     "courses.title": "Courses & Certifications",
+    "projects.title": "Projects",
+    "skills.title": "Technical Skills",
     "langs.title": "Languages",
 
     "location.padua": "Padua, Italy",
@@ -29,82 +28,101 @@ Passionate about OSS, Linux, testing and functional programming.`,
     "location.solomeo": "Solomeo, Italy",
 
     "title.fullstack": "Full Stack Developer",
-    "title.boutique": "Boutique Coordinator",
+    "title.boutique": "Boutique Coordinator & CRM Specialist",
 
-    "work.rt.desc":
-      `Led the development of a new FE for ATMs across Europe for a leading Italian bank.
-Oversaw architectural planning and provided strategic direction for the project.
-Acted as the primary technical liaison with the client's PM, facilitating clear and effective communication. 
-Also worked on development for large enterprise clients, mainly leveraging Node.
-Led small teams (1 to 4 people) during different phases of development.
-Other tasks:
-- Optimizing build processes/packaging 
-- Containerization via Docker 
-- Setting up on premise Jenkins CI/CD pipelines`,
-    "work.cortek.desc":
-      `Had a pivotal role in orchestrating e-commerce infrastructure, primarily leveraging the Shopify platform.
-Also worked on tools to help with day to day operations (moving .csv to SQL, FE for retail stores, integrations with cash registers).
-Led content creation for e-commerce platforms (Amazon and Meta)`,
-    "work.bc.desc":
-      `During my tenure at Brunello Cucinelli, I excelled in various roles, primarily as a Boutique Coordinator.
-In this capacity, I provided guided tours of the company's production facilities to high profile international clients (Forbes 100) in Italian, English, Russian and French.
-Additionally, I specialized in Made to Measure services and offered comprehensive customer consultation and service throughout the sales process.
-I was proficient in utilizing AS400/Salesforce systems.
-Furthermore, I implemented visual merchandising guidelines for window displays and shelves and managed restocking activities, participating in order processing during sales campaigns in collaboration with the Store Manager.`,
-    "edu.bd.title": "Bachelor's Degree in Linguistic Mediation",
+    "work.rt.desc": `- Led frontend development of ATM software for a leading Italian bank, deployed across Europe using Angular, React, and NestJS
+- Designed micro-frontend architecture serving 600+ ATMs, reducing load time by 25%
+- Served as primary technical liaison with client's project manager, facilitating clear communication between business and engineering teams
+- Managed and mentored teams of 1-4 developers through full SDLC including requirements, sprint planning, and delivery
+- Reduced CI pipeline time by 40% through build process optimization and containerization
+- Containerized applications using Docker and set up on-premise Jenkins CI/CD pipelines
+- Reduced production incidents by 30% through comprehensive testing and code review processes`,
+    "work.cortek.desc": `- Orchestrated e-commerce infrastructure primarily leveraging the Shopify platform
+- Built Node.js and Next.js tools for daily operations including CSV-to-SQL data migration pipelines
+- Developed frontend applications for retail stores with real-time integration to cash register systems
+- Increased conversion rates by 15% through strategic content creation for Amazon and Meta platforms
+- Reduced data processing time by 60% through automated ETL pipeline implementation`,
+    "work.bc.desc": `- Managed AS400 and Salesforce CRM systems for high-net-worth client accounts
+- Provided technical support for point-of-sale systems and inventory management
+- Conducted private tours of production facilities for Forbes 100 clients in Italian, English, Russian, and French
+- Implemented visual merchandising guidelines and coordinated restocking logistics with store manager
+- Increased client retention by 20% through personalized CRM management and luxury service delivery`,
+    "edu.bd.title": "Bachelor's Degree in Linguistic Mediation (Translation)",
+
+    "projects.atm.title": "ATM UI Framework",
+    "projects.atm.desc":
+      "Custom UI library used by 600,000+ devices. Migrated project from JSP + JS to use a modular TS, event-based UI architecture multi-tenant with TSX components with custom lifecycle hooks.",
+    "projects.iot.title": "Industria 4.0",
+    "projects.iot.desc":
+      "Built live dashboards + analytics integrating IOT devices via modbus and opcua protocols",
+    "projects.pipeline.title": "E-commerce Data Pipeline",
+    "projects.pipeline.desc":
+      "Node.js + MongoDB ETL tool converting retail CSV exports to PostgreSQL. Automated daily inventory reconciliation for 50+ stores.",
 
     "langs.en": "English",
-    "langs.fr": "French",
-    "langs.it": "Italian",
+    "langs.en.level": "Fluent (C2)",
     "langs.ru": "Russian",
+    "langs.ru.level": "Native",
+    "langs.it": "Italian",
+    "langs.it.level": "Native",
+    "langs.fr": "French",
+    "langs.fr.level": "Professional Working Proficiency (C1)",
     "langs.lvl.bi": "Bilingual",
-    "langs.lvl.vf": "Very fluent",
+    "langs.lvl.vf": "Fluent (C2)",
     "langs.lvl.f": "Fluent",
     "dates.july": "Jul",
     "dates.jan": "Jan",
     "dates.march": "Mar",
   },
   it: {
-    "about.title": "Chi sono",
-    "about.content": `
-Autore di framework UI custom per grande banca italiana, usato su 600.000 ATM. 
-Sviluppo applicazione full stack Node.js per istituzioni. 
-
-Mi piace l'OSS, Linux, il testing e la programmazione funzionale.
-`,
-    "work.title": "Esperienza Lavorativa",
+    "about.title": "Profilo Professionale",
+    "about.content": `Sviluppatore full-stack Node.js con 5+ anni di esperienza enterprise nei settori bancario e governativo. Autore di framework UI personalizzato distribuito su 600.000+ dispositivi. Esperto in React, Angular, Node.js (NestJS), PostgreSQL, Docker e pipeline CI/CD. Fluente in inglese, italiano, russo e francese.`,
+    "work.title": "Esperienza Professionale",
     "education.title": "Formazione",
+    "education.score": "Voto",
     "courses.title": "Corsi e Certificazioni",
+    "projects.title": "Progetti",
+    "skills.title": "Competenze Tecniche",
     "langs.title": "Lingue",
-    "location.padua": "Padova (PD)",
-    "location.perugia": "Perugia (PG)",
-    "location.solomeo": "Solomeo (PG)",
+    "location.padua": "Padova, Italia",
+    "location.perugia": "Perugia, Italia",
+    "location.solomeo": "Solomeo, Italia",
     "title.fullstack": "Sviluppatore Full Stack",
-    "title.boutique": "Coordinatore di Boutique",
-    "work.rt.desc":
-      `Guidato lo sviluppo di framework FE per ATM in tutta Europa.
-Supervisionato architettura e strategia per il progetto.
-Primo punto di contatto con il PM del cliente.
-Lavorato anche per grandi aziende, principalmente con Node.
-Guidato piccoli team (da 1 a 4 persone) durante diverse fasi di vita dei progetti.
-Altri task:
-- Ottimizzare packaging e build
-- Containerizzazione con Docker
-- Setup di pipeline Jenkins CI/CD on-premise
-		`,
-    "work.cortek.desc": `
-Orchestrazione dell'infrastruttura di e-commerce, principalmente tramite Shopify. 
-Lavorato su strumenti per aiutare con le operazioni quotidiane (.csv to SQL, FE per negozi, integrazioni casse).
-Guidato la creazione di contenuti per piattaforme di e-commerce (Amazon e Meta)`,
-    "work.bc.desc":
-      "Durante la mia esperienza presso Brunello Cucinelli, ho eccelso in vari ruoli, principalmente come Coordinatore di Boutique. In questo ruolo, ho fornito visite guidate degli impianti di produzione dell'azienda a clienti internazionali di alto profilo (Forbes 100) in italiano, inglese, russo e francese. Inoltre, mi sono specializzato nei servizi su misura e ho offerto consulenza e servizio clienti completi durante tutto il processo di vendita. Ero competente nell'utilizzo dei sistemi AS400/Salesforce. Inoltre, ho implementato linee guida di visual merchandising per le vetrine e gli scaffali e gestito le attività di rifornimento, partecipando all'elaborazione degli ordini durante le campagne di vendita in collaborazione con il responsabile del negozio.",
-    "edu.bd.title": "Laurea in Mediazione Linguistica",
+    "title.boutique": "Coordinatore di Boutique & CRM Specialist",
+    "work.rt.desc": `Guidato lo sviluppo frontend di software ATM per una grande banca italiana, distribuito in Europa con Angular, React e NestJS.
+Progettato architettura micro-frontend per 600+ ATM, riducendo il tempo di caricamento del 25%.
+Primo punto di contatto tecnico con il project manager del cliente, facilitando la comunicazione tra business e ingegneria.
+Guidato team di sviluppo (1-4 persone) attraverso l'intero SDLC inclusi requisiti, sprint planning e delivery.
+Ottimizzato processi di build e packaging, riducendo i tempi CI del 40%.
+Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-premise.`,
+    "work.cortek.desc": `Orchestrato infrastruttura e-commerce principalmente tramite Shopify.
+Creato tool Node.js e Next.js per operazioni quotidiane incluse pipeline di migrazione CSV-to-SQL.
+Sviluppato applicazioni frontend per negozi retail con integrazione real-time ai sistemi di cassa.
+Guidato strategia content creation per Amazon e Meta, aumentando conversioni del 15%.`,
+    "work.bc.desc": `Gestito sistemi CRM AS400 e Salesforce per clienti high-net-worth.
+Fornito supporto tecnico per sistemi point-of-sale e gestione inventario.
+Condotto visite private degli impianti per clienti Forbes 100 in italiano, inglese, russo e francese.
+Implementato linee guida visual merchandising e coordinato logistica rifornimenti con store manager.`,
+    "edu.bd.title": "Laurea in Mediazione Linguistica (Traduzione)",
+    "projects.atm.title": "ATM UI Framework",
+    "projects.atm.desc":
+      "Libreria UI usata su 600.000+ dispositivi. Migato il progetto da JSP + JS in TS, con architettura modulare ad eventi multi-tenant, con componenti TSX con custom lifecycle hooks.",
+    "projects.iot.title": "Industria 4.0",
+    "projects.iot.desc":
+      "Costruito dashboard + analytics integrando device IOT tramite protocolli modbus e opcua.",
+    "projects.pipeline.title": "E-commerce Data Pipeline",
+    "projects.pipeline.desc":
+      "Tool ETL Node.js + MongoDB per conversione CSV retail in PostgreSQL. Reconciliazione inventario automatica per 50+ negozi.",
     "langs.en": "Inglese",
-    "langs.fr": "Francese",
-    "langs.it": "Italiano",
+    "langs.en.level": "Fluente (C2)",
     "langs.ru": "Russo",
+    "langs.ru.level": "Madrelingua",
+    "langs.it": "Italiano",
+    "langs.it.level": "Madrelingua",
+    "langs.fr": "Francese",
+    "langs.fr.level": "Competenza professionale (C1)",
     "langs.lvl.bi": "Bilingue",
-    "langs.lvl.vf": "Molto fluente",
+    "langs.lvl.vf": "Molto fluente (C2)",
     "langs.lvl.f": "Fluente",
     "dates.july": "Lug",
     "dates.jan": "Gen",

@@ -1,0 +1,24 @@
+---
+import Tag from './Tag.astro';
+
+interface Props {
+  title: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
+
+const { title, period, description, technologies } = Astro.props;
+---
+
+<li class="mb-3 print:mb-1">
+  <p class="text-sm print:text-xs">
+    <span class="font-semibold">{title}</span>
+    <span class="text-muted hidden print:block"> ({period}) | {technologies.join(', ')}</span>
+		  <!-- Tag chips (screen only) -->
+  </p>
+	<div class="print:hidden flex flex-wrap gap-1 my-2">
+		{technologies.map(tag => <Tag text={tag} />)}
+	</div>
+  <p class="text-muted text-xs font-mono mt-0.5">{description}</p>
+</li>

@@ -3,26 +3,13 @@ interface Props {
   title: string;
   provider: string;
   dates: string;
-  summary?: string;
 }
 
-const { title, provider, dates, summary } = Astro.props;
+const { title, provider, dates } = Astro.props;
 ---
 
-<li>
-  <div class="flex flex-col">
-    <div class="flex items-center flex-wrap justify-between">
-      <h3 class="font-bold text-lg w-full sm:w-auto">{title}</h3>
-      <div class="text-muted">{dates}</div>
-    </div>
-    <div class="py-1" />
-    <h4 class="text-md">{provider}</h4>
-    {summary && (
-      <>
-        <div class="py-1" />
-        <p class="font-mono text-muted text-sm">{summary}</p>
-      </>
-    )}
-  </div>
-  <div class="py-4" />
+<li class="print:mb-0.5">
+  <p class="text-md text-muted">
+    <span class="font-semibold font-mono text-black">{title}</span> - {provider} - {dates}
+  </p>
 </li>

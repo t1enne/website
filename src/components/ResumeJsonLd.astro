@@ -1,0 +1,32 @@
+---
+interface Props {
+  name: string;
+  jobTitle: string;
+  email: string;
+  phone: string;
+  linkedin: string;
+  skills: string[];
+  languages: Array<{ name: string; level: string }>;
+}
+
+const { name, jobTitle, email, phone, linkedin, skills, languages } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name,
+  jobTitle,
+  email,
+  telephone: phone,
+  url: linkedin,
+  sameAs: [linkedin],
+  knowsAbout: skills,
+  knowsLanguage: languages.map(l => ({
+    "@type": "Language",
+    name: l.name,
+    proficiencyLevel: l.level
+  }))
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

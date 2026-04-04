@@ -4,25 +4,18 @@ interface Props {
   location: string;
   dates: string;
   summary?: string;
+  score?: string;
 }
 
-const { title, location, dates, summary } = Astro.props;
+const { title, location, dates, summary, score} = Astro.props;
 ---
 
-<li>
-  <div class="flex flex-col">
-    <div class="flex items-center flex-wrap justify-between">
-      <h3 class="font-bold text-lg w-full sm:w-auto">{title}</h3>
-      <div class="text-muted">{dates}</div>
-    </div>
-    <div class="py-1" />
-    <h4 class="text-md">{location}</h4>
-    {summary && (
-      <>
-        <div class="py-1" />
-        <p class="font-mono text-muted text-sm">{summary}</p>
-      </>
-    )}
+<li class="mb-3 print:mb-1" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
+    <h3 class="font-bold text-lg print:text-sm" itemprop="credentialCategory">{title}</h3>
+    <time class="text-muted font-mono text-sm print:text-xs">{dates}</time>
   </div>
-  <div class="py-4" />
+  <p class="text-sm print:text-xs text-muted" itemprop="recognizedBy">{location}</p>
+  <p class="text-sm print:text-xs text-muted">{score}</p>
+  {summary && <p class="text-muted text-sm print:text-xs mt-1">{summary}</p>}
 </li>

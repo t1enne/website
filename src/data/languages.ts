@@ -1,20 +1,20 @@
-import type { Language } from '../types/resume';
+import type { Language } from "../types/resume";
 
 export const LANGUAGES: Language[] = [
   {
-    name: 'langs.en',
-    level: 'langs.lvl.vf'
+    name: "langs.en",
+    level: "langs.en.level",
   },
   {
-    name: 'langs.ru',
-    level: 'langs.lvl.bi'
+    name: "langs.ru",
+    level: "langs.ru.level",
   },
   {
-    name: 'langs.it',
-    level: 'langs.lvl.bi'
+    name: "langs.it",
+    level: "langs.it.level",
   },
   {
-    name: 'langs.fr',
-    level: 'langs.lvl.f'
-  }
+    name: "langs.fr",
+    level: "langs.fr.level",
+  },
 ];

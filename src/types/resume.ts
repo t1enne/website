@@ -12,6 +12,7 @@ export interface Education {
   title: string;
   dates: string;
   summary?: string;
+  score?: string;
 }
 
 export interface Language {
