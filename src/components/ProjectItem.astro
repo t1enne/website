@@ -17,7 +17,6 @@ const { title, period, description, technologies } = Astro.props;
 		<div class="font-mono text-muted">{period}</div>
   </div>
 	<!-- Tag chips (screen only) -->
-	<p class="text-muted hidden print:block"> {technologies.join(', ')}</p>
 	<div class="print:hidden flex flex-wrap gap-1 my-2">
 		{technologies.map(tag => <Tag text={tag} />)}
 	</div>

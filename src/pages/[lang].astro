@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import IconButton from '../components/IconButton.astro';
-import Spacer from '../components/Spacer.astro';
 import WorkExperienceItem from '../components/WorkExperienceItem.astro';
 import EducationItem from '../components/EducationItem.astro';
 import CourseItem from '../components/CourseItem.astro';
@@ -96,12 +95,13 @@ const contactItems = [
             <IconButton href={linkedinUrl} target="_blank"><Linkedin size={18} /></IconButton>
             <IconButton href="https://github.com/t1enne" target="_blank" title="GitHub"><Github size={18} /></IconButton>
             <IconButton onclick="window.print()" title="Press to print"><Printer size={18} /></IconButton>
-            <IconButton href={`/resume-${lang}.pdf`} download title="Download PDF"><FileText size={18} /></IconButton>
+            <IconButton href={`/resume-${lang}.pdf`} title="Download PDF"><FileText size={18} /></IconButton>
           </div>
           <!-- Print contact info -->
           <div class="hidden print:block print:text-xs print:mt-1">
             <p class="text-muted">{t['contact.location']}: {location} | {t['contact.email']}: {email} | {t['contact.phone']}: {phone}</p>
             <p class="text-muted">{t['contact.linkedin']}: linkedin.com/in/nasir-taov</p>
+            <p class="text-muted">{t['contact.github']}: github.com/t1enne</p>
             <p class="text-muted">{t['contact.citizenshipLabel']}: {t['contact.citizenship']}</p>
           </div>
         </div>
@@ -190,7 +190,7 @@ const contactItems = [
       <div class="py-4" />
       <section aria-labelledby="projects-heading" class="print:mb-2">
         <h2 id="projects-heading" class="font-bold text-2xl mb-4">{t['projects.title']}</h2>
-        <ul class="w-full">
+        <ul class="w-full space-y-2">
           {translatedProjects.map(proj =>
             <ProjectItem
               title={proj.title}
