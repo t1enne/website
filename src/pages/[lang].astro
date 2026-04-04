@@ -9,7 +9,7 @@ import ProjectItem from '../components/ProjectItem.astro';
 import LanguageItem from '../components/LanguageItem.astro';
 import SkillsSection from '../components/SkillsSection.astro';
 import ResumeJsonLd from '../components/ResumeJsonLd.astro';
-import { Languages, Linkedin, Phone, Mail, Printer } from 'lucide-astro';
+import { Languages, Linkedin, Phone, Mail, Printer, FileText, Github } from 'lucide-astro';
 import { SITE_TITLE, SITE_DESCRIPTION, ui } from '../consts';
 import { WORK_EXP, EDUCATION, COURSES, PROJECTS, LANGUAGES } from '../data/index';
 import { SKILLS, ALL_SKILLS } from '../data/skills';
@@ -94,7 +94,9 @@ const contactItems = [
               <IconButton href={item.href}><item.icon size={18} /></IconButton>
             ))}
             <IconButton href={linkedinUrl} target="_blank"><Linkedin size={18} /></IconButton>
+            <IconButton href="https://github.com/t1enne" target="_blank" title="GitHub"><Github size={18} /></IconButton>
             <IconButton onclick="window.print()" title="Press to print"><Printer size={18} /></IconButton>
+            <IconButton href={`/resume-${lang}.pdf`} download title="Download PDF"><FileText size={18} /></IconButton>
           </div>
           <!-- Print contact info -->
           <div class="hidden print:block print:text-xs print:mt-1">
