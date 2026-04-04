@@ -1,9 +1,11 @@
 import { chromium } from 'playwright';
+import { spawn } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
 const DIST_DIR = path.join(process.cwd(), 'dist');
 const PDF_OUTPUT_DIR = DIST_DIR;
+const PORT = 4325; // Use a different port to avoid conflicts
 
 // Ensure the dist directory exists
 if (!fs.existsSync(DIST_DIR)) {
@@ -19,32 +21,61 @@ if (!fs.existsSync(PDF_OUTPUT_DIR)) {
 // Languages to generate PDFs for
 const languages = ['en', 'it'];
 
+async function waitForServer(url: string, timeout = 60000): Promise<void> {
+  const start = Date.now();
+  while (Date.now() - start < timeout) {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        return;
+      }
+    } catch {
+      // Server not ready yet
+    }
+    await new Promise(resolve => setTimeout(resolve, 500));
+  }
+  throw new Error(`Server at ${url} did not start within ${timeout}ms`);
+}
+
 async function generatePDFs() {
-  const browser = await chromium.launch();
+  console.log('Starting astro preview...');
+  
+  // Start astro preview server
+  const previewServer = spawn('npm', ['run', 'preview', '--', '--port', PORT.toString()], {
+    cwd: process.cwd(),
+    stdio: 'pipe',
+    shell: true,
+    detached: true,
+  });
+
+  // Log server output for debugging
+  previewServer.stdout?.on('data', (data) => {
+    console.log(`[preview] ${data.toString().trim()}`);
+  });
+  previewServer.stderr?.on('data', (data) => {
+    console.error(`[preview] ${data.toString().trim()}`);
+  });
 
   try {
+    // Wait for the server to be ready
+    await waitForServer(`http://localhost:${PORT}/en`);
+    console.log('Preview server started successfully');
+
+    const browser = await chromium.launch();
+
     for (const lang of languages) {
-      const htmlPath = path.join(DIST_DIR, lang, 'index.html');
-      
-      // Check if the HTML file exists
-      if (!fs.existsSync(htmlPath)) {
-        console.warn(`Warning: ${htmlPath} not found, skipping...`);
-        continue;
-      }
-      
       console.log(`Generating PDF for /${lang}...`);
       
       const context = await browser.newContext();
       const page = await context.newPage();
       
-      // Open the local HTML file directly
-      const fileUrl = 'file://' + htmlPath;
-      await page.goto(fileUrl, {
+      // Navigate to the preview server
+      await page.goto(`http://localhost:${PORT}/${lang}`, {
         waitUntil: 'networkidle',
       });
 
       // Wait for fonts to load
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(2000);
 
       // Generate PDF optimized for print
       const pdfPath = path.join(PDF_OUTPUT_DIR, `resume-${lang}.pdf`);
@@ -65,9 +96,17 @@ async function generatePDFs() {
       await context.close();
     }
 
+    await browser.close();
     console.log('PDF generation complete!');
   } finally {
-    await browser.close();
+    // Kill the preview server
+    if (previewServer.pid) {
+      try {
+        process.kill(-previewServer.pid, 'SIGTERM');
+      } catch {
+        // Ignore errors if process already exited
+      }
+    }
   }
 }
 
