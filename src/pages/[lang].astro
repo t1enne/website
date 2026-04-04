@@ -100,8 +100,9 @@ const contactItems = [
           </div>
           <!-- Print contact info -->
           <div class="hidden print:block print:text-xs print:mt-1">
-            <p class="text-muted">{location} | {email} | {phone}</p>
-            <p class="text-muted">linkedin.com/in/nasir-taov</p>
+            <p class="text-muted">{t['contact.location']}: {location} | {t['contact.email']}: {email} | {t['contact.phone']}: {phone}</p>
+            <p class="text-muted">{t['contact.linkedin']}: linkedin.com/in/nasir-taov</p>
+            <p class="text-muted">{t['contact.citizenshipLabel']}: {t['contact.citizenship']}</p>
           </div>
         </div>
         <div class="overflow-hidden rounded-lg print:hidden">
