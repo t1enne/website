@@ -42,7 +42,7 @@ export const ui = {
 - Developed frontend applications for retail stores with real-time integration to cash register systems
 - Increased conversion rates by 15% through strategic content creation for Amazon and Meta platforms
 - Reduced data processing time by 60% through automated ETL pipeline implementation`,
-    "work.bc.desc": `- Managed AS400 and Salesforce CRM systems for high-net-worth client accounts
+    "work.bc.desc": `- Created AS400 and Salesforce CRM automations for daily activities.
 - Provided technical support for point-of-sale systems and inventory management
 - Conducted private tours of production facilities for Forbes 100 clients in Italian, English, Russian, and French
 - Implemented visual merchandising guidelines and coordinated restocking logistics with store manager
@@ -99,7 +99,7 @@ Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-
 Creato tool Node.js e Next.js per operazioni quotidiane incluse pipeline di migrazione CSV-to-SQL.
 Sviluppato applicazioni frontend per negozi retail con integrazione real-time ai sistemi di cassa.
 Guidato strategia content creation per Amazon e Meta, aumentando conversioni del 15%.`,
-    "work.bc.desc": `Gestito sistemi CRM AS400 e Salesforce per clienti high-net-worth.
+    "work.bc.desc": `Creato automazioni di sistemi CRM AS400 e Salesforce per le attività quotidiane.
 Fornito supporto tecnico per sistemi point-of-sale e gestione inventario.
 Condotto visite private degli impianti per clienti Forbes 100 in italiano, inglese, russo e francese.
 Implementato linee guida visual merchandising e coordinato logistica rifornimenti con store manager.`,
