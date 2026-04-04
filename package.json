@@ -1,21 +1,27 @@
 {
-	"name": "t1enne-astro",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/check": "^0.9.4",
-		"@astrojs/sitemap": "^3.2.1",
-		"@astrojs/tailwind": "^6.0.0",
-		"astro": "^5.2.5",
-		"lucide-astro": "^0.344.0",
-		"tailwindcss": "^3.4.1",
-		"typescript": "^5.3.3"
-	}
+  "name": "t1enne-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "prebuild": "npx playwright install chromium-headless-hsell && npm run generate-pdfs",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-pdfs": "tsx scripts/generate-pdfs.ts"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^6.0.0",
+    "astro": "^5.2.5",
+    "lucide-astro": "^0.344.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1",
+    "tsx": "^4.21.0"
+  }
 }
