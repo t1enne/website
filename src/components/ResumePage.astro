@@ -1,0 +1,199 @@
+---
+import type { ResumeI18n } from "../i18n/types";
+import BaseHead from "./BaseHead.astro";
+import IconButton from "./IconButton.astro";
+import WorkExperienceItem from "./WorkExperienceItem.astro";
+import EducationItem from "./EducationItem.astro";
+import CourseItem from "./CourseItem.astro";
+import ProjectItem from "./ProjectItem.astro";
+import LanguageItem from "./LanguageItem.astro";
+import SkillsSection from "./SkillsSection.astro";
+import ResumeJsonLd from "./ResumeJsonLd.astro";
+import { Languages, Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+interface Props {
+  lang: "en" | "it";
+  i18n: ResumeI18n;
+}
+
+const { lang, i18n } = Astro.props;
+const t = i18n.labels;
+
+const jobTitle = "Full Stack Developer";
+const email = "nasir.taov@gmail.com";
+const phone = "+39 328 1934728";
+const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
+
+const contactItems = [
+  { href: `mailto:${email}`, icon: Mail, label: `mail: ${email}` },
+  { href: `tel:${phone.replace(/\s/g, "")}`, icon: Phone, label: `phone: ${phone}` },
+];
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={`${SITE_TITLE} - Resume`} description={SITE_DESCRIPTION} />
+    <ResumeJsonLd
+      name="Nasir Taov"
+      jobTitle={jobTitle}
+      email={email}
+      phone={phone}
+      linkedin={linkedinUrl}
+      skills={i18n.allSkills}
+      languages={i18n.languages}
+    />
+  </head>
+  <body class="print:bg-white">
+    <main
+      class="p-6 max-w-3xl mx-auto text-sm bg-white print:p-8"
+      itemscope
+      itemtype="https://schema.org/Person"
+    >
+      <meta itemprop="name" content="Nasir Taov" />
+      <meta itemprop="jobTitle" content={jobTitle} />
+      <meta itemprop="email" content={email} />
+      <meta itemprop="telephone" content={phone} />
+
+      <!-- Header -->
+      <div class="flex items-center justify-between print:mb-2">
+        <div class="pr-4">
+          <h1 class="font-bold text-3xl print:text-xl print:mb-0">Nasir Taov</h1>
+          <span class="text-md text-muted font-medium block">{jobTitle}</span>
+          <div class="py-2 hidden print:block" />
+          <div class="flex items-center gap-2 print:hidden mt-2">
+            {contactItems.map((item) => (
+              <IconButton href={item.href}><item.icon size={18} /></IconButton>
+            ))}
+            <IconButton href={linkedinUrl} target="_blank"><Linkedin size={18} /></IconButton>
+            <IconButton href="https://github.com/t1enne" target="_blank" title="GitHub"
+              ><Github size={18} /></IconButton
+            >
+            <IconButton onclick="window.print()" title="Press to print"
+              ><Printer size={18} /></IconButton
+            >
+            <IconButton href={`/resume-${lang}.pdf`} title="Download PDF"
+              ><FileText size={18} /></IconButton
+            >
+          </div>
+          <!-- Print contact info -->
+          <div class="hidden print:block print:text-xs print:mt-1">
+            <p class="text-muted">
+              {t.contactLocation}: {t.location} | {t.contactEmail}: {email} | {t.contactPhone}: {phone}
+            </p>
+            <p class="text-muted">{t.contactLinkedin}: linkedin.com/in/nasir-taov</p>
+            <p class="text-muted">{t.contactGithub}: github.com/t1enne</p>
+            <p class="text-muted">{t.citizenshipLabel}: {t.citizenship}</p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg print:hidden">
+          <img
+            class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            src="../self_2.jpeg"
+            alt="Nasir Taov"
+            itemprop="image"
+          />
+        </div>
+      </div>
+
+      <div class="py-2 print:hidden" />
+      <!-- Lang switcher (hidden print) -->
+      <div class="flex items-center print:hidden">
+        <Languages size={12} />
+        <ul class="flex divide-x text-sm text-muted ml-1">
+          <li><a class="p-2" href="/en/">EN</a></li>
+          <li><a class="p-2" href="/it/">IT</a></li>
+        </ul>
+      </div>
+
+      <div class="py-4" />
+      <!-- Summary -->
+      <section aria-labelledby="about-heading" class="mb-5">
+        <h2 id="about-heading" class="font-bold text-2xl mb-2">{t.aboutTitle}</h2>
+        <p class="text-muted font-mono text-sm leading-relaxed" itemprop="description">
+          {t.aboutContent}
+        </p>
+      </section>
+
+      <div class="py-2" />
+      <!-- Skills -->
+      <section aria-labelledby="skills-heading" class="mb-5">
+        <SkillsSection categories={i18n.skills} title={t.skillsTitle} />
+      </section>
+
+      <div class="py-2" />
+      <!-- Work Experience -->
+      <section aria-labelledby="work-heading" class="mb-5">
+        <h2 id="work-heading" class="font-bold text-2xl mb-2">{t.workTitle}</h2>
+        <ul class="w-full">
+          {i18n.workExperience.map((exp) => (
+            <WorkExperienceItem
+              title={exp.title}
+              company={exp.company}
+              location={exp.location}
+              dates={exp.dates}
+              description={exp.description}
+              tags={exp.tags}
+            />
+          ))}
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <div class="py-2" />
+      <section aria-labelledby="education-heading" class="print:mb-2">
+        <h2 id="education-heading" class="font-bold text-2xl mb-2">{t.educationTitle}</h2>
+        <ul class="w-full">
+          {i18n.education.map((edu) => (
+            <EducationItem
+              title={edu.title}
+              location={edu.location}
+              dates={edu.dates}
+              summary={edu.summary}
+              score={edu.score}
+            />
+          ))}
+        </ul>
+      </section>
+
+      <!-- Courses -->
+      <div class="py-2" />
+      <section aria-labelledby="courses-heading">
+        <h2 id="courses-heading" class="font-bold text-2xl mb-2">{t.coursesTitle}</h2>
+        <ul class="w-full space-y-2">
+          {i18n.courses.map((course) => (
+            <CourseItem title={course.title} provider={course.provider} dates={course.dates} />
+          ))}
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <div class="py-4" />
+      <section aria-labelledby="projects-heading" class="print:mb-2">
+        <h2 id="projects-heading" class="font-bold text-2xl mb-4">{t.projectsTitle}</h2>
+        <ul class="w-full space-y-2">
+          {i18n.projects.map((proj) => (
+            <ProjectItem
+              title={proj.title}
+              period={proj.period}
+              technologies={proj.technologies}
+              description={proj.description}
+            />
+          ))}
+        </ul>
+      </section>
+
+      <!-- Languages -->
+      <div class="py-2" />
+      <section aria-labelledby="languages-heading" class="print:mb-2">
+        <h2 id="languages-heading" class="font-bold text-2xl mb-2">{t.langsTitle}</h2>
+        <ul class="w-full divide-y divide-gray-100" itemprop="knowsLanguage">
+          {i18n.languages.map((langEntry) => (
+            <LanguageItem name={langEntry.name} level={langEntry.level} />
+          ))}
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
