@@ -1,21 +1,23 @@
 import { chromium } from 'playwright';
 import { spawn } from 'child_process';
+import { copyFileSync } from 'fs';
 import fs from 'fs';
 import path from 'path';
 
-const DIST_DIR = path.join(process.cwd(), 'dist');
-const PDF_OUTPUT_DIR = DIST_DIR;
-const PORT = 4325; // Use a different port to avoid conflicts
+const CWD = process.cwd();
+const DIST_DIR = path.join(CWD, 'dist');
+const PUBLIC_DIR = path.join(CWD, 'public');
+const PORT = 4325;
 
-// Ensure the dist directory exists
+// Output to dist/ for astro preview / production, and public/ for astro dev
+const PDF_OUTPUT_DIRS = [DIST_DIR, PUBLIC_DIR].filter((d) => {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+  return true;
+});
+
 if (!fs.existsSync(DIST_DIR)) {
   console.error('Error: dist/ directory does not exist. Run astro build first.');
   process.exit(1);
-}
-
-// Ensure the output directory exists
-if (!fs.existsSync(PDF_OUTPUT_DIR)) {
-  fs.mkdirSync(PDF_OUTPUT_DIR, { recursive: true });
 }
 
 // Languages to generate PDFs for
@@ -77,10 +79,10 @@ async function generatePDFs() {
       // Wait for fonts to load
       await page.waitForTimeout(2000);
 
-      // Generate PDF optimized for print
-      const pdfPath = path.join(PDF_OUTPUT_DIR, `resume-${lang}.pdf`);
+      // Generate PDF optimized for print — write to dist/ then copy to public/
+      const basePdfPath = path.join(DIST_DIR, `resume-${lang}.pdf`);
       await page.pdf({
-        path: pdfPath,
+        path: basePdfPath,
         format: 'A4',
         printBackground: true,
         margin: {
@@ -91,6 +93,10 @@ async function generatePDFs() {
         },
         scale: 1,
       });
+
+      // Copy to public/ so astro dev serves it too
+      const publicPdfPath = path.join(PUBLIC_DIR, `resume-${lang}.pdf`);
+      copyFileSync(basePdfPath, publicPdfPath);
 
       console.log(`PDF generated: resume-${lang}.pdf`);
       await context.close();
