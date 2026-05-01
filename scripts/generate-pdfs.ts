@@ -19,7 +19,7 @@ if (!fs.existsSync(PDF_OUTPUT_DIR)) {
 }
 
 // Languages to generate PDFs for
-const languages = ['en', 'it'];
+const languages = ['en', 'it', 'fr'];
 
 async function waitForServer(url: string, timeout = 60000): Promise<void> {
   const start = Date.now();
