@@ -1,0 +1,3 @@
+# Netlify redirects — processed at CDN level before static files are served
+# Root → /en/ with 301 permanent redirect
+/  /en/  301!
