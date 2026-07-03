@@ -27,6 +27,8 @@ export interface ProjectI18n {
   period: string;
   description: string;
   technologies: string[];
+  url?: string;
+  closedSource?: boolean;
 }
 
 export interface LanguageI18n {

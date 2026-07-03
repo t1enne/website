@@ -89,11 +89,20 @@ const fr: ResumeI18n = {
   ],
   projects: [
     {
+      title: "FormBaker",
+      period: "2026–présent",
+      technologies: ["TypeScript", "Vitest", "arktype", "Zod"],
+      description:
+        "Moteur d'exécution open-source pour formulaires conditionnels et schémas multi-frameworks. Définitions sérialisables avec graphe de dépendances, résolution de visibilité et backends de validation interchangeables (arktype/zod). Node.js + browser. Intégrations pour React Hook Form, Angular et HTML5.",
+      url: "https://github.com/t1enne/formbaker",
+    },
+    {
       title: "Framework UI pour ATM",
       period: "2024–présent",
       technologies: ["React", "TypeScript", "Vite", "Vitest", "Playwright", "Docker", "Git", "Jenkins"],
       description:
         "Bibliothèque UI personnalisée utilisée par plus de 600 000 appareils. Migration du projet de JSP + JS vers une architecture modulaire TS orientée événements, multi-tenant avec des composants TSX et des hooks de cycle de vie personnalisés.",
+      closedSource: true,
     },
     {
       title: "Industrie 4.0",
@@ -101,6 +110,7 @@ const fr: ResumeI18n = {
       technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "TypeScript", "Modbus", "Opcua", "Docker"],
       description:
         "Création de tableaux de bord + analytique intégrant des dispositifs IoT via les protocoles modbus et opcua.",
+      closedSource: true,
     },
     {
       title: "Pipeline de Données E-commerce",
@@ -108,6 +118,7 @@ const fr: ResumeI18n = {
       technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
       description:
         "Outil ETL Node.js + MongoDB convertissant les exports CSV retail en PostgreSQL. Réconciliation automatique quotidienne des stocks pour plus de 50 magasins.",
+      closedSource: true,
     },
   ],
   languages: [

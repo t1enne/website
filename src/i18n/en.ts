@@ -89,17 +89,27 @@ const en: ResumeI18n = {
   ],
   projects: [
     {
+      title: "FormBaker",
+      period: "2026–present",
+      technologies: ["TypeScript", "Vitest", "arktype", "Zod"],
+      description:
+        "Open-source runtime form engine for conditional form rendering and cross-framework schemas. Serializable form definitions with dependency graphs, visibility resolution, and swappable validation backends (arktype/zod). Node.js + browser. Integrations for React Hook Form, Angular, and HTML5.",
+      url: "https://github.com/t1enne/formbaker",
+    },
+    {
       title: "ATM UI Framework",
       period: "2024–present",
       technologies: ["React", "TypeScript", "Vite", "Vitest", "Playwright", "Docker", "Git", "Jenkins"],
       description:
         "Custom UI library used by 600,000+ devices. Migrated project from JSP + JS to use a modular TS, event-based UI architecture multi-tenant with TSX components with custom lifecycle hooks.",
+      closedSource: true,
     },
     {
       title: "Industria 4.0",
       period: "2023–2024",
       technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "TypeScript", "Modbus", "Opcua", "Docker"],
       description: "Built live dashboards + analytics integrating IOT devices via modbus and opcua protocols",
+      closedSource: true,
     },
     {
       title: "E-commerce Data Pipeline",
@@ -107,6 +117,7 @@ const en: ResumeI18n = {
       technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
       description:
         "Node.js + MongoDB ETL tool converting retail CSV exports to PostgreSQL. Automated daily inventory reconciliation for 50+ stores.",
+      closedSource: true,
     },
   ],
   languages: [

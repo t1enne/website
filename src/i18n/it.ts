@@ -86,11 +86,20 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
   ],
   projects: [
     {
+      title: "FormBaker",
+      period: "2026–presente",
+      technologies: ["TypeScript", "Vitest", "arktype", "Zod"],
+      description:
+        "Motore runtime open-source per form condizionali e schemi cross-framework. Definizioni serializzabili con grafo delle dipendenze, risoluzione della visibilità e backend di validazione intercambiabili (arktype/zod). Node.js + browser. Integrazioni per React Hook Form, Angular e HTML5.",
+      url: "https://github.com/t1enne/formbaker",
+    },
+    {
       title: "ATM UI Framework",
       period: "2024–presente",
       technologies: ["React", "TypeScript", "Vite", "Vitest", "Playwright", "Docker", "Git", "Jenkins"],
       description:
         "Libreria UI usata su 600.000+ dispositivi. Migrato il progetto da JSP + JS in TS, con architettura modulare ad eventi multi-tenant, con componenti TSX con custom lifecycle hooks.",
+      closedSource: true,
     },
     {
       title: "Industria 4.0",
@@ -98,6 +107,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
       technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "TypeScript", "Modbus", "Opcua", "Docker"],
       description:
         "Costruito dashboard + analytics integrando device IOT tramite protocolli modbus e opcua.",
+      closedSource: true,
     },
     {
       title: "E-commerce Data Pipeline",
@@ -105,6 +115,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
       technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
       description:
         "Tool ETL Node.js + MongoDB per conversione CSV retail in PostgreSQL. Reconciliazione inventario automatica per 50+ negozi.",
+      closedSource: true,
     },
   ],
   languages: [
