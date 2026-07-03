@@ -1,24 +1,37 @@
 ---
 import Tag from './Tag.astro';
 
+import { Github } from "lucide-astro";
+
 interface Props {
   title: string;
   period: string;
   description: string;
   technologies: string[];
+  url?: string;
+  closedSource?: boolean;
 }
 
-const { title, period, description, technologies } = Astro.props;
+const { title, period, description, technologies, url, closedSource } = Astro.props;
 ---
 
 <li class="mb-3 print:mb-1">
-  <div class="flex justify-between text-sm print:text-xs">
-    <div class="font-semibold">{title}</div>
-		<div class="font-mono text-muted">{period}</div>
+  <div class="flex justify-between items-baseline text-sm print:text-xs gap-1">
+    <div class="font-semibold flex items-center gap-1.5">
+      {title}
+      {url ? (
+        <a href={url} target="_blank" rel="noopener" class="print:hidden text-primary/60 hover:text-primary transition">
+          <Github size={14} />
+        </a>
+      ) : closedSource ? (
+        <span class="text-xs font-normal text-muted print:hidden">(closed source)</span>
+      ) : null}
+    </div>
+    <div class="font-mono text-xs text-muted">{period}</div>
   </div>
 	<!-- Tag chips (screen only) -->
 	<div class="print:hidden flex flex-wrap gap-1 my-2">
 		{technologies.map(tag => <Tag text={tag} />)}
 	</div>
-  <p class="text-muted text-xs font-mono mt-0.5">{description}</p>
+  <p class="font-mono text-muted text-xs mt-0.5">{description}</p>
 </li>

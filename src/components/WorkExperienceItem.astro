@@ -19,16 +19,15 @@ const bullets = description.trim().split('\n').filter(line => line.trim());
 <li class="mb-6" itemscope itemtype="https://schema.org/OrganizationRole">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
     <h3 class="font-bold text-lg" itemprop="roleName">{title}</h3>
-    <time class="text-muted font-mono text-sm">{dates}</time>
+    <time class="text-muted font-mono text-xs">{dates}</time>
   </div>
   <h4 class="text-sm text-muted mb-1">
     <span itemprop="name">{company}</span> — {location}
   </h4>
   <!-- Tag chips (screen only) -->
-  <div class="print:hidden flex flex-wrap gap-1 my-2">
+  <div class="print:hidden flex flex-wrap gap-1 mb-2.5">
     {tags.map(tag => <Tag text={tag} />)}
   </div>
-	<div class="py-2" />
   <!-- Bullets -->
   <ul class="list-disc list-outside ml-4 space-y-2">
     {bullets.map(bullet => (

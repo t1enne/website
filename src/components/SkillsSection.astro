@@ -11,7 +11,7 @@ const { categories, title } = Astro.props;
 
 <section aria-labelledby="skills-heading">
   <h2 id="skills-heading" class="font-bold text-2xl mb-2">{title}</h2>
-  <div class="space-y-2 print:space-y-2 font-mono">
+  <div class="space-y-2 print:space-y-2 font-mono text-xs">
     {categories.map(cat => (
       <p class="text-sm leading-relaxed">
         <span class="font-semibold print:text-black">{cat.category}:</span>

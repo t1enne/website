@@ -47,7 +47,7 @@ const contactItems = [
   </head>
   <body class="print:bg-white">
     <main
-      class="p-6 max-w-3xl mx-auto text-sm bg-white print:p-8"
+      class="p-6 max-w-3xl mx-auto my-8 text-base bg-white print:p-8 print:my-0"
       itemscope
       itemtype="https://schema.org/Person"
     >
@@ -60,7 +60,7 @@ const contactItems = [
       <div class="flex items-center justify-between print:mb-2">
         <div class="pr-4">
           <h1 class="font-bold text-3xl print:text-xl print:mb-0">Nasir Taov</h1>
-          <span class="text-md text-muted font-medium block">{jobTitle}</span>
+          <span class="text-sm text-muted font-medium block">{jobTitle}</span>
           <div class="py-2 hidden print:block" />
           <div class="flex items-center gap-2 print:hidden mt-2">
             {contactItems.map((item) => (
@@ -97,9 +97,8 @@ const contactItems = [
         </div>
       </div>
 
-      <div class="py-2 print:hidden" />
       <!-- Lang switcher (hidden print) -->
-      <div class="flex items-center print:hidden">
+      <div class="flex items-center print:hidden mt-4">
         <Languages size={12} />
         <ul class="flex divide-x text-sm text-muted ml-1">
           <li><a class="p-2" href="/en/">EN</a></li>
@@ -108,24 +107,23 @@ const contactItems = [
         </ul>
       </div>
 
-      <div class="py-4" />
+			<div class="mb-6"></div>
+
       <!-- Summary -->
-      <section aria-labelledby="about-heading" class="mb-5">
+      <section aria-labelledby="about-heading" class="mb-6">
         <h2 id="about-heading" class="font-bold text-2xl mb-2">{t.aboutTitle}</h2>
-        <p class="text-muted font-mono text-sm leading-relaxed" itemprop="description">
+        <p class="text-muted text-sm leading-relaxed" itemprop="description">
           {t.aboutContent}
         </p>
       </section>
 
-      <div class="py-2" />
       <!-- Skills -->
-      <section aria-labelledby="skills-heading" class="mb-5">
+      <section aria-labelledby="skills-heading" class="mb-6">
         <SkillsSection categories={i18n.skills} title={t.skillsTitle} />
       </section>
 
-      <div class="py-2" />
       <!-- Work Experience -->
-      <section aria-labelledby="work-heading" class="mb-5">
+      <section aria-labelledby="work-heading" class="mb-6">
         <h2 id="work-heading" class="font-bold text-2xl mb-2">{t.workTitle}</h2>
         <ul class="w-full">
           {i18n.workExperience.map((exp) => (
@@ -142,8 +140,7 @@ const contactItems = [
       </section>
 
       <!-- Education -->
-      <div class="py-2" />
-      <section aria-labelledby="education-heading" class="print:mb-2">
+      <section aria-labelledby="education-heading" class="mb-6 print:mb-2">
         <h2 id="education-heading" class="font-bold text-2xl mb-2">{t.educationTitle}</h2>
         <ul class="w-full">
           {i18n.education.map((edu) => (
@@ -159,8 +156,7 @@ const contactItems = [
       </section>
 
       <!-- Courses -->
-      <div class="py-2" />
-      <section aria-labelledby="courses-heading">
+      <section aria-labelledby="courses-heading" class="mb-6">
         <h2 id="courses-heading" class="font-bold text-2xl mb-2">{t.coursesTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.courses.map((course) => (
@@ -170,8 +166,7 @@ const contactItems = [
       </section>
 
       <!-- Projects -->
-      <div class="py-4" />
-      <section aria-labelledby="projects-heading" class="print:mb-2">
+      <section aria-labelledby="projects-heading" class="mb-6 print:mb-2">
         <h2 id="projects-heading" class="font-bold text-2xl mb-4">{t.projectsTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.projects.map((proj) => (
@@ -180,13 +175,14 @@ const contactItems = [
               period={proj.period}
               technologies={proj.technologies}
               description={proj.description}
+              url={proj.url}
+              closedSource={proj.closedSource}
             />
           ))}
         </ul>
       </section>
 
       <!-- Languages -->
-      <div class="py-2" />
       <section aria-labelledby="languages-heading" class="print:mb-2">
         <h2 id="languages-heading" class="font-bold text-2xl mb-2">{t.langsTitle}</h2>
         <ul class="w-full divide-y divide-gray-100" itemprop="knowsLanguage">
