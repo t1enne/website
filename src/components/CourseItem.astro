@@ -3,13 +3,17 @@ interface Props {
   title: string;
   provider: string;
   dates: string;
+  summary?: string;
 }
 
-const { title, provider, dates } = Astro.props;
+const { title, provider, dates, summary } = Astro.props;
 ---
 
-<li class="print:mb-0.5">
-  <p class="text-sm text-muted">
-    <span class="font-semibold text-primary/90">{title}</span> - {provider} - {dates}
-  </p>
+<li class="mb-3 print:mb-1">
+  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
+    <h3 class="font-semibold text-sm print:text-xs">{title}</h3>
+    <time class="text-muted font-mono text-xs print:text-xs">{dates}</time>
+  </div>
+  <p class="text-sm print:text-xs text-muted">{provider}</p>
+  {summary && <p class="text-muted text-sm print:text-xs mt-1">{summary}</p>}
 </li>

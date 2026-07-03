@@ -20,6 +20,7 @@ export interface CourseI18n {
   provider: string;
   title: string;
   dates: string;
+  summary?: string;
 }
 
 export interface ProjectI18n {
