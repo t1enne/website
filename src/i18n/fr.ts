@@ -5,7 +5,7 @@ const fr: ResumeI18n = {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
-      "Développeur full-stack avec plus de 5 ans d'expérience en entreprise dans les secteurs bancaire et gouvernemental. Auteur d'un framework UI personnalisé déployé sur plus de 600 000 appareils. Expert en React, Angular, Node.js (NestJS), PostgreSQL, Docker et pipelines CI/CD. Courant en anglais, italien, russe et français.",
+      "Développeur full-stack de niveau architecte, auteur d'un framework UI sur mesure utilisé par plus de 600 000 appareils au sein d'une grande banque européenne. J'ai dirigé des équipes transversales de 1–4 ingénieurs en tant qu'interlocuteur technique principal entre le métier et le développement, réduisant le temps de pipeline CI de 40 % et les incidents de production de 30 %. Ingénieur polyglotte (React, Angular, NestJS, Rust, Go) avec une vision produit forgée dans les secteurs bancaire, e-commerce et du luxe. Collaboration de niveau natif en anglais, italien, russe et français.",
     workTitle: "Expérience Professionnelle",
     educationTitle: "Formation",
     educationScore: "Note",

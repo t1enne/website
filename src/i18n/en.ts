@@ -5,7 +5,7 @@ const en: ResumeI18n = {
   labels: {
     aboutTitle: "Professional Summary",
     aboutContent:
-      "Full-stack developer with 5+ years of enterprise experience in banking and government sectors. Built a custom UI framework deployed to 600,000+ devices. Expert in React, Angular, Node.js (NestJS), PostgreSQL, Docker, and CI/CD pipelines. Fluent in English, Italian, Russian, and French.",
+      "Architect-level full-stack developer who designed a custom UI framework powering 600,000+ devices at a leading European bank. Led cross-functional teams of 1–4 engineers as the primary technical liaison between business and development, reducing CI pipeline time by 40% and production incidents by 30%. Polyglot engineer (React, Angular, NestJS, Rust, Go) with product sense built across banking, e-commerce, and luxury retail. Native-level collaboration in English, Italian, Russian, and French.",
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",
