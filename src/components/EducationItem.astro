@@ -10,9 +10,9 @@ interface Props {
 const { title, location, dates, summary, score} = Astro.props;
 ---
 
-<li class="mb-3 print:mb-1" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+<li class="mb-3" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
-    <h3 class="font-semibold text-sxm print:text-xs" itemprop="credentialCategory">{title}</h3>
+    <h3 class="font-semibold text-sm print:text-xs" itemprop="credentialCategory">{title}</h3>
     <time class="text-muted font-mono text-xs print:text-xs">{dates}</time>
   </div>
   <p class="text-sm print:text-xs text-muted" itemprop="recognizedBy">{location}</p>

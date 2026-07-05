@@ -9,7 +9,7 @@ interface Props {
 const { title, provider, dates, summary } = Astro.props;
 ---
 
-<li class="mb-3 print:mb-1">
+<li class="mb-3">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
     <h3 class="font-semibold text-sm print:text-xs">{title}</h3>
     <time class="text-muted font-mono text-xs print:text-xs">{dates}</time>

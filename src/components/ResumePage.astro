@@ -59,8 +59,8 @@ const contactItems = [
       <!-- Header -->
       <div class="flex items-center justify-between print:mb-2">
         <div class="pr-4">
-          <h1 class="font-bold text-3xl print:text-xl print:mb-0">Nasir Taov</h1>
-          <span class="text-sm text-muted font-medium block">{jobTitle}</span>
+          <h1 class="font-bold text-3xl print:text-2xl print:mb-0">Nasir Taov</h1>
+          <span class="text-sm text-muted font-medium block print:text-base print:text-black">{jobTitle}</span>
           <div class="py-2 hidden print:block" />
           <div class="flex items-center gap-2 print:hidden mt-2">
             {contactItems.map((item) => (
@@ -78,13 +78,9 @@ const contactItems = [
             >
           </div>
           <!-- Print contact info -->
-          <div class="hidden print:block print:text-xs print:mt-1">
-            <p class="text-muted">{t.contactLocation}: {t.location}</p>
-						<p class="text-muted">{t.contactEmail}: {email}</p>
-						<p class="text-muted">{t.contactPhone}: {phone}</p>
-            <p class="text-muted">{t.contactLinkedin}: linkedin.com/in/nasir-taov</p>
-            <p class="text-muted">{t.contactGithub}: github.com/t1enne</p>
-            <p class="text-muted">{t.citizenshipLabel}: {t.citizenship}</p>
+          <div class="hidden print:block print:mt-1">
+            <p class="text-xs text-muted">{t.contactLocation}: {t.location} &nbsp;|&nbsp; {t.contactEmail}: {email} &nbsp;|&nbsp; {t.contactPhone}: {phone}</p>
+            <p class="text-xs text-muted">{t.contactLinkedin}: linkedin.com/in/nasir-taov &nbsp;|&nbsp; {t.contactGithub}: github.com/t1enne &nbsp;|&nbsp; {t.citizenshipLabel}: {t.citizenship}</p>
           </div>
         </div>
         <div class="overflow-hidden rounded-lg print:hidden">
@@ -111,7 +107,7 @@ const contactItems = [
 
       <!-- Summary -->
       <section aria-labelledby="about-heading" class="mb-6">
-        <h2 id="about-heading" class="font-bold text-2xl mb-4">{t.aboutTitle}</h2>
+        <h2 id="about-heading" class="font-bold text-2xl print:text-lg mb-3">{t.aboutTitle}</h2>
         <p class="text-muted text-sm leading-relaxed" itemprop="description">
           {t.aboutContent}
         </p>
@@ -119,7 +115,7 @@ const contactItems = [
 
       <!-- Work Experience -->
       <section aria-labelledby="work-heading" class="mb-6">
-        <h2 id="work-heading" class="font-bold text-2xl mb-4">{t.workTitle}</h2>
+        <h2 id="work-heading" class="font-bold text-2xl print:text-lg mb-3">{t.workTitle}</h2>
         <ul class="w-full">
           {i18n.workExperience.map((exp) => (
             <WorkExperienceItem
@@ -135,8 +131,8 @@ const contactItems = [
       </section>
 
       <!-- Projects -->
-      <section aria-labelledby="projects-heading" class="mb-6 print:mb-2">
-        <h2 id="projects-heading" class="font-bold text-2xl mb-4">{t.projectsTitle}</h2>
+      <section aria-labelledby="projects-heading" class="mb-6">
+        <h2 id="projects-heading" class="font-bold text-2xl print:text-lg mb-3">{t.projectsTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.projects.map((proj) => (
             <ProjectItem
@@ -158,14 +154,13 @@ const contactItems = [
 
       <!-- Education -->
       <section aria-labelledby="education-heading" class="mb-6 print:mb-2">
-        <h2 id="education-heading" class="font-bold text-2xl mb-4">{t.educationTitle}</h2>
+        <h2 id="education-heading" class="font-bold text-2xl mb-3 print:text-lg">{t.educationTitle}</h2>
         <ul class="w-full">
           {i18n.education.map((edu) => (
             <EducationItem
               title={edu.title}
               location={edu.location}
               dates={edu.dates}
-              summary={edu.summary}
               score={edu.score}
             />
           ))}
@@ -174,7 +169,7 @@ const contactItems = [
 
       <!-- Courses -->
       <section aria-labelledby="courses-heading" class="mb-6">
-        <h2 id="courses-heading" class="font-bold text-2xl mb-4">{t.coursesTitle}</h2>
+        <h2 id="courses-heading" class="font-bold text-2xl print:text-lg mb-3">{t.coursesTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.courses.map((course) => (
             <CourseItem title={course.title} provider={course.provider} dates={course.dates} summary={course.summary} />
@@ -183,8 +178,8 @@ const contactItems = [
       </section>
 
       <!-- Languages -->
-      <section aria-labelledby="languages-heading" class="print:mb-2">
-        <h2 id="languages-heading" class="font-bold text-2xl mb-4">{t.langsTitle}</h2>
+      <section aria-labelledby="languages-heading" class="mb-6">
+        <h2 id="languages-heading" class="font-bold text-2xl print:text-lg mb-3">{t.langsTitle}</h2>
         <ul class="w-full divide-y divide-gray-100" itemprop="knowsLanguage">
           {i18n.languages.map((langEntry) => (
             <LanguageItem name={langEntry.name} level={langEntry.level} />

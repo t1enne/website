@@ -15,7 +15,7 @@ interface Props {
 const { title, period, description, technologies, url, closedSource } = Astro.props;
 ---
 
-<li class="mb-3 print:mb-1">
+<li class="mb-3">
   <div class="flex justify-between items-baseline text-sm print:text-xs gap-1">
     <div class="font-semibold flex items-center gap-1.5">
       {title}
@@ -23,15 +23,21 @@ const { title, period, description, technologies, url, closedSource } = Astro.pr
         <a href={url} target="_blank" rel="noopener" class="print:hidden text-primary/60 hover:text-primary transition">
           <Github size={14} />
         </a>
+				<a href={url} target="_blank" rel="noopener" class="hidden print:block italic text-muted">{url}</a>
       ) : closedSource ? (
         <span class="text-xs font-normal text-muted print:hidden">(closed source)</span>
       ) : null}
     </div>
     <div class="font-mono text-xs text-muted">{period}</div>
   </div>
-	<!-- Tag chips (screen only) -->
+	<!-- Tag chips (screen) -->
 	<div class="print:hidden flex flex-wrap gap-1 my-2">
 		{technologies.map(tag => <Tag text={tag} />)}
 	</div>
+	<!-- Tag chips (print) -->
+
+  <p class="hidden print:block text-xs text-muted font-mono my-2 print:italic">
+    {technologies.join(' · ')}
+  </p>
   <p class="font-mono text-muted text-xs mt-0.5">{description}</p>
 </li>

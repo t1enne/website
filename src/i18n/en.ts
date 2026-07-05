@@ -9,7 +9,7 @@ const en: ResumeI18n = {
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",
-    coursesTitle: "Courses & Certifications",
+    coursesTitle: "Courses",
     projectsTitle: "Projects",
     skillsTitle: "Technical Skills",
     langsTitle: "Languages",
@@ -35,7 +35,15 @@ const en: ResumeI18n = {
 - Containerized applications using Docker and set up on-premise Jenkins CI/CD pipelines
 - Reduced production incidents by 30% through comprehensive testing and code review processes`,
       dates: "Mar 2022 – Present",
-      tags: ["Angular", "React", "NestJS", "Node.js", "Docker", "Jenkins", "CI/CD"],
+      tags: [
+        "Angular",
+        "React",
+        "NestJS",
+        "Node.js",
+        "Docker",
+        "Jenkins",
+        "CI/CD",
+      ],
     },
     {
       company: "Cortek",
@@ -99,7 +107,16 @@ const en: ResumeI18n = {
     {
       title: "ATM UI Framework",
       period: "2024–present",
-      technologies: ["React", "TypeScript", "Vite", "Vitest", "Playwright", "Docker", "Git", "Jenkins"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Vitest",
+        "Playwright",
+        "Docker",
+        "Git",
+        "Jenkins",
+      ],
       description:
         "Custom UI library used by 600,000+ devices. Migrated project from JSP + JS to use a modular TS, event-based UI architecture multi-tenant with TSX components with custom lifecycle hooks.",
       closedSource: true,
@@ -107,8 +124,18 @@ const en: ResumeI18n = {
     {
       title: "Industria 4.0",
       period: "2023–2024",
-      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "TypeScript", "Modbus", "Opcua", "Docker"],
-      description: "Built live dashboards + analytics integrating IOT devices via modbus and opcua protocols",
+      technologies: [
+        "Angular",
+        "Nest.js",
+        "TypeORM",
+        "PostgreSQL",
+        "TypeScript",
+        "Modbus",
+        "Opcua",
+        "Docker",
+      ],
+      description:
+        "Built live dashboards + analytics integrating IOT devices via modbus and opcua protocols",
       closedSource: true,
     },
     {
