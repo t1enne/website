@@ -27,7 +27,7 @@ const fr: ResumeI18n = {
       company: "Raintonic",
       location: "Padoue, Italie",
       title: "Développeur Full Stack",
-      description: `- Dirigé le développement frontend de logiciels ATM pour une grande banque italienne, déployé en Europe avec Angular, React et NestJS
+      description: `
 - Conçu une architecture micro-frontend desservant plus de 600 ATM, réduisant le temps de chargement de 25 %
 - Assuré le rôle d'interlocuteur technique principal avec le chef de projet du client, facilitant la communication entre les équipes métier et ingénierie
 - Encadré des équipes de 1 à 4 développeurs à travers le cycle SDLC complet : spécifications, planification de sprint et livraison
@@ -35,7 +35,27 @@ const fr: ResumeI18n = {
 - Conteneurisé les applications avec Docker et mis en place des pipelines CI/CD Jenkins on-premise
 - Réduit les incidents en production de 30 % grâce à des processus rigoureux de test et de revue de code`,
       dates: "Mars 2022 – Présent",
-      tags: ["Angular", "React", "NestJS", "Node.js", "Docker", "Jenkins", "CI/CD"],
+      tags: [
+        "Angular",
+        "React",
+        "NestJS",
+        "Node.js",
+        "Docker",
+        "Jenkins",
+        "CI/CD",
+      ],
+    },
+    {
+      company: "Nexi Group",
+      location: "Vérone, Italie",
+      title: "Architecte Frontend",
+      description: `- Dirigé le développement frontend de logiciels ATM pour une grande banque italienne, déployé en Europe sur 600K ATM
+- Migré l'interface pilotée par le backend JSP vers une architecture moderne orientée événements en TypeScript
+- Développé des widgets et services personnalisés, utilisables depuis un DSL sur mesure basé sur JSON
+- Intégration approfondie avec la couche KAL existante des ATM
+- Créé un bundle personnalisé et un processus de build pour la compatibilité IE et des exigences de sécurité strictes`,
+      dates: "Janv. 2022 – Janv. 2024",
+      tags: ["Project Management", "TypeScript", "DevOps"],
     },
     {
       company: "Cortek",
@@ -97,17 +117,18 @@ const fr: ResumeI18n = {
       url: "https://github.com/t1enne/formbaker",
     },
     {
-      title: "Framework UI pour ATM",
-      period: "2024–présent",
-      technologies: ["React", "TypeScript", "Vite", "Vitest", "Playwright", "Docker", "Git", "Jenkins"],
-      description:
-        "Bibliothèque UI personnalisée utilisée par plus de 600 000 appareils. Migration du projet de JSP + JS vers une architecture modulaire TS orientée événements, multi-tenant avec des composants TSX et des hooks de cycle de vie personnalisés.",
-      closedSource: true,
-    },
-    {
       title: "Industrie 4.0",
       period: "2023–2024",
-      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "TypeScript", "Modbus", "Opcua", "Docker"],
+      technologies: [
+        "Angular",
+        "Nest.js",
+        "TypeORM",
+        "PostgreSQL",
+        "TypeScript",
+        "Modbus",
+        "Opcua",
+        "Docker",
+      ],
       description:
         "Création de tableaux de bord + analytique intégrant des dispositifs IoT via les protocoles modbus et opcua.",
       closedSource: true,

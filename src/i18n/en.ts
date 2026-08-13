@@ -27,9 +27,7 @@ const en: ResumeI18n = {
       company: "Raintonic",
       location: "Padua, Italy",
       title: "Full Stack Developer",
-      description: `- Led frontend development of ATM software for a leading Italian bank, deployed across Europe using Angular, React, and NestJS
-- Designed micro-frontend architecture serving 600+ ATMs, reducing load time by 25%
-- Served as primary technical liaison with client's project manager, facilitating clear communication between business and engineering teams
+      description: `
 - Managed and mentored teams of 1-4 developers through full SDLC including requirements, sprint planning, and delivery
 - Reduced CI pipeline time by 40% through build process optimization and containerization
 - Containerized applications using Docker and set up on-premise Jenkins CI/CD pipelines
@@ -44,6 +42,19 @@ const en: ResumeI18n = {
         "Jenkins",
         "CI/CD",
       ],
+    },
+    {
+      company: "Nexi Group",
+      location: "Verona, Italy",
+      title: "Frontend Architect",
+      description: `- Led frontend development of ATM software for a leading Italian bank, deployed across Europe on 600K ATMs
+- Ported JSP backend driven UI to a modern TypeScript event driven architecture
+- Developed custom widgets + services, usable from a custom DSL based on JSON
+- Deep integration with the existing ATM KAL layer
+- Built custom bundle and build process for IE compat and strict security requirements
+`,
+      dates: "Jan 2022 – Jan 2024",
+      tags: ["Project Management", "TypeScript", "DevOps"],
     },
     {
       company: "Cortek",
@@ -103,23 +114,6 @@ const en: ResumeI18n = {
       description:
         "Open-source runtime form engine for conditional form rendering and cross-framework schemas. Serializable form definitions with dependency graphs, visibility resolution, and swappable validation backends (arktype/zod). Node.js + browser. Integrations for React Hook Form, Angular, and HTML5.",
       url: "https://github.com/t1enne/formbaker",
-    },
-    {
-      title: "ATM UI Framework",
-      period: "2024–present",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Vitest",
-        "Playwright",
-        "Docker",
-        "Git",
-        "Jenkins",
-      ],
-      description:
-        "Custom UI library used by 600,000+ devices. Migrated project from JSP + JS to use a modular TS, event-based UI architecture multi-tenant with TSX components with custom lifecycle hooks.",
-      closedSource: true,
     },
     {
       title: "Industria 4.0",

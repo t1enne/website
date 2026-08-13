@@ -27,14 +27,33 @@ const it: ResumeI18n = {
       company: "Raintonic",
       location: "Padova, Italia",
       title: "Sviluppatore Full Stack",
-      description: `Guidato lo sviluppo frontend di software ATM per una grande banca italiana, distribuito in Europa con Angular, React e NestJS.
-Progettato architettura micro-frontend per 600+ ATM, riducendo il tempo di caricamento del 25%.
+      description: `
 Primo punto di contatto tecnico con il project manager del cliente, facilitando la comunicazione tra business e ingegneria.
 Guidato team di sviluppo (1-4 persone) attraverso l'intero SDLC inclusi requisiti, sprint planning e delivery.
 Ottimizzato processi di build e packaging, riducendo i tempi CI del 40%.
 Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-premise.`,
       dates: "Mar 2022 – Presente",
-      tags: ["Angular", "React", "NestJS", "Node.js", "Docker", "Jenkins", "CI/CD"],
+      tags: [
+        "Angular",
+        "React",
+        "NestJS",
+        "Node.js",
+        "Docker",
+        "Jenkins",
+        "CI/CD",
+      ],
+    },
+    {
+      company: "Nexi Group",
+      location: "Verona, Italia",
+      title: "Architetto Frontend",
+      description: `Guidato lo sviluppo frontend di software ATM per una grande banca italiana, distribuito in Europa su 600K ATM.
+Migrata l'interfaccia guidata dal backend JSP a una moderna architettura event-driven in TypeScript.
+Sviluppati widget e servizi custom, utilizzabili da un DSL custom basato su JSON.
+Integrazione profonda con l'allocatore KAL esistente degli ATM.
+Creato un bundle custom e un processo di build per la compatibilità IE e severi requisiti di sicurezza.`,
+      dates: "Gen 2022 – Gen 2024",
+      tags: ["Project Management", "TypeScript", "DevOps"],
     },
     {
       company: "Cortek",
@@ -94,17 +113,18 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
       url: "https://github.com/t1enne/formbaker",
     },
     {
-      title: "ATM UI Framework",
-      period: "2024–presente",
-      technologies: ["React", "TypeScript", "Vite", "Vitest", "Playwright", "Docker", "Git", "Jenkins"],
-      description:
-        "Libreria UI usata su 600.000+ dispositivi. Migrato il progetto da JSP + JS in TS, con architettura modulare ad eventi multi-tenant, con componenti TSX con custom lifecycle hooks.",
-      closedSource: true,
-    },
-    {
       title: "Industria 4.0",
       period: "2023–2024",
-      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "TypeScript", "Modbus", "Opcua", "Docker"],
+      technologies: [
+        "Angular",
+        "Nest.js",
+        "TypeORM",
+        "PostgreSQL",
+        "TypeScript",
+        "Modbus",
+        "Opcua",
+        "Docker",
+      ],
       description:
         "Costruito dashboard + analytics integrando device IOT tramite protocolli modbus e opcua.",
       closedSource: true,
