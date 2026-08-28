@@ -1,7 +1,6 @@
 ---
 import type { ResumeI18n, NavLabels } from "../i18n/types";
 import BaseHead from "./BaseHead.astro";
-import IconButton from "./IconButton.astro";
 import Nav from "./Nav.astro";
 import WorkExperienceItem from "./WorkExperienceItem.astro";
 import EducationItem from "./EducationItem.astro";
@@ -10,7 +9,6 @@ import ProjectItem from "./ProjectItem.astro";
 import LanguageItem from "./LanguageItem.astro";
 import SkillsSection from "./SkillsSection.astro";
 import ResumeJsonLd from "./ResumeJsonLd.astro";
-import { Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
 import { SITE_TITLE, SITE_DESCRIPTION, NAME, JOB_TITLE } from "../consts";
 
 interface Props {
@@ -27,10 +25,7 @@ const email = "nasir.taov@gmail.com";
 const phone = "+39 328 1934728";
 const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
-const contactItems = [
-  { href: `mailto:${email}`, icon: Mail, label: `mail: ${email}` },
-  { href: `tel:${phone.replace(/\s/g, "")}`, icon: Phone, label: `phone: ${phone}` },
-];
+
 ---
 
 <!DOCTYPE html>
@@ -50,7 +45,7 @@ const contactItems = [
   <body class="print:bg-white text-ink">
     <Nav lang={lang} nav={navLabels} active="resume" name={NAME} title={jobTitle} />
     <main
-      class="p-6 max-w-3xl mx-auto my-2 text-base print:bg-white print:p-8 print:my-0"
+      class="p-6 max-w-3xl mx-auto my-4 text-base print:bg-white print:p-8 print:my-0"
       itemscope
       itemtype="https://schema.org/Person"
     >
@@ -61,21 +56,6 @@ const contactItems = [
       <!-- Header -->
       <div class="flex items-center justify-between">
         <div class="pr-4 print:w-full print:pr-0">
-          <div class="flex items-center gap-2 print:hidden">
-            {contactItems.map((item) => (
-              <IconButton href={item.href}><item.icon size={18} /></IconButton>
-            ))}
-            <IconButton href={linkedinUrl} target="_blank"><Linkedin size={18} /></IconButton>
-            <IconButton href="https://github.com/t1enne" target="_blank" title="GitHub"
-              ><Github size={18} /></IconButton
-            >
-            <IconButton onclick="window.print()" title="Press to print"
-              ><Printer size={18} /></IconButton
-            >
-						<IconButton href={`/resume-${lang}.pdf`} title="Download PDF"
-              ><FileText size={18} /></IconButton
-            >
-          </div>
 
           <div class="hidden print:flex print:items-start print:justify-between print:gap-8 print:pb-3 print:mb-3 print:border-b-2 print:border-line">
             <div class="shrink-0">
@@ -110,15 +90,13 @@ const contactItems = [
         <h1 class="sr-only print:hidden">{NAME}</h1>
       </div>
 
-			<div class="mb-10"></div>
-
       <!-- Summary -->
-      <section aria-labelledby="about-heading" class="mb-12">
-        <h2 id="about-heading" class="font-bold text-2xl print:text-lg mb-6">{t.aboutTitle}</h2>
-        <p class="text-muted text-sm leading-relaxed" itemprop="description">
+
+      <header class="mb-10">
+        <p class="text-muted font-mono text-sm leading-relaxed max-w-2xl">
           {t.aboutContent}
         </p>
-      </section>
+      </header>
 
       <!-- Work Experience -->
       <section aria-labelledby="work-heading" class="mb-12">

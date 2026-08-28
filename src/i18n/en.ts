@@ -15,7 +15,7 @@ const en: ResumeI18n & {
   labels: {
     aboutTitle: "Professional Summary",
     aboutContent:
-      "Senior full-stack developer and technical lead who designed a custom UI framework powering 600,000+ ATMs at a leading European bank. Led focused, high-output teams of engineers as the bridge between business and development, cutting CI pipeline time by 40% and production incidents by 30%. Polyglot across React, Angular, NestJS, TypeScript, Rust, Go, and Python, with product sense built across banking, e-commerce, luxury retail, and open source. Recently shipping a pure-functional quant backtesting toolkit and an open-source conditional form engine (FormBaker). Native-level collaboration in English, Italian, Russian, and French.",
+      "Senior full-stack developer and technical lead. Designed a UI framework powering 600,000+ ATMs at a leading European bank, bridging business and engineering. Shipped an open-source form engine (FormBaker) and a quant backtesting toolkit. Strong DevOps skills (Docker, CI/CD, Linux) and full-stack depth across React, Angular, Node, Rust, Go, Python. Collaborative, fluent in Italian, English, Russian, and French.",
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",

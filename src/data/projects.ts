@@ -82,7 +82,13 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       category: "Quantitative Trading",
       description:
         "Composable quantitative trading toolkit: IBKR market-data sync, technical indicators (Kalman filters, HMM regime detection), and a pure-functional backtesting engine. JSON-configurable CLI workflows with walk-forward IS/OOS validation, hyperparameter sweep/optimize, and multiprocessing.",
-      technologies: ["Python", "IBKR REST API", "pandas", "Backtesting", "Multiprocessing"],
+      technologies: [
+        "Python",
+        "IBKR REST API",
+        "pandas",
+        "Backtesting",
+        "Multiprocessing",
+      ],
       highlights: [
         "Pure-functional backtest engine with immutable state",
         "Walk-forward IS/OOS validation & param sweep/optimize",
@@ -180,7 +186,13 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       category: "Trading Quantitativo",
       description:
         "Toolkit quantitativo componibile per trading: sincronizzazione dati IBKR, indicatori tecnici (filtri di Kalman, rilevamento regime HMM) e un motore di backtesting puramente funzionale. Workflow CLI configurabili in JSON con validazione IS/OOS walk-forward, sweep/ottimizzazione degli iperparametri e multiprocessing.",
-      technologies: ["Python", "IBKR REST API", "pandas", "Backtesting", "Multiprocessing"],
+      technologies: [
+        "Python",
+        "IBKR REST API",
+        "pandas",
+        "Backtesting",
+        "Multiprocessing",
+      ],
       highlights: [
         "Motore di backtest puramente funzionale con stato immutabile",
         "Validazione IS/OOS walk-forward & sweep/ottimizzazione parametri",
@@ -278,7 +290,13 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       category: "Trading Quantitatif",
       description:
         "Toolkit de trading quantitatif composable : synchronisation de données IBKR, indicateurs techniques (filtres de Kalman, détection de régime HMM) et moteur de backtesting purement fonctionnel. Workflows CLI configurables en JSON avec validation IS/OOS walk-forward, balayage/optimisation d'hyperparamètres et multiprocessing.",
-      technologies: ["Python", "IBKR REST API", "pandas", "Backtesting", "Multiprocessing"],
+      technologies: [
+        "Python",
+        "IBKR REST API",
+        "pandas",
+        "Backtesting",
+        "Multiprocessing",
+      ],
       highlights: [
         "Moteur de backtest purement fonctionnel à état immuable",
         "Validation IS/OOS walk-forward & balayage/optimisation de paramètres",

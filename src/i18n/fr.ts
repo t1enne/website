@@ -15,7 +15,7 @@ const fr: ResumeI18n & {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
-      "Développeur full-stack senior et lead technique, auteur d'un framework UI sur mesure utilisé par plus de 600 000 ATMs au sein d'une grande banque européenne. J'ai dirigé des équipes ciblées et très performantes en tant que pont entre le métier et le développement, réduisant le temps de pipeline CI de 40 % et les incidents de production de 30 %. Polyglotte en React, Angular, NestJS, TypeScript, Rust, Go et Python, avec une vision produit forgée dans les secteurs bancaire, e-commerce, du luxe et de l'open source. Récemment, je livre aussi un toolkit de backtesting quantitatif purement fonctionnel et FormBaker, un moteur de formulaires conditionnels open source. Collaboration de niveau natif en anglais, italien, russe et français.",
+      "Développeur full-stack senior et lead technique. J'ai conçu un framework UI utilisé par plus de 600 000 ATMs au sein d'une grande banque européenne, en servant de pont entre le métier et le développement. J'ai publié un moteur de formulaires open source (FormBaker) et un toolkit de backtesting quant. Solides compétences DevOps (Docker, CI/CD, Linux) et profondeur full-stack en React, Angular, Node, Rust, Go et Python. Collaboratif, courant en français, italien, russe et anglais.",
     workTitle: "Expérience Professionnelle",
     educationTitle: "Formation",
     educationScore: "Note",

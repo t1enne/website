@@ -2,6 +2,8 @@
 import type { NavLabels } from "../i18n/types";
 import ThemeToggle from "./ThemeToggle.astro";
 import LangToggle from "./LangToggle.astro";
+import { Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
+import IconButton from "./IconButton.astro";
 
 interface Props {
   lang: "en" | "it" | "fr";
@@ -12,6 +14,10 @@ interface Props {
 }
 
 const { lang, nav, active = "resume", name, title } = Astro.props;
+
+const email = "nasir.taov@gmail.com";
+const phone = "+39 328 1934728";
+const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
 const links = [
   { key: "resume", label: nav.resume, href: `/${lang}/` },
@@ -26,42 +32,65 @@ const langLinks = [
   { code: "it", href: `/it${pathSegment}/`, label: "Italiano" },
   { code: "fr", href: `/fr${pathSegment}/`, label: "Français" },
 ];
+
+const contactItems = [
+  { href: `mailto:${email}`, icon: Mail, label: `mail: ${email}` },
+  { href: `tel:${phone.replace(/\s/g, "")}`, icon: Phone, label: `phone: ${phone}` },
+];
 ---
 
 <nav
-  class="print:hidden max-w-3xl mx-auto mt-8 px-6 flex flex-col gap-5"
+  class="print:hidden max-w-3xl mx-auto mt-8 px-6 flex flex-col gap-4"
   aria-label="Main navigation"
 >
 
   <div class="w-full flex items-center justify-between gap-4">
-    <div class="flex flex-col">
-      <span class="font-bold text-lg leading-tight">{name}</span>
-      <span class="text-sm text-muted font-mono">{title}</span>
-    </div>
-
-    <div class="flex items-center gap-2">
+		<div class="flex items-center gap-4">
       <img
         src="/self-ascii.png"
         class="nav-avatar h-14 w-14 rounded-full object-cover"
         alt=""
       />
+    <div class="flex flex-col">
+      <span class="font-bold text-lg leading-tight">{name}</span>
+      <span class="text-sm text-muted font-mono">{title}</span>
+    </div>
+    </div>
+
+    <div class="flex items-center gap-2">
       <div class="flex items-center gap-2">
-        <ThemeToggle />
         <LangToggle lang={lang} links={langLinks} />
+        <ThemeToggle />
       </div>
     </div>
   </div>
 
-  <div class="w-full flex justify-between">
-    <ul class="flex flex-wrap items-center gap-1 text-sm font-mono">
+	<div class="flex items-center gap-2 print:hidden">
+		{contactItems.map((item) => (
+			<IconButton href={item.href}><item.icon size={18} /></IconButton>
+		))}
+		<IconButton href={linkedinUrl} target="_blank"><Linkedin size={18} /></IconButton>
+		<IconButton href="https://github.com/t1enne" target="_blank" title="GitHub"
+			><Github size={18} /></IconButton
+		>
+		<IconButton onclick="window.print()" title="Press to print"
+			><Printer size={18} /></IconButton
+		>
+		<IconButton href={`/resume-${lang}.pdf`} title="Download PDF"
+			><FileText size={18} /></IconButton
+		>
+	</div>
+
+  <div class="w-full flex justify-between mt-2">
+    <ul class="flex flex-wrap items-center gap-4 text-sm">
       {links.map((link) => (
         <li>
           <a
             href={link.href}
-            class={`px-2 py-1 rounded-md transition border ${
+            class={`px-1 pb-0.5 transition text-md border-b-2 ${
               active === link.key
-                ? "bg-soft border-line text-primary"
-                : "border-transparent text-muted hover:text-ink hover:bg-soft"
+                ? "border-primary text-primary"
+                : "border-transparent text-muted hover:text-primary hover:border-primary"
             }`}
             aria-current={active === link.key ? "page" : undefined}
           >
