@@ -1,4 +1,5 @@
 import type { Alpine } from "alpinejs";
+import type { ThemeMode } from "./theme";
 import { applyTheme, storeTheme, readTheme } from "./theme";
 
 /**
@@ -13,8 +14,13 @@ export default (Alpine: Alpine) => {
   document.addEventListener("astro:page-load", applyTheme);
 
   Alpine.data("themeStore", () => ({
-    mode: "system",
+    mode: "system" as ThemeMode | "system",
     open: false,
+
+    // Media query listening for OS-level scheme changes (system mode).
+    media: null as MediaQueryList | null,
+    // Bound change listener, torn down on navigation.
+    onMediaChange: null as ((e: MediaQueryListEvent) => void) | null,
 
     // Human-readable label used for aria-label / title on the trigger.
     get a11yLabel() {
@@ -34,14 +40,14 @@ export default (Alpine: Alpine) => {
       this.media.addEventListener("change", this.onMediaChange);
 
       // Keep <html> in sync when the mode changes via the store.
-      this.$watch("mode", (val) => this.apply());
+      this.$watch("mode", () => this.apply());
     },
 
     apply() {
       applyTheme();
     },
 
-    setMode(mode) {
+    setMode(mode: ThemeMode) {
       this.mode = mode;
       storeTheme(mode);
       applyTheme();

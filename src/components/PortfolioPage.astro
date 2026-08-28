@@ -57,7 +57,7 @@ const t = i18n.labels;
                 {project.category}
               </p>
               <p class="text-muted text-sm leading-relaxed mb-4">{project.description}</p>
-              {project.highlights.length > 0 && (
+              {project.highlights && project.highlights.length > 0 && (
                 <ul class="space-y-1.5 mb-4">
                   {project.highlights.map((hl) => (
                     <li class="flex items-start gap-2 text-sm">
