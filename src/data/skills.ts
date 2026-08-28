@@ -19,7 +19,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "Backend",
-    skills: ["Node.js", "NestJS", "Python", "Rust", "Go", "F#"],
+    skills: ["Node.js", "NestJS", "Python"],
   },
   {
     category: "Databases",

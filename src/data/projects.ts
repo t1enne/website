@@ -62,7 +62,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       showOnResume: true,
     },
     {
-      title: "nSwarwm",
+      title: "nSwarm",
       period: "2026–present",
       category: "Open Source / AI Orchestration",
       description:
@@ -166,7 +166,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       showOnResume: true,
     },
     {
-      title: "nSwarwm",
+      title: "nSwarm",
       period: "2026–presente",
       category: "Open Source / Orchestrazione AI",
       description:
@@ -270,7 +270,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       showOnResume: true,
     },
     {
-      title: "nSwarwm",
+      title: "nSwarm",
       period: "2026–présent",
       category: "Open Source / Orchestration IA",
       description:

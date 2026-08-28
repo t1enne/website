@@ -15,7 +15,7 @@ const en: ResumeI18n & {
   labels: {
     aboutTitle: "Professional Summary",
     aboutContent:
-      "Senior full-stack developer and technical lead. Designed a UI framework powering 600,000+ ATMs at a leading European bank, bridging business and engineering. Shipped an open-source form engine (FormBaker) and a quant backtesting toolkit. Strong DevOps skills (Docker, CI/CD, Linux) and full-stack depth across React, Angular, Node, Rust, Go, Python. Collaborative, fluent in Italian, English, Russian, and French.",
+      "Senior full-stack developer and tech lead with 5+ years building software end to end. I've worked on a UI framework that runs on 600,000+ ATMs at a European bank, and shipped an open-source form engine (FormBaker) and a quant backtesting toolkit. Day to day I work in TypeScript, React, Angular, Node, and Python, with Docker and Linux close by. Fluent in English, French, Italian, and Russian. I prefer boring solutions that keep working.",
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",
@@ -38,12 +38,12 @@ const en: ResumeI18n & {
       location: "Padua, Italy",
       title: "Full Stack Developer",
       description: `
-- Technical lead accountable for full SDLC (requirements, sprint planning, delivery) for focused high-output teams, as the primary liaison between business stakeholders and engineering
-- Reduced CI pipeline time by 40% through build process optimization and containerization
-- Containerized applications using Docker and set up on-premise Jenkins CI/CD pipelines
-- Reduced production incidents by 30% through comprehensive testing and code review processes
-- Delivered an on-site frontend-architect engagement at Nexi Group (see below)
-- Designed performance-critical services in Rust and Go alongside TypeScript stacks`,
+- Technical lead for a focused team, owning the full cycle from requirements to delivery
+- Main bridge between business stakeholders and engineering
+- Containerized applications with Docker and set up the on-premise Jenkins CI/CD pipeline
+- Cleaned up the build process so CI stops being the bottleneck
+- On-site frontend-architect engagement at Nexi Group (see below)
+- TypeScript and Node across the stack, from UI to services`,
       dates: "Mar 2022 – Present",
       tags: [
         "Angular",
@@ -73,11 +73,11 @@ const en: ResumeI18n & {
       company: "Cortek",
       location: "Perugia, Italy",
       title: "Full Stack Developer",
-      description: `- Orchestrated e-commerce infrastructure primarily leveraging the Shopify platform
-- Built Node.js and Next.js tools for daily operations including CSV-to-SQL data migration pipelines
-- Developed frontend applications for retail stores with real-time integration to cash register systems
-- Increased conversion rates by 15% through strategic content creation for Amazon and Meta platforms
-- Reduced data processing time by 60% through automated ETL pipeline implementation`,
+      description: `- Ran e-commerce infrastructure, largely on Shopify
+- Built Node.js and Next.js tools for daily operations, including CSV-to-SQL data migrations
+- Frontend apps for retail stores with live integration to the cash register systems
+- Content strategy for Amazon and Meta marketplaces
+- Automated ETL pipelines to get store data from CSV into PostgreSQL`,
       dates: "Jan 2020 – Feb 2022",
       tags: ["Node.js", "Next.js", "React", "PostgreSQL", "MongoDB", "AWS"],
     },
@@ -85,12 +85,12 @@ const en: ResumeI18n & {
       company: "Brunello Cucinelli",
       location: "Solomeo, Italy",
       title: "Boutique Coordinator & CRM Specialist",
-      description: `- Self-taught pivot into software: automated daily retail operations, the technical foundation that launched a full-stack engineering career
-- Created AS400 and Salesforce CRM automations for daily activities.
-- Provided technical support for point-of-sale systems and inventory management
-- Conducted private tours of production facilities for Forbes-listed clients in Italian, English, Russian, and French
-- Implemented visual merchandising guidelines and coordinated restocking logistics with store manager
-- Increased client retention by 20% through personalized CRM management and luxury service delivery`,
+      description: `- Self-taught pivot into software: automated daily retail operations with scripts, which kicked off my engineering career
+- Built AS400 and Salesforce CRM automations for day-to-day work
+- Technical support for point-of-sale systems and inventory management
+- Led private tours of the production facilities in Italian, English, Russian, and French
+- Handled visual merchandising and coordinated restocking with the store manager
+- Looked after client relationships through personal CRM management and store service`,
       dates: "Mar 2017 – Dec 2019",
       tags: ["AS400", "Salesforce", "Retail Operations", "CRM"],
     },
@@ -138,7 +138,7 @@ const en: ResumeI18n & {
     labels: {
       pageTitle: "Services",
       intro:
-        "From full-stack architecture to performance tuning and team mentoring, I help teams ship reliable software that scales. Available for freelance projects, long-term engagements, and technical consulting.",
+        "Full-stack architecture, performance tuning, team mentoring. I build software that keeps working, and I'm available for freelance projects, longer engagements, and consulting.",
       title: "What I offer",
       deliverablesLabel: "Deliverables",
       cta: "Get in touch",
@@ -146,24 +146,24 @@ const en: ResumeI18n & {
       processTitle: "How I work",
       process: [
         {
-          title: "Discover",
+          title: "Talk before code",
           description:
-            "We align on goals, constraints, and the shape of the product before writing code.",
+            "Let's talk before anything gets built. I want to understand what actually matters to you - the budget, the goals, the parts that scare you. Sometimes the honest answer is that you shouldn't build it yet, and I'd rather say that now than after you've paid for it.",
         },
         {
-          title: "Design",
+          title: "Resilient",
           description:
-            "I map the architecture, data model, and tooling to the problem - not the other way around.",
+            "I spent years building software that runs on 600,000+ ATMs. When downtime isn't an option, you learn to design for reliability from the start instead of discovering problems in production.",
         },
         {
-          title: "Build & iterate",
+          title: "Small pieces, shown as I go",
           description:
-            "Short feedback loops with tests and reviews at every step, keeping quality and momentum.",
+            "I ship in small chunks and show my work continuously, so you can see things working and change direction while it's cheap. No big reveals, no surprises at the end.",
         },
         {
-          title: "Ship & support",
+          title: "I stick around after launch",
           description:
-            "I release in small batches and stay available to harden, monitor, and scale what we built.",
+            "When the project ships I don't vanish. I monitor it, fix what breaks, and write things down so the people who take it over can actually understand and run it.",
         },
       ],
     },
@@ -172,19 +172,19 @@ const en: ResumeI18n & {
         icon: "LayoutGrid",
         title: "Full Stack Web Development",
         description:
-          "End-to-end product development: modern frontends with React & Angular, and robust backends with Node.js, NestJS, Rust, and Go.",
+          "Modern frontends with React & Angular, and backends in Node.js and NestJS (TypeScript).",
         features: [
           "Web & SaaS apps, dashboards, and APIs",
           "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB, and efficient data modeling",
-          "Rust & Go for performance-critical services",
+          "PostgreSQL, MongoDB, and data modeling",
+          "Python for tooling, automation, and data work",
         ],
       },
       {
         icon: "Cpu",
         title: "System Architecture & DevOps",
         description:
-          "Designing scalable, maintainable systems and the pipelines that keep them healthy. I reduce build times, stabilize deployments, and lower incident counts.",
+          "Systems that stay up, and pipelines that keep them healthy. I focus on fast builds, stable deployments, and fewer production surprises.",
         features: [
           "Architecture reviews & modernization",
           "CI/CD pipelines (Jenkins, GitHub Actions)",
@@ -196,7 +196,7 @@ const en: ResumeI18n & {
         icon: "Smartphone",
         title: "Mobile & Embedded Frontends",
         description:
-          "Battle-tested on 600,000+ ATMs in production. I specialize in constrained, high-security, event-driven UIs that demand reliability at scale.",
+          "Runs on 600,000+ ATMs in production. I build constrained, high-security, event-driven UIs that need to keep working at scale.",
         features: [
           "Custom UI frameworks & design systems",
           "Event-driven, offline-capable interfaces",
@@ -208,7 +208,7 @@ const en: ResumeI18n & {
         icon: "Users",
         title: "Team Leadership & Mentoring",
         description:
-          "I've led focused, high-output teams as the bridge between business and engineering. I level up developers, tighten code review, and keep delivery on track.",
+          "I've led small, focused teams as the bridge between business and engineering. I mentor, review code, and keep delivery moving.",
         features: [
           "Technical lead & mentoring",
           "Code review and engineering standards",
@@ -222,7 +222,7 @@ const en: ResumeI18n & {
     labels: {
       pageTitle: "Portfolio",
       intro:
-        "A selection of products and tools I've designed and shipped across banking, e-commerce, industrial IoT, and open source.",
+        "Products and tools I've built across banking, e-commerce, industrial IoT, and open source.",
       title: "Selected work",
       projectCount: "projects",
       cta: "Get in touch",

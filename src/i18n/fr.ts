@@ -15,7 +15,7 @@ const fr: ResumeI18n & {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
-      "Développeur full-stack senior et lead technique. J'ai conçu un framework UI utilisé par plus de 600 000 ATMs au sein d'une grande banque européenne, en servant de pont entre le métier et le développement. J'ai publié un moteur de formulaires open source (FormBaker) et un toolkit de backtesting quant. Solides compétences DevOps (Docker, CI/CD, Linux) et profondeur full-stack en React, Angular, Node, Rust, Go et Python. Collaboratif, courant en français, italien, russe et anglais.",
+      "Développeur full-stack senior et lead technique avec plus de 5 ans d'expérience à construire des logiciels de bout en bout. J'ai travaillé sur un framework UI qui tourne sur plus de 600 000 ATMs dans une banque européenne, et j'ai publié un moteur de formulaires open source (FormBaker) et un toolkit de backtesting quant. Au quotidien, je travaille en TypeScript, React, Angular, Node et Python, avec Docker et Linux à portée de main. Courant en français, italien, russe et anglais. Je préfère les solutions simples qui continuent de fonctionner.",
     workTitle: "Expérience Professionnelle",
     educationTitle: "Formation",
     educationScore: "Note",
@@ -38,14 +38,12 @@ const fr: ResumeI18n & {
       location: "Padoue, Italie",
       title: "Développeur Full Stack",
       description: `
-- Conçu une architecture micro-frontend desservant plus de 600 ATM, réduisant le temps de chargement de 25 %
-- Assuré le rôle d'interlocuteur technique principal avec le chef de projet du client, facilitant la communication entre les équipes métier et ingénierie
-- Lead technique responsable de l'ensemble du SDLC pour des équipes ciblées et très performantes, en tant que point de contact principal entre les parties prenantes métier et l'ingénierie
-- Réduit le temps de pipeline CI de 40 % grâce à l'optimisation des processus de build et à la conteneurisation
-- Conteneurisé les applications avec Docker et mis en place des pipelines CI/CD Jenkins on-premise
-- Réduit les incidents en production de 30 % grâce à des processus rigoureux de test et de revue de code
-- Livré une mission d'architecte frontend sur site chez Nexi Group (voir ci-dessous)
-- Conçu des services critiques en termes de performance en Rust et Go en complément des stacks TypeScript`,
+- Lead technique pour une équipe ciblée, responsable de tout le cycle, des exigences à la livraison
+- Principal interlocuteur entre les parties prenantes métier et l'ingénierie
+- Conteneurisé les applications avec Docker et mis en place la pipeline CI/CD Jenkins on-premise
+- Nettoyé le processus de build pour que la CI ne soit plus le goulot d'étranglement
+- Mission d'architecte frontend sur site chez Nexi Group (voir ci-dessous)
+- TypeScript et Node à travers la stack, de l'interface aux services`,
       dates: "Mars 2022 – Présent",
       tags: [
         "Angular",
@@ -74,11 +72,11 @@ const fr: ResumeI18n & {
       company: "Cortek",
       location: "Pérouse, Italie",
       title: "Développeur Full Stack",
-      description: `- Orchestré l'infrastructure e-commerce principalement via la plateforme Shopify
-- Créé des outils Node.js et Next.js pour les opérations quotidiennes, incluant des pipelines de migration CSV vers SQL
-- Développé des applications frontend pour des magasins avec intégration en temps réel aux systèmes de caisse
-- Augmenté les taux de conversion de 15 % grâce à la création stratégique de contenu pour Amazon et Meta
-- Réduit le temps de traitement des données de 60 % grâce à l'implémentation de pipelines ETL automatisés`,
+      description: `- Géré l'infrastructure e-commerce, principalement via Shopify
+- Créé des outils Node.js et Next.js pour les opérations quotidiennes, incluant des migrations CSV vers SQL
+- Applications frontend pour des magasins avec intégration en temps réel aux systèmes de caisse
+- Stratégie de contenu pour les places de marché Amazon et Meta
+- Pipelines ETL automatisés pour faire passer les données des magasins du CSV vers PostgreSQL`,
       dates: "Janv. 2020 – Févr. 2022",
       tags: ["Node.js", "Next.js", "React", "PostgreSQL", "MongoDB", "AWS"],
     },
@@ -86,12 +84,12 @@ const fr: ResumeI18n & {
       company: "Brunello Cucinelli",
       location: "Solomeo, Italie",
       title: "Coordinateur de Boutique & Spécialiste CRM",
-      description: `- Passage auto-didacte vers le logiciel : automatisé les opérations retail quotidiennes, la base technique qui a lancé une carrière d'ingénieur full-stack
-- Créé des automatisations CRM AS400 et Salesforce pour les activités quotidiennes
-- Fourni un support technique pour les systèmes de point de vente et la gestion des stocks
-- Animé des visites privées des installations de production pour des clients Forbes-listed en italien, anglais, russe et français
-- Mis en œuvre les directives de merchandising visuel et coordonné la logistique de réapprovisionnement avec le responsable du magasin
-- Augmenté la fidélisation client de 20 % grâce à une gestion CRM personnalisée et un service de luxe`,
+      description: `- Passage auto-didacte vers le logiciel : j'automatisais les opérations retail quotidiennes avec des scripts, c'est de là que ma carrière d'ingénieur est partie
+- Créé des automatisations CRM AS400 et Salesforce pour le travail quotidien
+- Support technique pour les systèmes de point de vente et la gestion des stocks
+- Animé des visites privées des installations de production en italien, anglais, russe et français
+- Géré le merchandising visuel et coordonné les réapprovisionnements avec le responsable du magasin
+- Suivi les relations clients via une gestion CRM personnelle et le service en boutique`,
       dates: "Mars 2017 – Déc. 2019",
       tags: ["AS400", "Salesforce", "Retail Operations", "CRM"],
     },
@@ -139,7 +137,7 @@ const fr: ResumeI18n & {
     labels: {
       pageTitle: "Services",
       intro:
-        "De l'architecture full-stack à l'optimisation des performances et au mentorat d'équipe, j'aide les équipes à livrer des logiciels fiables qui passent à l'échelle. Disponible pour des projets freelance, des collaborations à long terme et du conseil technique.",
+        "Architecture full-stack, optimisation des performances, mentorat d'équipe. Je construis des logiciels qui continuent de fonctionner, et je suis disponible pour des projets freelance, des collaborations plus longues et du conseil.",
       title: "Ce que je propose",
       deliverablesLabel: "Livrables",
       cta: "Contactez-moi",
@@ -147,24 +145,24 @@ const fr: ResumeI18n & {
       processTitle: "Comment je travaille",
       process: [
         {
-          title: "Découverte",
+          title: "On parle avant le code",
           description:
-            "Nous alignons objectifs, contraintes et forme du produit avant d'écrire le moindre code.",
+            "Avant de construire quoi que ce soit, parlons. Je veux comprendre ce qui compte vraiment pour vous : le budget, les objectifs, les parties qui vous inquiètent. Parfois la réponse honnête, c'est que vous ne devriez pas encore construire, et je préfère vous le dire tout de suite plutôt qu'après avoir payé.",
         },
         {
-          title: "Conception",
+          title: "Conçu pour tenir le coup",
           description:
-            "Je mappe l'architecture, le modèle de données et les outils au problème - pas l'inverse.",
+            "J'ai passé des années à construire des logiciels qui tournent sur plus de 600 000 ATMs. Quand l'arrêt n'est pas une option, on apprend à concevoir pour la fiabilité dès le départ, au lieu de découvrir les problèmes en production.",
         },
         {
-          title: "Développement & itération",
+          title: "Par petits pas, toujours visibles",
           description:
-            "Boucles de feedback courtes avec tests et revues à chaque étape, en gardant qualité et rythme.",
+            "Je vous livre en petites tranches et je vous montre le travail au fur et à mesure : vous voyez les choses fonctionner et vous changez de cap tant que c'est encore peu coûteux. Pas de grande révélation, pas de surprise après le lancement.",
         },
         {
-          title: "Livraison & support",
+          title: "Je reste après le lancement",
           description:
-            "Je publie par petits lots et reste disponible pour durcir, surveiller et faire évoluer ce que nous avons construit.",
+            "Quand le projet part, je ne disparais pas. Je surveille, je répare ce qui casse et je documente tout, pour que ceux qui reprennent le projet puissent réellement le comprendre et le faire tourner.",
         },
       ],
     },
@@ -173,19 +171,19 @@ const fr: ResumeI18n & {
         icon: "LayoutGrid",
         title: "Développement Web Full Stack",
         description:
-          "Développement produit de bout en bout : des frontends modernes en React et Angular, et des backends robustes en Node.js, NestJS, Rust et Go.",
+          "Des frontends modernes en React et Angular, des backends en Node.js et NestJS (TypeScript).",
         features: [
           "Applications web & SaaS, tableaux de bord et API",
           "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB et modélisation de données efficace",
-          "Rust & Go pour les services critiques en performance",
+          "PostgreSQL, MongoDB et modélisation de données",
+          "Python pour l'outillage, l'automatisation et les données",
         ],
       },
       {
         icon: "Cpu",
         title: "Architecture & DevOps",
         description:
-          "Conception de systèmes scalables et maintenables ainsi que des pipelines qui les gardent stables. Je réduis les temps de build, stabilise les déploiements et fais baisser les incidents.",
+          "Systèmes qui restent debout, et pipelines qui les gardent en bonne santé. Je mise sur des builds rapides, des déploiements stables et moins de surprises en production.",
         features: [
           "Revues d'architecture & modernisation",
           "Pipelines CI/CD (Jenkins, GitHub Actions)",
@@ -197,7 +195,7 @@ const fr: ResumeI18n & {
         icon: "Smartphone",
         title: "Frontends Mobile & Embarqués",
         description:
-          "Éprouvé en production sur plus de 600 000 ATM. Je me spécialise dans les interfaces événementielles contraintes et hautement sécurisées, fiables à grande échelle.",
+          "Tourne sur plus de 600 000 ATM en production. Je construis des interfaces événementielles contraintes et hautement sécurisées, qui doivent continuer de fonctionner à grande échelle.",
         features: [
           "Frameworks UI personnalisés & design systems",
           "Interfaces événementielles, compatibles hors-ligne",
@@ -209,7 +207,7 @@ const fr: ResumeI18n & {
         icon: "Users",
         title: "Leadership d'Équipe & Mentorat",
         description:
-          "J'ai dirigé des équipes ciblées et très performantes en tant que pont entre le métier et l'ingénierie. Je fais progresser les développeurs, renforce la revue de code et maintient la livraison dans les délais.",
+          "J'ai dirigé de petites équipes ciblées en tant que pont entre le métier et l'ingénierie. Je fais du mentorat, je révise le code et je garde la livraison en mouvement.",
         features: [
           "Lead technique & mentorat",
           "Revue de code et standards d'ingénierie",
@@ -223,7 +221,7 @@ const fr: ResumeI18n & {
     labels: {
       pageTitle: "Portfolio",
       intro:
-        "Une sélection de produits et d'outils que j'ai conçus et livrés dans les secteurs de la banque, du e-commerce, de l'IoT industriel et de l'open source.",
+        "Produits et outils que j'ai construits dans les secteurs de la banque, du e-commerce, de l'IoT industriel et de l'open source.",
       title: "Travaux sélectionnés",
       projectCount: "projets",
       cta: "Contactez-moi",

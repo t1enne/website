@@ -15,7 +15,7 @@ const it: ResumeI18n & {
   labels: {
     aboutTitle: "Profilo Professionale",
     aboutContent:
-      "Sviluppatore full-stack senior e technical lead. Ho progettato un framework UI che alimenta oltre 600.000 ATM presso una delle principali banche europee, facendo da ponte tra business e sviluppo. Ho pubblicato un motore di form open source (FormBaker) e un toolkit di backtesting quant. Ottime competenze DevOps (Docker, CI/CD, Linux) e profondità full-stack in React, Angular, Node, Rust, Go e Python. Collaborativo, fluente in italiano, inglese, russo e francese.",
+      "Sviluppatore full-stack senior e technical lead con oltre 5 anni di esperienza nel costruire software a 360 gradi. Ho lavorato a un framework UI che gira su oltre 600.000 ATM per una banca europea, e ho pubblicato un motore di form open source (FormBaker) e un toolkit di backtesting quant. Nel quotidiano uso TypeScript, React, Angular, Node e Python, con Docker e Linux a portata di mano. Fluente in italiano, inglese, francese e russo. Preferisco soluzioni semplici che continuano a funzionare.",
     workTitle: "Esperienza Professionale",
     educationTitle: "Formazione",
     educationScore: "Voto",
@@ -38,12 +38,12 @@ const it: ResumeI18n & {
       location: "Padova, Italia",
       title: "Sviluppatore Full Stack",
       description: `
-Primo punto di contatto tecnico con il project manager del cliente, facilitando la comunicazione tra business e ingegneria.
-Guida di team focalizzati e ad alte prestazioni attraverso l'intero SDLC (requisiti, sprint planning e delivery), con responsabilità tecnica complessiva e ruolo di punto di contatto principale tra stakeholder di business e ingegneria.
-Ottimizzato processi di build e packaging, riducendo i tempi CI del 40%.
-Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-premise.
-Realizzata un'engagement on-site di architettura frontend presso Nexi Group (vedi sotto).
-Progettati servizi performance-critical in Rust e Go accanto a stack TypeScript.`,
+Technical lead per un team focalizzato, con responsabilità sull'intero ciclo, dai requisiti alla consegna.
+Interfaccia principale tra stakeholder di business e ingegneria.
+Containerizzate applicazioni con Docker e configurata la pipeline Jenkins CI/CD on-premise.
+Sistemato il processo di build così la CI smette di essere il collo di bottiglia.
+Engagement on-site di architettura frontend presso Nexi Group (vedi sotto).
+TypeScript e Node trasversali allo stack, dalla UI ai servizi.`,
       dates: "Mar 2022 – Presente",
       tags: [
         "Angular",
@@ -72,10 +72,11 @@ Creato un bundle custom e un processo di build per la compatibilità IE e severi
       company: "Cortek",
       location: "Perugia, Italia",
       title: "Sviluppatore Full Stack",
-      description: `Orchestrato infrastruttura e-commerce principalmente tramite Shopify.
-Creato tool Node.js e Next.js per operazioni quotidiane incluse pipeline di migrazione CSV-to-SQL.
-Sviluppato applicazioni frontend per negozi retail con integrazione real-time ai sistemi di cassa.
-Guidato strategia content creation per Amazon e Meta, aumentando conversioni del 15%.`,
+      description: `Gestita infrastruttura e-commerce, principalmente tramite Shopify.
+Creati tool Node.js e Next.js per le operazioni quotidiane, incluse migrazioni CSV-SQL.
+App frontend per negozi retail con integrazione live ai sistemi di cassa.
+Strategia contenuti per i marketplace Amazon e Meta.
+Pipelines ETL automatizzate per portare i dati negozio da CSV a PostgreSQL.`,
       dates: "Gen 2020 – Feb 2022",
       tags: ["Node.js", "Next.js", "React", "PostgreSQL", "MongoDB", "AWS"],
     },
@@ -83,11 +84,12 @@ Guidato strategia content creation per Amazon e Meta, aumentando conversioni del
       company: "Brunello Cucinelli",
       location: "Solomeo, Italia",
       title: "Coordinatore di Boutique & CRM Specialist",
-      description: `Transizione autodidatta verso il software: ho automatizzato le operazioni retail quotidiane, le basi tecniche che hanno lanciato una carriera di ingegneria full-stack.
-Creato automazioni di sistemi CRM AS400 e Salesforce per le attività quotidiane.
-Fornito supporto tecnico per sistemi point-of-sale e gestione inventario.
-Condotto visite private degli impianti per clienti Forbes-listed in italiano, inglese, russo e francese.
-Implementato linee guida visual merchandising e coordinato logistica rifornimenti con store manager.`,
+      description: `Transizione autodidatta verso il software: automatizzavo le operazioni retail quotidiane con script, ed è da lì che è partita la mia carriera da ingegnere.
+Create automazioni CRM AS400 e Salesforce per il lavoro di tutti i giorni.
+Supporto tecnico per i sistemi point-of-sale e la gestione inventario.
+Condotte visite private degli impianti in italiano, inglese, russo e francese.
+Gestito visual merchandising e coordinato i rifornimenti con lo store manager.
+Seguiti i rapporti con i clienti attraverso la gestione CRM personale e il servizio in negozio.`,
       dates: "Mar 2017 – Dic 2019",
       tags: ["AS400", "Salesforce", "Retail Operations", "CRM"],
     },
@@ -135,7 +137,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
     labels: {
       pageTitle: "Servizi",
       intro:
-        "Dall'architettura full-stack all'ottimizzazione delle performance e al mentoring di team, aiuto i team a consegnare software affidabile che scala. Disponibile per progetti freelance, collaborazioni a lungo termine e consulenza tecnica.",
+        "Architettura full-stack, ottimizzazione delle performance, mentoring di team. Costruisco software che continua a funzionare, e sono disponibile per progetti freelance, collaborazioni più lunghe e consulenza.",
       title: "Cosa offro",
       deliverablesLabel: "Deliverable",
       cta: "Contattami",
@@ -143,24 +145,24 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
       processTitle: "Come lavoro",
       process: [
         {
-          title: "Scoperta",
+          title: "Parliamone prima di scrivere codice",
           description:
-            "Allineiamo obiettivi, vincoli e forma del prodotto prima di scrivere codice.",
+            "Prima di costruire qualcosa, parliamone. Voglio capire cosa conta davvero per te: il budget, gli obiettivi, le parti che ti preoccupano. A volte la risposta onesta è che non dovresti ancora costruirlo, e preferisco dirtelo subito piuttosto che dopo averlo pagato.",
         },
         {
-          title: "Progettazione",
+          title: "Pensato per non fermarsi",
           description:
-            "Mappo architettura, modello dati e strumenti al problema - non il contrario.",
+            "Ho passato anni a costruire software che funziona su oltre 600.000 ATM. Quando lo stop non è un'opzione, impari a progettare per l'affidabilità fin dall'inizio, invece di scoprire i problemi in produzione.",
         },
         {
-          title: "Sviluppo & iterazione",
+          title: "Piccoli passi, sempre visibili",
           description:
-            "Cicli di feedback brevi con test e revisioni in ogni fase, mantenendo qualità e ritmo.",
+            "Ti consegno in piccoli blocchi e ti mostro il lavoro strada facendo: vedi le cose funzionare e cambi direzione finché è ancora conveniente. Niente grandi annunci, niente sorprese dopo il lancio.",
         },
         {
-          title: "Rilascio & supporto",
+          title: "Resto anche dopo il lancio",
           description:
-            "Pubblico in piccoli batch e resto disponibile per rafforzare, monitorare e scalare ciò che abbiamo costruito.",
+            "Quando il progetto esce non sparisco. Lo monitoro, sistemo ciò che si rompe e lo documento, così chi lo prende in mano riesce davvero a capirlo e a farlo funzionare.",
         },
       ],
     },
@@ -169,19 +171,19 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         icon: "LayoutGrid",
         title: "Sviluppo Web Full Stack",
         description:
-          "Sviluppo di prodotto end-to-end: frontend moderni con React e Angular, e backend robusti con Node.js, NestJS, Rust e Go.",
+          "Frontend moderni con React e Angular, backend in Node.js e NestJS (TypeScript).",
         features: [
           "App web & SaaS, dashboard e API",
           "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB e data modeling efficiente",
-          "Rust & Go per servizi ad alte prestazioni",
+          "PostgreSQL, MongoDB e data modeling",
+          "Python per tooling, automazione e lavoro sui dati",
         ],
       },
       {
         icon: "Cpu",
         title: "Architettura di Sistemi & DevOps",
         description:
-          "Progettazione di sistemi scalabili e manutenibili e delle pipeline che li mantengono stabili. Riduco i tempi di build, stabilizzo i deployment e abbasso gli incidenti.",
+          "Sistemi che restano su, e pipeline che li tengono sani. Punto su build veloci, deployment stabili e meno sorprese in produzione.",
         features: [
           "Revisioni architetturali & modernizzazione",
           "Pipeline CI/CD (Jenkins, GitHub Actions)",
@@ -193,7 +195,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         icon: "Smartphone",
         title: "Frontend Mobile & Embedded",
         description:
-          "Testato in produzione su oltre 600.000 ATM. Specializzato in UI event-driven con vincoli di sicurezza e di risorse, affidabili su larga scala.",
+          "Gira su oltre 600.000 ATM in produzione. Costruisco UI event-driven con vincoli di sicurezza e risorse, che devono continuare a funzionare su larga scala.",
         features: [
           "Framework UI custom & design system",
           "Interfacce event-driven e offline-ready",
@@ -205,7 +207,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         icon: "Users",
         title: "Leadership di Team & Mentoring",
         description:
-          "Ho guidato team focalizzati e ad alte prestazioni come ponte tra business e ingegneria. Faccio crescere gli sviluppatori, stringo la code review e tengo la delivery nei tempi.",
+          "Ho guidato team piccoli e focalizzati come ponte tra business e ingegneria. Faccio mentoring, rivedo il codice e tengo la delivery in movimento.",
         features: [
           "Technical lead & mentoring",
           "Code review e standard di ingegneria",
@@ -219,7 +221,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
     labels: {
       pageTitle: "Portfolio",
       intro:
-        "Una selezione di prodotti e strumenti che ho progettato e rilasciato nei settori bancario, e-commerce, IoT industriale e open source.",
+        "Prodotti e strumenti che ho costruito nei settori bancario, e-commerce, IoT industriale e open source.",
       title: "Lavori selezionati",
       projectCount: "progetti",
       cta: "Contattami",
