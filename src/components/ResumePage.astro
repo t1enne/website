@@ -59,13 +59,8 @@ const contactItems = [
       <meta itemprop="telephone" content={phone} />
 
       <!-- Header -->
-      <div class="flex items-center justify-between print:mb-2">
-        <div class="w-full hidden print:block">
-          <span class="block font-bold text-2xl print:text-black">{NAME}</span>
-          <span class="block text-sm text-muted font-medium print:text-base print:text-black">{jobTitle}</span>
-        </div>
-        <h1 class="sr-only print:hidden">{NAME}</h1>
-        <div class="pr-4">
+      <div class="flex items-center justify-between">
+        <div class="pr-4 print:w-full print:pr-0">
           <div class="flex items-center gap-2 print:hidden">
             {contactItems.map((item) => (
               <IconButton href={item.href}><item.icon size={18} /></IconButton>
@@ -81,12 +76,38 @@ const contactItems = [
               ><FileText size={18} /></IconButton
             >
           </div>
-          <!-- Print contact info -->
-          <div class="hidden print:block print:mt-1">
-            <p class="text-xs text-muted">{t.contactLocation}: {t.location} &nbsp;|&nbsp; {t.contactEmail}: {email} &nbsp;|&nbsp; {t.contactPhone}: {phone}</p>
-            <p class="text-xs text-muted">{t.contactLinkedin}: linkedin.com/in/nasir-taov &nbsp;|&nbsp; {t.contactGithub}: github.com/t1enne &nbsp;|&nbsp; {t.citizenshipLabel}: {t.citizenship}</p>
+
+          <div class="hidden print:flex print:items-start print:justify-between print:gap-8 print:pb-3 print:mb-3 print:border-b-2 print:border-line">
+            <div class="shrink-0">
+              <h1 class="font-bold text-2xl text-black">{NAME}</h1>
+              <p class="text-sm text-ink mt-1 font-medium">{jobTitle}</p>
+            </div>
+            <table class="ml-auto border-collapse text-xs">
+              <tbody>
+                <tr>
+                  <td class="font-medium pr-3 text-left align-top whitespace-nowrap">{t.contactLocation}</td>
+                  <td class="text-muted text-left whitespace-nowrap">{t.location}</td>
+                  <td class="font-medium px-3 text-left align-top whitespace-nowrap">{t.contactEmail}</td>
+                  <td class="text-muted text-left whitespace-nowrap">{email}</td>
+                </tr>
+                <tr>
+                  <td class="font-medium pr-3 text-left align-top whitespace-nowrap pt-0.5">{t.contactPhone}</td>
+                  <td class="text-muted text-left whitespace-nowrap pt-0.5">{phone}</td>
+                  <td class="font-medium px-3 text-left align-top whitespace-nowrap pt-0.5">{t.contactGithub}</td>
+                  <td class="text-muted text-left whitespace-nowrap pt-0.5">github.com/t1enne</td>
+                </tr>
+                <tr>
+                  <td class="font-medium pr-3 text-left align-top whitespace-nowrap pt-0.5">{t.contactLinkedin}</td>
+                  <td class="text-muted text-left whitespace-nowrap pt-0.5">linkedin.com/in/nasir-taov</td>
+                  <td class="font-medium px-3 text-left align-top whitespace-nowrap pt-0.5">{t.citizenshipLabel}</td>
+                  <td class="text-muted text-left whitespace-nowrap pt-0.5">{t.citizenship}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+
+        <h1 class="sr-only print:hidden">{NAME}</h1>
       </div>
 
 			<div class="mb-10"></div>

@@ -15,7 +15,7 @@ const it: ResumeI18n & {
   labels: {
     aboutTitle: "Profilo Professionale",
     aboutContent:
-      "Sviluppatore full-stack di livello architetturale, autore di un framework UI su misura che alimenta oltre 600.000 dispositivi presso una delle principali banche europee. Ho guidato team cross-funzionali di 1–4 ingegneri come punto di contatto tecnico principale tra business e sviluppo, riducendo i tempi della pipeline CI del 40% e gli incidenti in produzione del 30%. Ingegnere poliglotta (React, Angular, NestJS, Rust, Go) con visione di prodotto maturata nei settori bancario, e-commerce e luxury retail. Collaborazione a livello nativo in inglese, italiano, russo e francese.",
+      "Sviluppatore full-stack di livello architetturale, autore di un framework UI su misura che alimenta oltre 600.000 ATM presso una delle principali banche europee. Ho guidato team cross-funzionali di 1–4 ingegneri come punto di contatto tecnico principale tra business e sviluppo, riducendo i tempi della pipeline CI del 40% e gli incidenti in produzione del 30%. Ingegnere poliglotta (React, Angular, NestJS, Rust, Go) con visione di prodotto maturata nei settori bancario, e-commerce e luxury retail. Collaborazione a livello nativo in inglese, italiano, russo e francese.",
     workTitle: "Esperienza Professionale",
     educationTitle: "Formazione",
     educationScore: "Voto",
@@ -41,7 +41,9 @@ const it: ResumeI18n & {
 Primo punto di contatto tecnico con il project manager del cliente, facilitando la comunicazione tra business e ingegneria.
 Guidato team di sviluppo (1-4 persone) attraverso l'intero SDLC inclusi requisiti, sprint planning e delivery.
 Ottimizzato processi di build e packaging, riducendo i tempi CI del 40%.
-Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-premise.`,
+Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-premise.
+Realizzata un'engagement on-site di architettura frontend presso Nexi Group (vedi sotto).
+Progettati servizi performance-critical in Rust e Go accanto a stack TypeScript.`,
       dates: "Mar 2022 – Presente",
       tags: [
         "Angular",
@@ -57,12 +59,13 @@ Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-
       company: "Nexi Group",
       location: "Verona, Italia",
       title: "Architetto Frontend",
-      description: `Guidato lo sviluppo frontend di software ATM per una grande banca italiana, distribuito in Europa su 600K ATM.
+      description: `Engagement on-site per conto del cliente, svolto mentre ero assunto presso Raintonic (ho ricevuto ID e hardware Nexi).
+Guidato lo sviluppo frontend di software ATM per una grande banca italiana, distribuito in Europa su 600K+ ATM.
 Migrata l'interfaccia guidata dal backend JSP a una moderna architettura event-driven in TypeScript.
 Sviluppati widget e servizi custom, utilizzabili da un DSL custom basato su JSON.
 Integrazione profonda con l'allocatore KAL esistente degli ATM.
 Creato un bundle custom e un processo di build per la compatibilità IE e severi requisiti di sicurezza.`,
-      dates: "Gen 2022 – Gen 2024",
+      dates: "Mar 2022 – Gen 2024",
       tags: ["Project Management", "TypeScript", "DevOps"],
     },
     {
@@ -82,7 +85,7 @@ Guidato strategia content creation per Amazon e Meta, aumentando conversioni del
       title: "Coordinatore di Boutique & CRM Specialist",
       description: `Creato automazioni di sistemi CRM AS400 e Salesforce per le attività quotidiane.
 Fornito supporto tecnico per sistemi point-of-sale e gestione inventario.
-Condotto visite private degli impianti per clienti Forbes 100 in italiano, inglese, russo e francese.
+Condotto visite private degli impianti per clienti Forbes-listed in italiano, inglese, russo e francese.
 Implementato linee guida visual merchandising e coordinato logistica rifornimenti con store manager.`,
       dates: "Mar 2017 – Dic 2019",
       tags: ["AS400", "Salesforce", "Retail Operations", "CRM"],

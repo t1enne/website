@@ -15,7 +15,7 @@ const fr: ResumeI18n & {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
-      "Développeur full-stack de niveau architecte, auteur d'un framework UI sur mesure utilisé par plus de 600 000 appareils au sein d'une grande banque européenne. J'ai dirigé des équipes transversales de 1–4 ingénieurs en tant qu'interlocuteur technique principal entre le métier et le développement, réduisant le temps de pipeline CI de 40 % et les incidents de production de 30 %. Ingénieur polyglotte (React, Angular, NestJS, Rust, Go) avec une vision produit forgée dans les secteurs bancaire, e-commerce et du luxe. Collaboration de niveau natif en anglais, italien, russe et français.",
+      "Développeur full-stack de niveau architecte, auteur d'un framework UI sur mesure utilisé par plus de 600 000 ATMs au sein d'une grande banque européenne. J'ai dirigé des équipes transversales de 1–4 ingénieurs en tant qu'interlocuteur technique principal entre le métier et le développement, réduisant le temps de pipeline CI de 40 % et les incidents de production de 30 %. Ingénieur polyglotte (React, Angular, NestJS, Rust, Go) avec une vision produit forgée dans les secteurs bancaire, e-commerce et du luxe. Collaboration de niveau natif en anglais, italien, russe et français.",
     workTitle: "Expérience Professionnelle",
     educationTitle: "Formation",
     educationScore: "Note",
@@ -43,7 +43,9 @@ const fr: ResumeI18n & {
 - Encadré des équipes de 1 à 4 développeurs à travers le cycle SDLC complet : spécifications, planification de sprint et livraison
 - Réduit le temps de pipeline CI de 40 % grâce à l'optimisation des processus de build et à la conteneurisation
 - Conteneurisé les applications avec Docker et mis en place des pipelines CI/CD Jenkins on-premise
-- Réduit les incidents en production de 30 % grâce à des processus rigoureux de test et de revue de code`,
+- Réduit les incidents en production de 30 % grâce à des processus rigoureux de test et de revue de code
+- Livré une mission d'architecte frontend sur site chez Nexi Group (voir ci-dessous)
+- Conçu des services critiques en termes de performance en Rust et Go en complément des stacks TypeScript`,
       dates: "Mars 2022 – Présent",
       tags: [
         "Angular",
@@ -59,12 +61,13 @@ const fr: ResumeI18n & {
       company: "Nexi Group",
       location: "Vérone, Italie",
       title: "Architecte Frontend",
-      description: `- Dirigé le développement frontend de logiciels ATM pour une grande banque italienne, déployé en Europe sur 600K ATM
+      description: `- Mission client sur site réalisée pendant mon emploi chez Raintonic (avec ID et matériel Nexi fournis)
+- Dirigé le développement frontend de logiciels ATM pour une grande banque italienne, déployé en Europe sur 600K+ ATM
 - Migré l'interface pilotée par le backend JSP vers une architecture moderne orientée événements en TypeScript
 - Développé des widgets et services personnalisés, utilisables depuis un DSL sur mesure basé sur JSON
 - Intégration approfondie avec la couche KAL existante des ATM
 - Créé un bundle personnalisé et un processus de build pour la compatibilité IE et des exigences de sécurité strictes`,
-      dates: "Janv. 2022 – Janv. 2024",
+      dates: "Mars 2022 – Janv. 2024",
       tags: ["Project Management", "TypeScript", "DevOps"],
     },
     {
@@ -85,7 +88,7 @@ const fr: ResumeI18n & {
       title: "Coordinateur de Boutique & Spécialiste CRM",
       description: `- Créé des automatisations CRM AS400 et Salesforce pour les activités quotidiennes
 - Fourni un support technique pour les systèmes de point de vente et la gestion des stocks
-- Animé des visites privées des installations de production pour des clients Forbes 100 en italien, anglais, russe et français
+- Animé des visites privées des installations de production pour des clients Forbes-listed en italien, anglais, russe et français
 - Mis en œuvre les directives de merchandising visuel et coordonné la logistique de réapprovisionnement avec le responsable du magasin
 - Augmenté la fidélisation client de 20 % grâce à une gestion CRM personnalisée et un service de luxe`,
       dates: "Mars 2017 – Déc. 2019",

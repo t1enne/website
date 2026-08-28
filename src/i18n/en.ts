@@ -15,7 +15,7 @@ const en: ResumeI18n & {
   labels: {
     aboutTitle: "Professional Summary",
     aboutContent:
-      "Architect-level full-stack developer who designed a custom UI framework powering 600,000+ devices at a leading European bank. Led cross-functional teams of 1–4 engineers as the primary technical liaison between business and development, reducing CI pipeline time by 40% and production incidents by 30%. Polyglot engineer (React, Angular, NestJS, Rust, Go) with product sense built across banking, e-commerce, and luxury retail. Native-level collaboration in English, Italian, Russian, and French.",
+      "Architect-level full-stack developer who designed a custom UI framework powering 600,000+ ATMs at a leading European bank. Led cross-functional teams of 1–4 engineers as the primary technical liaison between business and development, reducing CI pipeline time by 40% and production incidents by 30%. Polyglot engineer (React, Angular, NestJS, Rust, Go) with product sense built across banking, e-commerce, and luxury retail. Native-level collaboration in English, Italian, Russian, and French.",
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",
@@ -41,7 +41,9 @@ const en: ResumeI18n & {
 - Managed and mentored teams of 1-4 developers through full SDLC including requirements, sprint planning, and delivery
 - Reduced CI pipeline time by 40% through build process optimization and containerization
 - Containerized applications using Docker and set up on-premise Jenkins CI/CD pipelines
-- Reduced production incidents by 30% through comprehensive testing and code review processes`,
+- Reduced production incidents by 30% through comprehensive testing and code review processes
+- Delivered an on-site frontend-architect engagement at Nexi Group (see below)
+- Designed performance-critical services in Rust and Go alongside TypeScript stacks`,
       dates: "Mar 2022 – Present",
       tags: [
         "Angular",
@@ -57,13 +59,14 @@ const en: ResumeI18n & {
       company: "Nexi Group",
       location: "Verona, Italy",
       title: "Frontend Architect",
-      description: `- Led frontend development of ATM software for a leading Italian bank, deployed across Europe on 600K ATMs
+      description: `- On-site client engagement delivered while employed at Raintonic (issued Nexi ID and hardware)
+- Led frontend development of ATM software for a leading Italian bank, deployed across Europe on 600K+ ATMs
 - Ported JSP backend driven UI to a modern TypeScript event driven architecture
 - Developed custom widgets + services, usable from a custom DSL based on JSON
 - Deep integration with the existing ATM KAL layer
 - Built custom bundle and build process for IE compat and strict security requirements
 `,
-      dates: "Jan 2022 – Jan 2024",
+      dates: "Mar 2022 – Jan 2024",
       tags: ["Project Management", "TypeScript", "DevOps"],
     },
     {
@@ -84,7 +87,7 @@ const en: ResumeI18n & {
       title: "Boutique Coordinator & CRM Specialist",
       description: `- Created AS400 and Salesforce CRM automations for daily activities.
 - Provided technical support for point-of-sale systems and inventory management
-- Conducted private tours of production facilities for Forbes 100 clients in Italian, English, Russian, and French
+- Conducted private tours of production facilities for Forbes-listed clients in Italian, English, Russian, and French
 - Implemented visual merchandising guidelines and coordinated restocking logistics with store manager
 - Increased client retention by 20% through personalized CRM management and luxury service delivery`,
       dates: "Mar 2017 – Dec 2019",
