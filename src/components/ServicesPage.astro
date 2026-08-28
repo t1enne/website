@@ -46,8 +46,8 @@ const iconMap = { LayoutGrid, Cpu, Smartphone, Users } as const;
           {i18n.services.map((service) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap] ?? LayoutGrid;
             return (
-              <li class="border border-gray-200 rounded-lg p-5 flex flex-col">
-                <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-gray-100 text-primary mb-4">
+              <li class="border border-line rounded-lg p-5 flex flex-col">
+                <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-soft text-primary mb-4">
                   <Icon size={20} />
                 </span>
                 <h3 class="font-semibold text-base mb-2">{service.title}</h3>
@@ -88,7 +88,7 @@ const iconMap = { LayoutGrid, Cpu, Smartphone, Users } as const;
       </section>
 
       <!-- CTA -->
-      <section class="mt-12 border border-gray-200 rounded-lg p-6 text-center">
+      <section class="mt-12 border border-line rounded-lg p-6 text-center">
         <a
           href={t.ctaHref}
           class="inline-flex items-center gap-2 font-mono text-sm bg-primary text-primaryFg px-5 py-2.5 rounded-md hover:opacity-90 transition"

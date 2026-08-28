@@ -47,10 +47,10 @@ const contactItems = [
       languages={i18n.languages}
     />
   </head>
-  <body class="print:bg-white">
+  <body class="print:bg-white text-ink">
     <Nav lang={lang} nav={navLabels} active="resume" />
     <main
-      class="p-6 max-w-3xl mx-auto my-8 text-base bg-white print:p-8 print:my-0"
+      class="p-6 max-w-3xl mx-auto my-8 text-base print:bg-white print:p-8 print:my-0"
       itemscope
       itemtype="https://schema.org/Person"
     >
@@ -173,7 +173,7 @@ const contactItems = [
       <!-- Languages -->
       <section aria-labelledby="languages-heading" class="mb-6">
         <h2 id="languages-heading" class="font-bold text-2xl print:text-lg mb-3">{t.langsTitle}</h2>
-        <ul class="w-full divide-y divide-gray-100" itemprop="knowsLanguage">
+        <ul class="w-full divide-y divide-line" itemprop="knowsLanguage">
           {i18n.languages.map((langEntry) => (
             <LanguageItem name={langEntry.name} level={langEntry.level} />
           ))}

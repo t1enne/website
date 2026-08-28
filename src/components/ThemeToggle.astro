@@ -1,0 +1,77 @@
+---
+import { Sun, Moon, Monitor } from "lucide-astro";
+---
+
+<!--
+  Theme switcher. modes: light | dark | system.
+  The Alpine store "theme" is registered globally in BaseHead's script.
+-->
+<div
+  class="relative"
+  x-data="themeStore"
+  x-init="init()"
+  @click.outside="open = false"
+>
+  <button
+    type="button"
+    @click="open = !open"
+    class="p-2 rounded-md border transition cursor-pointer"
+    x-bind:class="open
+      ? 'border-line bg-soft text-ink'
+      : 'border-transparent text-muted hover:text-ink hover:bg-soft'"
+    x-bind:aria-label="a11yLabel"
+    :title="a11yLabel"
+    aria-haspopup="true"
+    x-bind:aria-expanded="open"
+  >
+    <Sun x-cloak x-show="mode === 'light'" size={14} />
+    <Moon x-cloak x-show="mode === 'dark'" size={14} />
+    <Monitor x-cloak x-show="mode === 'system'" size={14} />
+  </button>
+
+  <ul
+    x-cloak
+    x-show="open"
+    x-transition.opacity.duration.150ms
+    @keydown.escape.window="open = false"
+    class="absolute right-0 mt-2 w-40 rounded-md border border-line bg-page text-ink text-sm shadow-xl"
+    role="menu"
+  >
+    <li>
+      <button
+        type="button"
+        @click="setMode('light'); open = false"
+        role="menuitem"
+        class="w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-soft transition"
+        :class="mode === 'light' ? 'text-primary font-medium' : ''"
+      >
+        <Sun size={14} />
+        <span>Light</span>
+      </button>
+    </li>
+    <li>
+      <button
+        type="button"
+        @click="setMode('dark'); open = false"
+        role="menuitem"
+        class="w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-soft transition"
+        :class="mode === 'dark' ? 'text-primary font-medium' : ''"
+      >
+        <Moon size={14} />
+        <span>Dark</span>
+      </button>
+    </li>
+    <li>
+      <button
+        type="button"
+        @click="setMode('system'); open = false"
+        role="menuitem"
+        class="w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-soft transition"
+        :class="mode === 'system' ? 'text-primary font-medium' : ''"
+      >
+        <Monitor size={14} />
+        <span>System</span>
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,64 @@
+---
+import { Languages } from "lucide-astro";
+
+interface Props {
+  lang: "en" | "it" | "fr";
+  links: { code: "en" | "it" | "fr"; href: string; label: string }[];
+}
+
+const { lang } = Astro.props;
+const links = Astro.props.links;
+const current = links.find((l) => l.code === lang);
+---
+
+<!--
+  Language switcher dropdown, mirroring the theme toggle's UX:
+  a trigger showing the current locale + a dropdown of available locales.
+  Keeps the user on the same page in another locale.
+-->
+<div
+  class="relative"
+  x-data="{ open: false }"
+  @click.outside="open = false"
+>
+  <button
+    type="button"
+    @click="open = !open"
+    class="flex items-center gap-1.5 p-2 rounded-md border transition cursor-pointer"
+    x-bind:class="open
+      ? 'border-line bg-soft text-ink'
+      : 'border-transparent text-muted hover:text-ink hover:bg-soft'"
+    aria-haspopup="true"
+    x-bind:aria-expanded="open"
+    aria-label="Change language"
+  >
+    <Languages size={14} />
+    <span class="text-xs font-medium uppercase">{current?.code ?? lang}</span>
+  </button>
+
+  <ul
+    x-cloak
+    x-show="open"
+    x-transition.opacity.duration.150ms
+    @keydown.escape.window="open = false"
+    class="absolute right-0 mt-2 w-40 rounded-md border border-line bg-page text-ink text-sm shadow-xl"
+    role="menu"
+  >
+    {links.map((l) => (
+      <li>
+        <a
+          role="menuitem"
+          href={l.href}
+          @click="open = false"
+          class={`w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-soft transition ${
+            l.code === lang ? "text-primary font-medium" : ""
+          }`}
+          aria-current={l.code === lang ? "true" : undefined}
+        >
+          <span class="uppercase text-xs font-semibold">{l.code}</span>
+          <span class="text-muted">{l.label}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

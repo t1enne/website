@@ -39,7 +39,7 @@ const t = i18n.labels;
         <h2 id="portfolio-heading" class="font-bold text-2xl mb-6">{t.title}</h2>
         <ul class="space-y-5">
           {i18n.projects.map((project) => (
-            <li class="border border-gray-200 rounded-lg p-5">
+            <li class="border border-line rounded-lg p-5">
               <div class="flex flex-wrap justify-between items-baseline gap-1 mb-1">
                 <h3 class="font-semibold text-base flex items-center gap-2">
                   {project.title}
@@ -80,7 +80,7 @@ const t = i18n.labels;
       </section>
 
       <!-- CTA -->
-      <section class="mt-12 border border-gray-200 rounded-lg p-6 text-center">
+      <section class="mt-12 border border-line rounded-lg p-6 text-center">
         <a
           href={t.ctaHref}
           class="inline-flex items-center gap-2 font-mono text-sm bg-primary text-primaryFg px-5 py-2.5 rounded-md hover:opacity-90 transition"

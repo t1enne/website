@@ -14,6 +14,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 ---
 
+<head>
+  <!-- Theme init: runs before paint to prevent flash of wrong theme.
+       Resolves light | dark | system -> applies .dark to <html>. -->
+  <script is:inline>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem("theme");
+      } catch (e) {}
+      // No stored preference means the user is following the system.
+      var resolved = stored === "light" || stored === "dark" ? stored : "system";
+      var isDark = resolved === "dark";
+      if (resolved === "system") {
+        isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
+      var root = document.documentElement;
+      root.setAttribute("data-theme", resolved);
+      if (isDark) root.classList.add("dark");
+    })();
+  </script>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -48,3 +69,58 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script>
+  import Alpine from 'alpinejs';
+
+  window.Alpine = Alpine;
+
+  Alpine.data('themeStore', () => ({
+    mode: 'system',
+    open: false,
+
+    // Human-readable label used for aria-label / title on the trigger.
+    get a11yLabel() {
+      return `Theme: ${this.mode}`;
+    },
+
+    init() {
+      // Re-read the current preference from <html data-theme> (set pre-paint).
+      const root = document.documentElement;
+      const attr = root.getAttribute('data-theme');
+      this.mode = attr === 'light' || attr === 'dark' ? attr : 'system';
+
+      this.media = window.matchMedia('(prefers-color-scheme: dark)');
+      this.onMediaChange = (e) => {
+        if (this.mode === 'system') this.apply();
+      };
+      this.media.addEventListener('change', this.onMediaChange);
+
+      // Keep <html> in sync when the mode changes via the store.
+      this.$watch('mode', (val) => this.apply());
+    },
+
+    apply() {
+      const root = document.documentElement;
+      let isDark = this.mode === 'dark';
+      if (this.mode === 'system') {
+        isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      root.classList.toggle('dark', isDark);
+    },
+
+    setMode(mode) {
+      this.mode = mode;
+      const root = document.documentElement;
+      root.setAttribute('data-theme', mode);
+      try {
+        // 'system' is the default; clear a stored override to follow the OS.
+        if (mode === 'system') localStorage.removeItem('theme');
+        else localStorage.setItem('theme', mode);
+      } catch (e) {}
+      this.apply();
+    },
+  }));
+
+  Alpine.start();
+</script>

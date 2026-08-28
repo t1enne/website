@@ -18,7 +18,7 @@ const { href, label, onclick, title, target, class: className = '' } = Astro.pro
   target={target}
 	class="cursor-pointer"
 >
-	<div class={`print:hidden text-primary p-2 border rounded-md hover:bg-gray-100 hover:text-gray-800 transition ${className}`}>
+	<div class={`print:hidden text-primary p-2 border rounded-md hover:bg-soft hover:text-ink border-line transition ${className}`}>
 		<slot />
 	</div>
 	<div class="hidden print:block text-muted">{label}</div>

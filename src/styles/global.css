@@ -4,21 +4,66 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+[x-cloak] {
+  display: none !important;
+}
+
 :root {
+  color-scheme: light;
   --primary: 220.9 39.3% 11%;
   --primaryFg: 210 20% 98%;
   --muted: 220 10% 45%;
+
+  /* Theme tokens (light defaults) */
+  --bg-page: 0 0% 100%;
+  --text: 220 30% 12%;
+  --muted-text: 220 10% 45%;
+  --border: 215 16% 90%;
+  --soft-bg: 214 16% 93%;
 }
+
+/* Explicit dark mode: html[data-theme='dark'] or html[data-theme='system']
+   when the OS is dark (resolved in JS by adding .dark). */
+.dark {
+  color-scheme: dark;
+  --primary: 220 30% 92%;
+  --primaryFg: 222 47% 11%;
+  --muted: 220 10% 65%;
+
+  --bg-page: 225 18% 14%;
+  --text: 220 15% 90%;
+  --muted-text: 220 10% 65%;
+  --border: 220 15% 22%;
+  --soft-bg: 223 16% 20%;
+}
+
+/* System / auto mode when no .dark overrides (JS resolves system theme)
+   so this fallback only matters before hydration — keep in sync with .dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --primary: 220 30% 92%;
+    --primaryFg: 222 47% 11%;
+    --muted: 220 10% 65%;
+
+    --bg-page: 225 18% 14%;
+    --text: 220 15% 90%;
+    --muted-text: 220 10% 65%;
+    --border: 220 15% 22%;
+    --soft-bg: 223 16% 20%;
+  }
+}
+
 body {
   font-family: "Arial", "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  background: hsl(var(--bg-page));
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
+  color: hsl(var(--text));
   font-size: 16px;
   line-height: 1.7;
   font-optical-sizing: auto;
@@ -37,6 +82,11 @@ body {
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+
+  html.dark,
+  html.dark * {
+    color-scheme: light !important;
   }
 
   body {
