@@ -1,8 +1,17 @@
-import type { ResumeI18n, ServicesI18n, PortfolioI18n, NavLabels } from "./types";
+import type {
+  ResumeI18n,
+  ServicesI18n,
+  PortfolioI18n,
+  NavLabels,
+} from "./types";
 import { SKILLS, ALL_SKILLS } from "../data/skills";
 import { PROJECTS } from "../data/projects";
 
-const fr: ResumeI18n & { services: ServicesI18n; portfolio: PortfolioI18n; nav: NavLabels } = {
+const fr: ResumeI18n & {
+  services: ServicesI18n;
+  portfolio: PortfolioI18n;
+  nav: NavLabels;
+} = {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
@@ -141,7 +150,7 @@ const fr: ResumeI18n & { services: ServicesI18n; portfolio: PortfolioI18n; nav: 
         {
           title: "Conception",
           description:
-            "Je mappe l'architecture, le modèle de données et les outils au problème — pas l'inverse.",
+            "Je mappe l'architecture, le modèle de données et les outils au problème - pas l'inverse.",
         },
         {
           title: "Développement & itération",

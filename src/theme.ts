@@ -6,7 +6,7 @@
  *
  * Used both by the Alpine `themeStore` (entrypoint) and the pre-paint inline
  * script in <BaseHead> (which cannot import modules yet, so it imports this
- * module — see below).
+ * module - see below).
  */
 
 export type ThemeMode = "light" | "dark" | "system";
@@ -16,7 +16,7 @@ export function readTheme(): { resolved: ThemeMode; isDark: boolean } {
   try {
     stored = localStorage.getItem("theme");
   } catch (e) {
-    /* storage unavailable — fall back to system */
+    /* storage unavailable - fall back to system */
   }
 
   // No stored preference means the user is following the system.

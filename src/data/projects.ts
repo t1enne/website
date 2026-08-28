@@ -26,7 +26,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       showOnResume: true,
     },
     {
-      title: "ATM Software — Nexi Group",
+      title: "ATM Software - Nexi Group",
       period: "2022–2024",
       category: "Fintech / Frontend Architecture",
       description:
@@ -45,7 +45,14 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       category: "Industrial IoT",
       description:
         "Live dashboards and analytics integrating IoT devices via Modbus and OPC UA protocols for industrial monitoring.",
-      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "Modbus", "OPC UA"],
+      technologies: [
+        "Angular",
+        "Nest.js",
+        "TypeORM",
+        "PostgreSQL",
+        "Modbus",
+        "OPC UA",
+      ],
       highlights: [
         "Real-time device telemetry",
         "Modbus & OPC UA protocol integration",
@@ -87,7 +94,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       showOnResume: true,
     },
     {
-      title: "Software ATM — Nexi Group",
+      title: "Software ATM - Nexi Group",
       period: "2022–2024",
       category: "Fintech / Architettura Frontend",
       description:
@@ -106,7 +113,14 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       category: "IoT Industriale",
       description:
         "Dashboard live e analytics che integrano device IoT tramite i protocolli Modbus e OPC UA per il monitoraggio industriale.",
-      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "Modbus", "OPC UA"],
+      technologies: [
+        "Angular",
+        "Nest.js",
+        "TypeORM",
+        "PostgreSQL",
+        "Modbus",
+        "OPC UA",
+      ],
       highlights: [
         "Telemetria device in tempo reale",
         "Integrazione protocolli Modbus & OPC UA",
@@ -148,7 +162,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       showOnResume: true,
     },
     {
-      title: "Logiciel ATM — Nexi Group",
+      title: "Logiciel ATM - Nexi Group",
       period: "2022–2024",
       category: "Fintech / Architecture Frontend",
       description:
@@ -167,7 +181,14 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       category: "IoT Industriel",
       description:
         "Tableaux de bord en direct et analytique intégrant des dispositifs IoT via les protocoles Modbus et OPC UA pour le monitoring industriel.",
-      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "Modbus", "OPC UA"],
+      technologies: [
+        "Angular",
+        "Nest.js",
+        "TypeORM",
+        "PostgreSQL",
+        "Modbus",
+        "OPC UA",
+      ],
       highlights: [
         "Télémétrie en temps réel",
         "Intégration des protocoles Modbus & OPC UA",

@@ -1,8 +1,17 @@
-import type { ResumeI18n, ServicesI18n, PortfolioI18n, NavLabels } from "./types";
+import type {
+  ResumeI18n,
+  ServicesI18n,
+  PortfolioI18n,
+  NavLabels,
+} from "./types";
 import { SKILLS, ALL_SKILLS } from "../data/skills";
 import { PROJECTS } from "../data/projects";
 
-const it: ResumeI18n & { services: ServicesI18n; portfolio: PortfolioI18n; nav: NavLabels } = {
+const it: ResumeI18n & {
+  services: ServicesI18n;
+  portfolio: PortfolioI18n;
+  nav: NavLabels;
+} = {
   labels: {
     aboutTitle: "Profilo Professionale",
     aboutContent:
@@ -137,7 +146,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         {
           title: "Progettazione",
           description:
-            "Mappo architettura, modello dati e strumenti al problema — non il contrario.",
+            "Mappo architettura, modello dati e strumenti al problema - non il contrario.",
         },
         {
           title: "Sviluppo & iterazione",

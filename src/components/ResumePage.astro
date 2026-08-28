@@ -63,9 +63,10 @@ const contactItems = [
       <div class="flex items-center justify-between print:mb-2">
         <div class="pr-4">
           <h1 class="font-bold text-3xl print:text-2xl print:mb-0">Nasir Taov</h1>
+          <div class="py-1" />
           <span class="text-sm text-muted font-medium block print:text-base print:text-black">{jobTitle}</span>
-          <div class="py-2 hidden print:block" />
-          <div class="flex items-center gap-2 print:hidden mt-2">
+          <div class="py-2" />
+          <div class="flex items-center gap-2 print:hidden">
             {contactItems.map((item) => (
               <IconButton href={item.href}><item.icon size={18} /></IconButton>
             ))}
@@ -96,19 +97,19 @@ const contactItems = [
         </div>
       </div>
 
-			<div class="mb-6"></div>
+			<div class="mb-10"></div>
 
       <!-- Summary -->
-      <section aria-labelledby="about-heading" class="mb-6">
-        <h2 id="about-heading" class="font-bold text-2xl print:text-lg mb-3">{t.aboutTitle}</h2>
+      <section aria-labelledby="about-heading" class="mb-12">
+        <h2 id="about-heading" class="font-bold text-2xl print:text-lg mb-6">{t.aboutTitle}</h2>
         <p class="text-muted text-sm leading-relaxed" itemprop="description">
           {t.aboutContent}
         </p>
       </section>
 
       <!-- Work Experience -->
-      <section aria-labelledby="work-heading" class="mb-6">
-        <h2 id="work-heading" class="font-bold text-2xl print:text-lg mb-3">{t.workTitle}</h2>
+      <section aria-labelledby="work-heading" class="mb-12">
+        <h2 id="work-heading" class="font-bold text-2xl print:text-lg mb-6">{t.workTitle}</h2>
         <ul class="w-full">
           {i18n.workExperience.map((exp) => (
             <WorkExperienceItem
@@ -124,8 +125,8 @@ const contactItems = [
       </section>
 
       <!-- Projects (only visible when printing / exporting PDF) -->
-      <section aria-labelledby="projects-heading" class="hidden print:block">
-        <h2 id="projects-heading" class="font-bold text-2xl print:text-lg mb-3">{t.projectsTitle}</h2>
+      <section aria-labelledby="projects-heading" class="hidden print:block mb-12">
+        <h2 id="projects-heading" class="font-bold text-2xl print:text-lg mb-6">{t.projectsTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.projects.map((proj) => (
             <ProjectItem
@@ -141,13 +142,13 @@ const contactItems = [
       </section>
 
       <!-- Skills -->
-      <section aria-labelledby="skills-heading" class="mb-6">
+      <section aria-labelledby="skills-heading" class="mb-12">
         <SkillsSection categories={i18n.skills} title={t.skillsTitle} />
       </section>
 
       <!-- Education -->
-      <section aria-labelledby="education-heading" class="mb-6 print:mb-2">
-        <h2 id="education-heading" class="font-bold text-2xl mb-3 print:text-lg">{t.educationTitle}</h2>
+      <section aria-labelledby="education-heading" class="mb-12 print:mb-2">
+        <h2 id="education-heading" class="font-bold text-2xl mb-6 print:text-lg">{t.educationTitle}</h2>
         <ul class="w-full">
           {i18n.education.map((edu) => (
             <EducationItem
@@ -161,8 +162,8 @@ const contactItems = [
       </section>
 
       <!-- Courses -->
-      <section aria-labelledby="courses-heading" class="mb-6">
-        <h2 id="courses-heading" class="font-bold text-2xl print:text-lg mb-3">{t.coursesTitle}</h2>
+      <section aria-labelledby="courses-heading" class="mb-12">
+        <h2 id="courses-heading" class="font-bold text-2xl print:text-lg mb-6">{t.coursesTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.courses.map((course) => (
             <CourseItem title={course.title} provider={course.provider} dates={course.dates} summary={course.summary} />
@@ -171,8 +172,8 @@ const contactItems = [
       </section>
 
       <!-- Languages -->
-      <section aria-labelledby="languages-heading" class="mb-6">
-        <h2 id="languages-heading" class="font-bold text-2xl print:text-lg mb-3">{t.langsTitle}</h2>
+      <section aria-labelledby="languages-heading" class="mb-12">
+        <h2 id="languages-heading" class="font-bold text-2xl print:text-lg mb-6">{t.langsTitle}</h2>
         <ul class="w-full divide-y divide-line" itemprop="knowsLanguage">
           {i18n.languages.map((langEntry) => (
             <LanguageItem name={langEntry.name} level={langEntry.level} />

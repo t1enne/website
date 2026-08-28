@@ -38,7 +38,7 @@
 }
 
 /* System / auto mode when no .dark overrides (JS resolves system theme)
-   so this fallback only matters before hydration — keep in sync with .dark. */
+   so this fallback only matters before hydration - keep in sync with .dark. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
