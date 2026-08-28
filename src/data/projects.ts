@@ -89,6 +89,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Process-pool parallelism for sweeps and folds",
       ],
       url: "https://github.com/t1enne/ibkr",
+      showOnResume: true,
     },
     {
       title: "E-commerce Data Pipeline",
@@ -186,6 +187,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Parallelismo su processi per sweep e fold",
       ],
       url: "https://github.com/t1enne/ibkr",
+      showOnResume: true,
     },
     {
       title: "Pipeline Dati E-commerce",
@@ -283,6 +285,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Parallélisme par processus pour sweeps et folds",
       ],
       url: "https://github.com/t1enne/ibkr",
+      showOnResume: true,
     },
     {
       title: "Pipeline de Données E-commerce",

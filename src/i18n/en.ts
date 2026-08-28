@@ -15,7 +15,7 @@ const en: ResumeI18n & {
   labels: {
     aboutTitle: "Professional Summary",
     aboutContent:
-      "Architect-level full-stack developer who designed a custom UI framework powering 600,000+ ATMs at a leading European bank. Led cross-functional teams of 1–4 engineers as the primary technical liaison between business and development, reducing CI pipeline time by 40% and production incidents by 30%. Polyglot engineer (React, Angular, NestJS, Rust, Go) with product sense built across banking, e-commerce, and luxury retail. Native-level collaboration in English, Italian, Russian, and French.",
+      "Senior full-stack developer and technical lead who designed a custom UI framework powering 600,000+ ATMs at a leading European bank. Led focused, high-output teams of engineers as the bridge between business and development, cutting CI pipeline time by 40% and production incidents by 30%. Polyglot across React, Angular, NestJS, TypeScript, Rust, Go, and Python, with product sense built across banking, e-commerce, luxury retail, and open source. Recently shipping a pure-functional quant backtesting toolkit and an open-source conditional form engine (FormBaker). Native-level collaboration in English, Italian, Russian, and French.",
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",
@@ -38,7 +38,7 @@ const en: ResumeI18n & {
       location: "Padua, Italy",
       title: "Full Stack Developer",
       description: `
-- Managed and mentored teams of 1-4 developers through full SDLC including requirements, sprint planning, and delivery
+- Technical lead accountable for full SDLC (requirements, sprint planning, delivery) for focused high-output teams, as the primary liaison between business stakeholders and engineering
 - Reduced CI pipeline time by 40% through build process optimization and containerization
 - Containerized applications using Docker and set up on-premise Jenkins CI/CD pipelines
 - Reduced production incidents by 30% through comprehensive testing and code review processes
@@ -85,7 +85,8 @@ const en: ResumeI18n & {
       company: "Brunello Cucinelli",
       location: "Solomeo, Italy",
       title: "Boutique Coordinator & CRM Specialist",
-      description: `- Created AS400 and Salesforce CRM automations for daily activities.
+      description: `- Self-taught pivot into software: automated daily retail operations, the technical foundation that launched a full-stack engineering career
+- Created AS400 and Salesforce CRM automations for daily activities.
 - Provided technical support for point-of-sale systems and inventory management
 - Conducted private tours of production facilities for Forbes-listed clients in Italian, English, Russian, and French
 - Implemented visual merchandising guidelines and coordinated restocking logistics with store manager
@@ -207,7 +208,7 @@ const en: ResumeI18n & {
         icon: "Users",
         title: "Team Leadership & Mentoring",
         description:
-          "I've led teams of 1–4 engineers as the bridge between business and engineering. I level up developers, tighten code review, and keep delivery on track.",
+          "I've led focused, high-output teams as the bridge between business and engineering. I level up developers, tighten code review, and keep delivery on track.",
         features: [
           "Technical lead & mentoring",
           "Code review and engineering standards",

@@ -15,7 +15,7 @@ const fr: ResumeI18n & {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
-      "Développeur full-stack de niveau architecte, auteur d'un framework UI sur mesure utilisé par plus de 600 000 ATMs au sein d'une grande banque européenne. J'ai dirigé des équipes transversales de 1–4 ingénieurs en tant qu'interlocuteur technique principal entre le métier et le développement, réduisant le temps de pipeline CI de 40 % et les incidents de production de 30 %. Ingénieur polyglotte (React, Angular, NestJS, Rust, Go) avec une vision produit forgée dans les secteurs bancaire, e-commerce et du luxe. Collaboration de niveau natif en anglais, italien, russe et français.",
+      "Développeur full-stack senior et lead technique, auteur d'un framework UI sur mesure utilisé par plus de 600 000 ATMs au sein d'une grande banque européenne. J'ai dirigé des équipes ciblées et très performantes en tant que pont entre le métier et le développement, réduisant le temps de pipeline CI de 40 % et les incidents de production de 30 %. Polyglotte en React, Angular, NestJS, TypeScript, Rust, Go et Python, avec une vision produit forgée dans les secteurs bancaire, e-commerce, du luxe et de l'open source. Récemment, je livre aussi un toolkit de backtesting quantitatif purement fonctionnel et FormBaker, un moteur de formulaires conditionnels open source. Collaboration de niveau natif en anglais, italien, russe et français.",
     workTitle: "Expérience Professionnelle",
     educationTitle: "Formation",
     educationScore: "Note",
@@ -40,7 +40,7 @@ const fr: ResumeI18n & {
       description: `
 - Conçu une architecture micro-frontend desservant plus de 600 ATM, réduisant le temps de chargement de 25 %
 - Assuré le rôle d'interlocuteur technique principal avec le chef de projet du client, facilitant la communication entre les équipes métier et ingénierie
-- Encadré des équipes de 1 à 4 développeurs à travers le cycle SDLC complet : spécifications, planification de sprint et livraison
+- Lead technique responsable de l'ensemble du SDLC pour des équipes ciblées et très performantes, en tant que point de contact principal entre les parties prenantes métier et l'ingénierie
 - Réduit le temps de pipeline CI de 40 % grâce à l'optimisation des processus de build et à la conteneurisation
 - Conteneurisé les applications avec Docker et mis en place des pipelines CI/CD Jenkins on-premise
 - Réduit les incidents en production de 30 % grâce à des processus rigoureux de test et de revue de code
@@ -86,7 +86,8 @@ const fr: ResumeI18n & {
       company: "Brunello Cucinelli",
       location: "Solomeo, Italie",
       title: "Coordinateur de Boutique & Spécialiste CRM",
-      description: `- Créé des automatisations CRM AS400 et Salesforce pour les activités quotidiennes
+      description: `- Passage auto-didacte vers le logiciel : automatisé les opérations retail quotidiennes, la base technique qui a lancé une carrière d'ingénieur full-stack
+- Créé des automatisations CRM AS400 et Salesforce pour les activités quotidiennes
 - Fourni un support technique pour les systèmes de point de vente et la gestion des stocks
 - Animé des visites privées des installations de production pour des clients Forbes-listed en italien, anglais, russe et français
 - Mis en œuvre les directives de merchandising visuel et coordonné la logistique de réapprovisionnement avec le responsable du magasin
@@ -208,7 +209,7 @@ const fr: ResumeI18n & {
         icon: "Users",
         title: "Leadership d'Équipe & Mentorat",
         description:
-          "J'ai dirigé des équipes de 1 à 4 ingénieurs en tant que pont entre le métier et l'ingénierie. Je fais progresser les développeurs, renforce la revue de code et maintient la livraison dans les délais.",
+          "J'ai dirigé des équipes ciblées et très performantes en tant que pont entre le métier et l'ingénierie. Je fais progresser les développeurs, renforce la revue de code et maintient la livraison dans les délais.",
         features: [
           "Lead technique & mentorat",
           "Revue de code et standards d'ingénierie",

@@ -15,7 +15,7 @@ const it: ResumeI18n & {
   labels: {
     aboutTitle: "Profilo Professionale",
     aboutContent:
-      "Sviluppatore full-stack di livello architetturale, autore di un framework UI su misura che alimenta oltre 600.000 ATM presso una delle principali banche europee. Ho guidato team cross-funzionali di 1–4 ingegneri come punto di contatto tecnico principale tra business e sviluppo, riducendo i tempi della pipeline CI del 40% e gli incidenti in produzione del 30%. Ingegnere poliglotta (React, Angular, NestJS, Rust, Go) con visione di prodotto maturata nei settori bancario, e-commerce e luxury retail. Collaborazione a livello nativo in inglese, italiano, russo e francese.",
+      "Sviluppatore full-stack senior e technical lead, autore di un framework UI su misura che alimenta oltre 600.000 ATM presso una delle principali banche europee. Ho guidato team focalizzati e ad alte prestazioni come ponte tra business e sviluppo, riducendo i tempi della pipeline CI del 40% e gli incidenti in produzione del 30%. Poliglotta in React, Angular, NestJS, TypeScript, Rust, Go e Python, con visione di prodotto maturata nei settori bancario, e-commerce, luxury retail e open source. Recentemente sto anche rilasciando un toolkit di backtesting quantitativo puramente funzionale e FormBaker, un motore di form condizionali open source. Collaborazione a livello nativo in inglese, italiano, russo e francese.",
     workTitle: "Esperienza Professionale",
     educationTitle: "Formazione",
     educationScore: "Voto",
@@ -39,7 +39,7 @@ const it: ResumeI18n & {
       title: "Sviluppatore Full Stack",
       description: `
 Primo punto di contatto tecnico con il project manager del cliente, facilitando la comunicazione tra business e ingegneria.
-Guidato team di sviluppo (1-4 persone) attraverso l'intero SDLC inclusi requisiti, sprint planning e delivery.
+Guida di team focalizzati e ad alte prestazioni attraverso l'intero SDLC (requisiti, sprint planning e delivery), con responsabilità tecnica complessiva e ruolo di punto di contatto principale tra stakeholder di business e ingegneria.
 Ottimizzato processi di build e packaging, riducendo i tempi CI del 40%.
 Containerizzato applicazioni con Docker e configurato pipeline Jenkins CI/CD on-premise.
 Realizzata un'engagement on-site di architettura frontend presso Nexi Group (vedi sotto).
@@ -83,7 +83,8 @@ Guidato strategia content creation per Amazon e Meta, aumentando conversioni del
       company: "Brunello Cucinelli",
       location: "Solomeo, Italia",
       title: "Coordinatore di Boutique & CRM Specialist",
-      description: `Creato automazioni di sistemi CRM AS400 e Salesforce per le attività quotidiane.
+      description: `Transizione autodidatta verso il software: ho automatizzato le operazioni retail quotidiane, le basi tecniche che hanno lanciato una carriera di ingegneria full-stack.
+Creato automazioni di sistemi CRM AS400 e Salesforce per le attività quotidiane.
 Fornito supporto tecnico per sistemi point-of-sale e gestione inventario.
 Condotto visite private degli impianti per clienti Forbes-listed in italiano, inglese, russo e francese.
 Implementato linee guida visual merchandising e coordinato logistica rifornimenti con store manager.`,
@@ -204,7 +205,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         icon: "Users",
         title: "Leadership di Team & Mentoring",
         description:
-          "Ho guidato team di 1–4 ingegneri come ponte tra business e ingegneria. Faccio crescere gli sviluppatori, stringo la code review e tengo la delivery nei tempi.",
+          "Ho guidato team focalizzati e ad alte prestazioni come ponte tra business e ingegneria. Faccio crescere gli sviluppatori, stringo la code review e tengo la delivery nei tempi.",
         features: [
           "Technical lead & mentoring",
           "Code review e standard di ingegneria",
