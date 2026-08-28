@@ -1,0 +1,102 @@
+---
+import type { ServicesI18n, NavLabels } from "../i18n/types";
+import BaseHead from "./BaseHead.astro";
+import Nav from "./Nav.astro";
+import {
+  LayoutGrid,
+  Cpu,
+  Smartphone,
+  Users,
+  ArrowRight,
+  Check,
+} from "lucide-astro";
+import { SITE_TITLE } from "../consts";
+
+interface Props {
+  lang: "en" | "it" | "fr";
+  i18n: ServicesI18n;
+  navLabels: NavLabels;
+}
+
+const { lang, i18n, navLabels } = Astro.props;
+const t = i18n.labels;
+
+const iconMap = { LayoutGrid, Cpu, Smartphone, Users } as const;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={`${SITE_TITLE} — ${t.pageTitle}`} description={t.intro} />
+  </head>
+  <body>
+    <Nav lang={lang} nav={navLabels} active="services" />
+    <main class="p-6 max-w-3xl mx-auto my-8">
+      <header class="mb-10">
+        <h1 class="font-bold text-3xl print:text-2xl mb-3">{t.pageTitle}</h1>
+        <p class="text-muted font-mono text-sm leading-relaxed max-w-2xl">
+          {t.intro}
+        </p>
+      </header>
+
+      <!-- Services grid -->
+      <section aria-labelledby="services-heading" class="mb-12">
+        <h2 id="services-heading" class="font-bold text-2xl mb-6">{t.title}</h2>
+        <ul class="grid gap-4 sm:grid-cols-2">
+          {i18n.services.map((service) => {
+            const Icon = iconMap[service.icon as keyof typeof iconMap] ?? LayoutGrid;
+            return (
+              <li class="border border-gray-200 rounded-lg p-5 flex flex-col">
+                <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-gray-100 text-primary mb-4">
+                  <Icon size={20} />
+                </span>
+                <h3 class="font-semibold text-base mb-2">{service.title}</h3>
+                <p class="text-muted text-sm leading-relaxed mb-4">{service.description}</p>
+                <div class="mt-auto">
+                  <p class="text-xs font-mono text-muted uppercase tracking-wide mb-2">{t.deliverablesLabel}</p>
+                  <ul class="space-y-1.5">
+                    {service.features.map((feature) => (
+                      <li class="flex items-start gap-2 text-sm">
+                        <Check size={14} class="text-primary mt-0.5 shrink-0" />
+                        <span class="font-mono text-xs leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <!-- Process -->
+      <section aria-labelledby="process-heading">
+        <h2 id="process-heading" class="font-bold text-2xl mb-6">{t.processTitle}</h2>
+        <ol class="space-y-4">
+          {t.process.map((step, i) => (
+            <li class="flex gap-4">
+              <span class="font-mono text-sm text-primary font-bold shrink-0">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3 class="font-semibold text-sm mb-1">{step.title}</h3>
+                <p class="text-muted font-mono text-xs leading-relaxed">{step.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 border border-gray-200 rounded-lg p-6 text-center">
+        <a
+          href={t.ctaHref}
+          class="inline-flex items-center gap-2 font-mono text-sm bg-primary text-primaryFg px-5 py-2.5 rounded-md hover:opacity-90 transition"
+        >
+          {t.cta}
+          <ArrowRight size={16} />
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

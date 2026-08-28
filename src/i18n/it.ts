@@ -1,7 +1,8 @@
-import type { ResumeI18n } from "./types";
+import type { ResumeI18n, ServicesI18n, PortfolioI18n, NavLabels } from "./types";
 import { SKILLS, ALL_SKILLS } from "../data/skills";
+import { PROJECTS } from "../data/projects";
 
-const it: ResumeI18n = {
+const it: ResumeI18n & { services: ServicesI18n; portfolio: PortfolioI18n; nav: NavLabels } = {
   labels: {
     aboutTitle: "Profilo Professionale",
     aboutContent:
@@ -103,41 +104,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
       dates: "Gen 2024",
     },
   ],
-  projects: [
-    {
-      title: "FormBaker",
-      period: "2026–presente",
-      technologies: ["TypeScript", "Vitest", "arktype", "Zod"],
-      description:
-        "Motore runtime open-source per form condizionali e schemi cross-framework. Definizioni serializzabili con grafo delle dipendenze, risoluzione della visibilità e backend di validazione intercambiabili (arktype/zod). Node.js + browser. Integrazioni per React Hook Form, Angular e HTML5.",
-      url: "https://github.com/t1enne/formbaker",
-    },
-    {
-      title: "Industria 4.0",
-      period: "2023–2024",
-      technologies: [
-        "Angular",
-        "Nest.js",
-        "TypeORM",
-        "PostgreSQL",
-        "TypeScript",
-        "Modbus",
-        "Opcua",
-        "Docker",
-      ],
-      description:
-        "Costruito dashboard + analytics integrando device IOT tramite protocolli modbus e opcua.",
-      closedSource: true,
-    },
-    {
-      title: "E-commerce Data Pipeline",
-      period: "2021-2022",
-      technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
-      description:
-        "Tool ETL Node.js + MongoDB per conversione CSV retail in PostgreSQL. Reconciliazione inventario automatica per 50+ negozi.",
-      closedSource: true,
-    },
-  ],
+  projects: PROJECTS.it.filter((p) => p.showOnResume),
   languages: [
     { name: "Inglese", level: "Fluente (C2)" },
     { name: "Russo", level: "Madrelingua" },
@@ -146,6 +113,107 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
   ],
   skills: SKILLS,
   allSkills: ALL_SKILLS,
+  nav: {
+    resume: "Curriculum",
+    services: "Servizi",
+    portfolio: "Portfolio",
+  },
+  services: {
+    labels: {
+      pageTitle: "Servizi",
+      intro:
+        "Dall'architettura full-stack all'ottimizzazione delle performance e al mentoring di team, aiuto i team a consegnare software affidabile che scala. Disponibile per progetti freelance, collaborazioni a lungo termine e consulenza tecnica.",
+      title: "Cosa offro",
+      deliverablesLabel: "Deliverable",
+      cta: "Inizia un progetto",
+      ctaHref: "mailto:nasir.taov@gmail.com",
+      processTitle: "Come lavoro",
+      process: [
+        {
+          title: "Scoperta",
+          description:
+            "Allineiamo obiettivi, vincoli e forma del prodotto prima di scrivere codice.",
+        },
+        {
+          title: "Progettazione",
+          description:
+            "Mappo architettura, modello dati e strumenti al problema — non il contrario.",
+        },
+        {
+          title: "Sviluppo & iterazione",
+          description:
+            "Cicli di feedback brevi con test e revisioni in ogni fase, mantenendo qualità e ritmo.",
+        },
+        {
+          title: "Rilascio & supporto",
+          description:
+            "Pubblico in piccoli batch e resto disponibile per rafforzare, monitorare e scalare ciò che abbiamo costruito.",
+        },
+      ],
+    },
+    services: [
+      {
+        icon: "LayoutGrid",
+        title: "Sviluppo Web Full Stack",
+        description:
+          "Sviluppo di prodotto end-to-end: frontend moderni con React e Angular, e backend robusti con Node.js, NestJS, Rust e Go.",
+        features: [
+          "App web & SaaS, dashboard e API",
+          "React, Angular, TypeScript, Node.js, NestJS",
+          "PostgreSQL, MongoDB e data modeling efficiente",
+          "Rust & Go per servizi ad alte prestazioni",
+        ],
+      },
+      {
+        icon: "Cpu",
+        title: "Architettura di Sistemi & DevOps",
+        description:
+          "Progettazione di sistemi scalabili e manutenibili e delle pipeline che li mantengono stabili. Riduco i tempi di build, stabilizzo i deployment e abbasso gli incidenti.",
+        features: [
+          "Revisioni architetturali & modernizzazione",
+          "Pipeline CI/CD (Jenkins, GitHub Actions)",
+          "Contenitorizzazione Docker & orchestrazione",
+          "Ottimizzazione delle performance & reliability engineering",
+        ],
+      },
+      {
+        icon: "Smartphone",
+        title: "Frontend Mobile & Embedded",
+        description:
+          "Testato in produzione su oltre 600.000 ATM. Specializzato in UI event-driven con vincoli di sicurezza e di risorse, affidabili su larga scala.",
+        features: [
+          "Framework UI custom & design system",
+          "Interfacce event-driven e offline-ready",
+          "Riscritture di sistemi legacy (JSP → TS moderno)",
+          "Build indurite per sicurezza e compatibilità",
+        ],
+      },
+      {
+        icon: "Users",
+        title: "Leadership di Team & Mentoring",
+        description:
+          "Ho guidato team di 1–4 ingegneri come ponte tra business e ingegneria. Faccio crescere gli sviluppatori, stringo la code review e tengo la delivery nei tempi.",
+        features: [
+          "Technical lead & mentoring",
+          "Code review e standard di ingegneria",
+          "Coordinamento team cross-funzionali",
+          "Cerimonie agile & pianificazione",
+        ],
+      },
+    ],
+  },
+  portfolio: {
+    labels: {
+      pageTitle: "Portfolio",
+      intro:
+        "Una selezione di prodotti e strumenti che ho progettato e rilasciato nei settori bancario, e-commerce, IoT industriale e open source.",
+      title: "Lavori selezionati",
+      projectCount: "progetti",
+      cta: "Costruiamo qualcosa insieme",
+      ctaHref: "mailto:nasir.taov@gmail.com",
+    },
+    projects: PROJECTS.it,
+  },
 };
 
 export default it;

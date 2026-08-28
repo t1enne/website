@@ -1,7 +1,8 @@
 ---
-import type { ResumeI18n } from "../i18n/types";
+import type { ResumeI18n, NavLabels } from "../i18n/types";
 import BaseHead from "./BaseHead.astro";
 import IconButton from "./IconButton.astro";
+import Nav from "./Nav.astro";
 import WorkExperienceItem from "./WorkExperienceItem.astro";
 import EducationItem from "./EducationItem.astro";
 import CourseItem from "./CourseItem.astro";
@@ -9,15 +10,16 @@ import ProjectItem from "./ProjectItem.astro";
 import LanguageItem from "./LanguageItem.astro";
 import SkillsSection from "./SkillsSection.astro";
 import ResumeJsonLd from "./ResumeJsonLd.astro";
-import { Languages, Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
+import { Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 interface Props {
   lang: "en" | "it" | "fr";
   i18n: ResumeI18n;
+  navLabels: NavLabels;
 }
 
-const { lang, i18n } = Astro.props;
+const { lang, i18n, navLabels } = Astro.props;
 const t = i18n.labels;
 
 const jobTitle = "Full Stack Developer";
@@ -46,6 +48,7 @@ const contactItems = [
     />
   </head>
   <body class="print:bg-white">
+    <Nav lang={lang} nav={navLabels} active="resume" />
     <main
       class="p-6 max-w-3xl mx-auto my-8 text-base bg-white print:p-8 print:my-0"
       itemscope
@@ -93,16 +96,6 @@ const contactItems = [
         </div>
       </div>
 
-      <!-- Lang switcher (hidden print) -->
-      <div class="flex items-center print:hidden mt-2">
-        <Languages size={12} />
-        <ul class="flex divide-x text-sm text-muted ml-1">
-          <li><a class="p-2" href="/en/">EN</a></li>
-          <li><a class="p-2" href="/it/">IT</a></li>
-          <li><a class="p-2" href="/fr/">FR</a></li>
-        </ul>
-      </div>
-
 			<div class="mb-6"></div>
 
       <!-- Summary -->
@@ -130,8 +123,8 @@ const contactItems = [
         </ul>
       </section>
 
-      <!-- Projects -->
-      <section aria-labelledby="projects-heading" class="mb-6">
+      <!-- Projects (only visible when printing / exporting PDF) -->
+      <section aria-labelledby="projects-heading" class="hidden print:block">
         <h2 id="projects-heading" class="font-bold text-2xl print:text-lg mb-3">{t.projectsTitle}</h2>
         <ul class="w-full space-y-2">
           {i18n.projects.map((proj) => (

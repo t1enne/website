@@ -1,7 +1,8 @@
-import type { ResumeI18n } from "./types";
+import type { ResumeI18n, ServicesI18n, PortfolioI18n, NavLabels } from "./types";
 import { SKILLS, ALL_SKILLS } from "../data/skills";
+import { PROJECTS } from "../data/projects";
 
-const en: ResumeI18n = {
+const en: ResumeI18n & { services: ServicesI18n; portfolio: PortfolioI18n; nav: NavLabels } = {
   labels: {
     aboutTitle: "Professional Summary",
     aboutContent:
@@ -106,41 +107,7 @@ const en: ResumeI18n = {
       dates: "Jan 2024",
     },
   ],
-  projects: [
-    {
-      title: "FormBaker",
-      period: "2026–present",
-      technologies: ["TypeScript", "Vitest", "arktype", "Zod"],
-      description:
-        "Open-source runtime form engine for conditional form rendering and cross-framework schemas. Serializable form definitions with dependency graphs, visibility resolution, and swappable validation backends (arktype/zod). Node.js + browser. Integrations for React Hook Form, Angular, and HTML5.",
-      url: "https://github.com/t1enne/formbaker",
-    },
-    {
-      title: "Industria 4.0",
-      period: "2023–2024",
-      technologies: [
-        "Angular",
-        "Nest.js",
-        "TypeORM",
-        "PostgreSQL",
-        "TypeScript",
-        "Modbus",
-        "Opcua",
-        "Docker",
-      ],
-      description:
-        "Built live dashboards + analytics integrating IOT devices via modbus and opcua protocols",
-      closedSource: true,
-    },
-    {
-      title: "E-commerce Data Pipeline",
-      period: "2021-2022",
-      technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
-      description:
-        "Node.js + MongoDB ETL tool converting retail CSV exports to PostgreSQL. Automated daily inventory reconciliation for 50+ stores.",
-      closedSource: true,
-    },
-  ],
+  projects: PROJECTS.en.filter((p) => p.showOnResume),
   languages: [
     { name: "English", level: "Fluent (C2)" },
     { name: "Russian", level: "Native" },
@@ -149,6 +116,107 @@ const en: ResumeI18n = {
   ],
   skills: SKILLS,
   allSkills: ALL_SKILLS,
+  nav: {
+    resume: "Resume",
+    services: "Services",
+    portfolio: "Portfolio",
+  },
+  services: {
+    labels: {
+      pageTitle: "Services",
+      intro:
+        "From full-stack architecture to performance tuning and team mentoring, I help teams ship reliable software that scales. Available for freelance projects, long-term engagements, and technical consulting.",
+      title: "What I offer",
+      deliverablesLabel: "Deliverables",
+      cta: "Start a project",
+      ctaHref: "mailto:nasir.taov@gmail.com",
+      processTitle: "How I work",
+      process: [
+        {
+          title: "Discover",
+          description:
+            "We align on goals, constraints, and the shape of the product before writing code.",
+        },
+        {
+          title: "Design",
+          description:
+            "I map the architecture, data model, and tooling to the problem — not the other way around.",
+        },
+        {
+          title: "Build & iterate",
+          description:
+            "Short feedback loops with tests and reviews at every step, keeping quality and momentum.",
+        },
+        {
+          title: "Ship & support",
+          description:
+            "I release in small batches and stay available to harden, monitor, and scale what we built.",
+        },
+      ],
+    },
+    services: [
+      {
+        icon: "LayoutGrid",
+        title: "Full Stack Web Development",
+        description:
+          "End-to-end product development: modern frontends with React & Angular, and robust backends with Node.js, NestJS, Rust, and Go.",
+        features: [
+          "Web & SaaS apps, dashboards, and APIs",
+          "React, Angular, TypeScript, Node.js, NestJS",
+          "PostgreSQL, MongoDB, and efficient data modeling",
+          "Rust & Go for performance-critical services",
+        ],
+      },
+      {
+        icon: "Cpu",
+        title: "System Architecture & DevOps",
+        description:
+          "Designing scalable, maintainable systems and the pipelines that keep them healthy. I reduce build times, stabilize deployments, and lower incident counts.",
+        features: [
+          "Architecture reviews & modernization",
+          "CI/CD pipelines (Jenkins, GitHub Actions)",
+          "Docker containerization & orchestration",
+          "Performance tuning and reliability engineering",
+        ],
+      },
+      {
+        icon: "Smartphone",
+        title: "Mobile & Embedded Frontends",
+        description:
+          "Battle-tested on 600,000+ ATMs in production. I specialize in constrained, high-security, event-driven UIs that demand reliability at scale.",
+        features: [
+          "Custom UI frameworks & design systems",
+          "Event-driven, offline-capable interfaces",
+          "Legacy system rewrites (JSP → modern TS)",
+          "Security & compatibility-hardened builds",
+        ],
+      },
+      {
+        icon: "Users",
+        title: "Team Leadership & Mentoring",
+        description:
+          "I've led teams of 1–4 engineers as the bridge between business and engineering. I level up developers, tighten code review, and keep delivery on track.",
+        features: [
+          "Technical lead & mentoring",
+          "Code review and engineering standards",
+          "Cross-functional team coordination",
+          "Agile ceremonies & planning",
+        ],
+      },
+    ],
+  },
+  portfolio: {
+    labels: {
+      pageTitle: "Portfolio",
+      intro:
+        "A selection of products and tools I've designed and shipped across banking, e-commerce, industrial IoT, and open source.",
+      title: "Selected work",
+      projectCount: "projects",
+      cta: "Let's build something together",
+      ctaHref: "mailto:nasir.taov@gmail.com",
+    },
+    projects: PROJECTS.en,
+  },
 };
 
 export default en;

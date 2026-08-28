@@ -1,0 +1,94 @@
+---
+import type { PortfolioI18n, NavLabels } from "../i18n/types";
+import BaseHead from "./BaseHead.astro";
+import Nav from "./Nav.astro";
+import Tag from "./Tag.astro";
+import { Github, ArrowRight, Check } from "lucide-astro";
+import { SITE_TITLE } from "../consts";
+
+interface Props {
+  lang: "en" | "it" | "fr";
+  i18n: PortfolioI18n;
+  navLabels: NavLabels;
+}
+
+const { lang, i18n, navLabels } = Astro.props;
+const t = i18n.labels;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={`${SITE_TITLE} — ${t.pageTitle}`} description={t.intro} />
+  </head>
+  <body>
+    <Nav lang={lang} nav={navLabels} active="portfolio" />
+    <main class="p-6 max-w-3xl mx-auto my-8">
+      <header class="mb-10">
+        <h1 class="font-bold text-3xl print:text-2xl mb-3">{t.pageTitle}</h1>
+        <p class="text-muted font-mono text-sm leading-relaxed max-w-2xl">
+          {t.intro}
+        </p>
+        <p class="font-mono text-xs text-muted mt-2">
+          {i18n.projects.length} {t.projectCount}
+        </p>
+      </header>
+
+      <!-- Projects -->
+      <section aria-labelledby="portfolio-heading" class="mb-12">
+        <h2 id="portfolio-heading" class="font-bold text-2xl mb-6">{t.title}</h2>
+        <ul class="space-y-5">
+          {i18n.projects.map((project) => (
+            <li class="border border-gray-200 rounded-lg p-5">
+              <div class="flex flex-wrap justify-between items-baseline gap-1 mb-1">
+                <h3 class="font-semibold text-base flex items-center gap-2">
+                  {project.title}
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener"
+                      class="text-primary/60 hover:text-primary transition"
+                      aria-label={`${project.title} — ${t.pageTitle}`}
+                    >
+                      <Github size={15} />
+                    </a>
+                  )}
+                </h3>
+                <span class="font-mono text-xs text-muted">{project.period}</span>
+              </div>
+              <p class="text-xs font-mono text-muted uppercase tracking-wide mb-3">
+                {project.category}
+              </p>
+              <p class="text-muted text-sm leading-relaxed mb-4">{project.description}</p>
+              {project.highlights.length > 0 && (
+                <ul class="space-y-1.5 mb-4">
+                  {project.highlights.map((hl) => (
+                    <li class="flex items-start gap-2 text-sm">
+                      <Check size={14} class="text-primary mt-0.5 shrink-0" />
+                      <span class="font-mono text-xs leading-relaxed">{hl}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div class="flex flex-wrap gap-1">
+                {project.technologies.map((tech) => <Tag text={tech} />)}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 border border-gray-200 rounded-lg p-6 text-center">
+        <a
+          href={t.ctaHref}
+          class="inline-flex items-center gap-2 font-mono text-sm bg-primary text-primaryFg px-5 py-2.5 rounded-md hover:opacity-90 transition"
+        >
+          {t.cta}
+          <ArrowRight size={16} />
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

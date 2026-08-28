@@ -1,0 +1,67 @@
+---
+import type { NavLabels } from "../i18n/types";
+import { Languages } from "lucide-astro";
+
+interface Props {
+  lang: "en" | "it" | "fr";
+  nav: NavLabels;
+  active?: "resume" | "services" | "portfolio";
+}
+
+const { lang, nav, active = "resume" } = Astro.props;
+
+const links = [
+  { key: "resume", label: nav.resume, href: `/${lang}/` },
+  { key: "services", label: nav.services, href: `/${lang}/services/` },
+  { key: "portfolio", label: nav.portfolio, href: `/${lang}/portfolio/` },
+] as const;
+
+// Language switcher keeps the user on the same page in another locale.
+const pathSegment = active === "resume" ? "" : `/${active}`;
+const langLinks = [
+  { code: "en", href: `/en${pathSegment}/` },
+  { code: "it", href: `/it${pathSegment}/` },
+  { code: "fr", href: `/fr${pathSegment}/` },
+];
+---
+
+<nav
+  class="print:hidden max-w-3xl mx-auto mt-8 flex items-center justify-between gap-4 px-6"
+  aria-label="Main navigation"
+>
+  <ul class="flex flex-wrap items-center gap-1 text-sm font-mono">
+    {links.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          class={`px-2 py-1 rounded-md transition border ${
+            active === link.key
+              ? "bg-gray-100 border-gray-200 text-primary"
+              : "border-transparent text-muted hover:text-gray-800 hover:bg-gray-100"
+          }`}
+          aria-current={active === link.key ? "page" : undefined}
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <div class="flex items-center">
+    <Languages size={12} />
+    <ul class="flex divide-x text-sm text-muted ml-1">
+      {langLinks.map((l) => (
+        <li>
+          <a
+            class={`p-2 ${l.code === lang ? "font-bold text-primary" : "hover:text-gray-800"}`}
+            href={l.href}
+            aria-label={l.code.toUpperCase()}
+            aria-current={l.code === lang ? "true" : undefined}
+          >
+            {l.code.toUpperCase()}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>

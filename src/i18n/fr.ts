@@ -1,7 +1,8 @@
-import type { ResumeI18n } from "./types";
+import type { ResumeI18n, ServicesI18n, PortfolioI18n, NavLabels } from "./types";
 import { SKILLS, ALL_SKILLS } from "../data/skills";
+import { PROJECTS } from "../data/projects";
 
-const fr: ResumeI18n = {
+const fr: ResumeI18n & { services: ServicesI18n; portfolio: PortfolioI18n; nav: NavLabels } = {
   labels: {
     aboutTitle: "Profil Professionnel",
     aboutContent:
@@ -107,41 +108,7 @@ const fr: ResumeI18n = {
       dates: "Janv. 2024",
     },
   ],
-  projects: [
-    {
-      title: "FormBaker",
-      period: "2026–présent",
-      technologies: ["TypeScript", "Vitest", "arktype", "Zod"],
-      description:
-        "Moteur d'exécution open-source pour formulaires conditionnels et schémas multi-frameworks. Définitions sérialisables avec graphe de dépendances, résolution de visibilité et backends de validation interchangeables (arktype/zod). Node.js + browser. Intégrations pour React Hook Form, Angular et HTML5.",
-      url: "https://github.com/t1enne/formbaker",
-    },
-    {
-      title: "Industrie 4.0",
-      period: "2023–2024",
-      technologies: [
-        "Angular",
-        "Nest.js",
-        "TypeORM",
-        "PostgreSQL",
-        "TypeScript",
-        "Modbus",
-        "Opcua",
-        "Docker",
-      ],
-      description:
-        "Création de tableaux de bord + analytique intégrant des dispositifs IoT via les protocoles modbus et opcua.",
-      closedSource: true,
-    },
-    {
-      title: "Pipeline de Données E-commerce",
-      period: "2021-2022",
-      technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
-      description:
-        "Outil ETL Node.js + MongoDB convertissant les exports CSV retail en PostgreSQL. Réconciliation automatique quotidienne des stocks pour plus de 50 magasins.",
-      closedSource: true,
-    },
-  ],
+  projects: PROJECTS.fr.filter((p) => p.showOnResume),
   languages: [
     { name: "Anglais", level: "Courant (C2)" },
     { name: "Russe", level: "Langue maternelle" },
@@ -150,6 +117,107 @@ const fr: ResumeI18n = {
   ],
   skills: SKILLS,
   allSkills: ALL_SKILLS,
+  nav: {
+    resume: "CV",
+    services: "Services",
+    portfolio: "Portfolio",
+  },
+  services: {
+    labels: {
+      pageTitle: "Services",
+      intro:
+        "De l'architecture full-stack à l'optimisation des performances et au mentorat d'équipe, j'aide les équipes à livrer des logiciels fiables qui passent à l'échelle. Disponible pour des projets freelance, des collaborations à long terme et du conseil technique.",
+      title: "Ce que je propose",
+      deliverablesLabel: "Livrables",
+      cta: "Démarrer un projet",
+      ctaHref: "mailto:nasir.taov@gmail.com",
+      processTitle: "Comment je travaille",
+      process: [
+        {
+          title: "Découverte",
+          description:
+            "Nous alignons objectifs, contraintes et forme du produit avant d'écrire le moindre code.",
+        },
+        {
+          title: "Conception",
+          description:
+            "Je mappe l'architecture, le modèle de données et les outils au problème — pas l'inverse.",
+        },
+        {
+          title: "Développement & itération",
+          description:
+            "Boucles de feedback courtes avec tests et revues à chaque étape, en gardant qualité et rythme.",
+        },
+        {
+          title: "Livraison & support",
+          description:
+            "Je publie par petits lots et reste disponible pour durcir, surveiller et faire évoluer ce que nous avons construit.",
+        },
+      ],
+    },
+    services: [
+      {
+        icon: "LayoutGrid",
+        title: "Développement Web Full Stack",
+        description:
+          "Développement produit de bout en bout : des frontends modernes en React et Angular, et des backends robustes en Node.js, NestJS, Rust et Go.",
+        features: [
+          "Applications web & SaaS, tableaux de bord et API",
+          "React, Angular, TypeScript, Node.js, NestJS",
+          "PostgreSQL, MongoDB et modélisation de données efficace",
+          "Rust & Go pour les services critiques en performance",
+        ],
+      },
+      {
+        icon: "Cpu",
+        title: "Architecture & DevOps",
+        description:
+          "Conception de systèmes scalables et maintenables ainsi que des pipelines qui les gardent stables. Je réduis les temps de build, stabilise les déploiements et fais baisser les incidents.",
+        features: [
+          "Revues d'architecture & modernisation",
+          "Pipelines CI/CD (Jenkins, GitHub Actions)",
+          "Conteneurisation Docker & orchestration",
+          "Optimisation des performances & fiabilité",
+        ],
+      },
+      {
+        icon: "Smartphone",
+        title: "Frontends Mobile & Embarqués",
+        description:
+          "Éprouvé en production sur plus de 600 000 ATM. Je me spécialise dans les interfaces événementielles contraintes et hautement sécurisées, fiables à grande échelle.",
+        features: [
+          "Frameworks UI personnalisés & design systems",
+          "Interfaces événementielles, compatibles hors-ligne",
+          "Réécritures de systèmes legacy (JSP → TS moderne)",
+          "Builds durcis pour la sécurité et la compatibilité",
+        ],
+      },
+      {
+        icon: "Users",
+        title: "Leadership d'Équipe & Mentorat",
+        description:
+          "J'ai dirigé des équipes de 1 à 4 ingénieurs en tant que pont entre le métier et l'ingénierie. Je fais progresser les développeurs, renforce la revue de code et maintient la livraison dans les délais.",
+        features: [
+          "Lead technique & mentorat",
+          "Revue de code et standards d'ingénierie",
+          "Coordination d'équipes transversales",
+          "Cérémonies agile & planification",
+        ],
+      },
+    ],
+  },
+  portfolio: {
+    labels: {
+      pageTitle: "Portfolio",
+      intro:
+        "Une sélection de produits et d'outils que j'ai conçus et livrés dans les secteurs de la banque, du e-commerce, de l'IoT industriel et de l'open source.",
+      title: "Travaux sélectionnés",
+      projectCount: "projets",
+      cta: "Construisons quelque chose ensemble",
+      ctaHref: "mailto:nasir.taov@gmail.com",
+    },
+    projects: PROJECTS.fr,
+  },
 };
 
 export default fr;

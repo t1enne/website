@@ -1,0 +1,195 @@
+import type { Project } from "../i18n/types";
+
+/**
+ * Single source of truth for projects.
+ * The Portfolio page and the Resume's Projects section both render from
+ * these arrays, so project content lives here and nowhere else.
+ *
+ * - `showOnResume: true` → also listed in the resume (print) Projects section.
+ * - Portfolios always render every entry.
+ */
+export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
+  en: [
+    {
+      title: "FormBaker",
+      period: "2026–present",
+      category: "Open Source",
+      description:
+        "Open-source runtime form engine for conditional form rendering and cross-framework schemas. Serializable form definitions with dependency graphs, visibility resolution, and swappable validation backends (arktype/zod). Node.js + browser. Integrations for React Hook Form, Angular, and HTML5.",
+      technologies: ["TypeScript", "Vitest", "arktype", "Zod", "Node.js"],
+      highlights: [
+        "Dependency graph & visibility resolution",
+        "arktype / zod swappable validators",
+        "React Hook Form, Angular & HTML5 integrations",
+      ],
+      url: "https://github.com/t1enne/formbaker",
+      showOnResume: true,
+    },
+    {
+      title: "ATM Software — Nexi Group",
+      period: "2022–2024",
+      category: "Fintech / Frontend Architecture",
+      description:
+        "Frontend architecture for ATM software deployed on 600K ATMs across Europe for a leading Italian bank. Ported a JSP-driven UI to a modern TypeScript event-driven architecture.",
+      technologies: ["TypeScript", "Custom DSL", "Event-driven", "KAL"],
+      highlights: [
+        "600K devices in production",
+        "Custom widgets & JSON-based DSL",
+        "IE-compatible, security-hardened builds",
+      ],
+      closedSource: true,
+    },
+    {
+      title: "Industria 4.0",
+      period: "2023–2024",
+      category: "Industrial IoT",
+      description:
+        "Live dashboards and analytics integrating IoT devices via Modbus and OPC UA protocols for industrial monitoring.",
+      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "Modbus", "OPC UA"],
+      highlights: [
+        "Real-time device telemetry",
+        "Modbus & OPC UA protocol integration",
+        "Docker-based deployment",
+      ],
+      closedSource: true,
+      showOnResume: true,
+    },
+    {
+      title: "E-commerce Data Pipeline",
+      period: "2021–2022",
+      category: "Data / E-commerce",
+      description:
+        "Node.js + MongoDB ETL tool converting retail CSV exports to PostgreSQL, with automated daily inventory reconciliation across 50+ stores.",
+      technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
+      highlights: [
+        "50+ stores reconciled daily",
+        "Automated ETL & error recovery",
+        "AWS Lambda serverless processing",
+      ],
+      closedSource: true,
+      showOnResume: true,
+    },
+  ],
+  it: [
+    {
+      title: "FormBaker",
+      period: "2026–presente",
+      category: "Open Source",
+      description:
+        "Motore runtime open-source per form condizionali e schemi cross-framework. Definizioni serializzabili con grafo delle dipendenze, risoluzione della visibilità e backend di validazione intercambiabili (arktype/zod). Node.js + browser. Integrazioni per React Hook Form, Angular e HTML5.",
+      technologies: ["TypeScript", "Vitest", "arktype", "Zod", "Node.js"],
+      highlights: [
+        "Grafo delle dipendenze & risoluzione visibilità",
+        "Validator intercambiabili arktype / zod",
+        "Integrazioni React Hook Form, Angular & HTML5",
+      ],
+      url: "https://github.com/t1enne/formbaker",
+      showOnResume: true,
+    },
+    {
+      title: "Software ATM — Nexi Group",
+      period: "2022–2024",
+      category: "Fintech / Architettura Frontend",
+      description:
+        "Architettura frontend per software ATM distribuito su 600K ATM in Europa per una grande banca italiana. Migrata l'interfaccia JSP a una moderna architettura event-driven in TypeScript.",
+      technologies: ["TypeScript", "DSL custom", "Event-driven", "KAL"],
+      highlights: [
+        "600K dispositivi in produzione",
+        "Widget custom & DSL basato su JSON",
+        "Build compatibili IE e indurite",
+      ],
+      closedSource: true,
+    },
+    {
+      title: "Industria 4.0",
+      period: "2023–2024",
+      category: "IoT Industriale",
+      description:
+        "Dashboard live e analytics che integrano device IoT tramite i protocolli Modbus e OPC UA per il monitoraggio industriale.",
+      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "Modbus", "OPC UA"],
+      highlights: [
+        "Telemetria device in tempo reale",
+        "Integrazione protocolli Modbus & OPC UA",
+        "Deployment basato su Docker",
+      ],
+      closedSource: true,
+      showOnResume: true,
+    },
+    {
+      title: "Pipeline Dati E-commerce",
+      period: "2021–2022",
+      category: "Dati / E-commerce",
+      description:
+        "Tool ETL Node.js + MongoDB che converte gli export CSV retail in PostgreSQL, con riconciliazione automatica giornaliera su oltre 50 negozi.",
+      technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
+      highlights: [
+        "50+ negozi riconciliati ogni giorno",
+        "ETL automatico & recovery dagli errori",
+        "Elaborazione serverless con AWS Lambda",
+      ],
+      closedSource: true,
+      showOnResume: true,
+    },
+  ],
+  fr: [
+    {
+      title: "FormBaker",
+      period: "2026–présent",
+      category: "Open Source",
+      description:
+        "Moteur d'exécution open-source pour formulaires conditionnels et schémas multi-frameworks. Définitions sérialisables avec graphe de dépendances, résolution de visibilité et backends de validation interchangeables (arktype/zod). Node.js + browser. Intégrations pour React Hook Form, Angular et HTML5.",
+      technologies: ["TypeScript", "Vitest", "arktype", "Zod", "Node.js"],
+      highlights: [
+        "Graphe de dépendances & résolution de visibilité",
+        "Validateurs interchangeables arktype / zod",
+        "Intégrations React Hook Form, Angular & HTML5",
+      ],
+      url: "https://github.com/t1enne/formbaker",
+      showOnResume: true,
+    },
+    {
+      title: "Logiciel ATM — Nexi Group",
+      period: "2022–2024",
+      category: "Fintech / Architecture Frontend",
+      description:
+        "Architecture frontend pour un logiciel ATM déployé sur 600K ATM en Europe pour une grande banque italienne. Migration de l'interface JSP vers une architecture moderne événementielle en TypeScript.",
+      technologies: ["TypeScript", "DSL personnalisé", "Événementiel", "KAL"],
+      highlights: [
+        "600K appareils en production",
+        "Widgets personnalisés & DSL basé sur JSON",
+        "Builds compatibles IE et durcis",
+      ],
+      closedSource: true,
+    },
+    {
+      title: "Industrie 4.0",
+      period: "2023–2024",
+      category: "IoT Industriel",
+      description:
+        "Tableaux de bord en direct et analytique intégrant des dispositifs IoT via les protocoles Modbus et OPC UA pour le monitoring industriel.",
+      technologies: ["Angular", "Nest.js", "TypeORM", "PostgreSQL", "Modbus", "OPC UA"],
+      highlights: [
+        "Télémétrie en temps réel",
+        "Intégration des protocoles Modbus & OPC UA",
+        "Déploiement basé sur Docker",
+      ],
+      closedSource: true,
+      showOnResume: true,
+    },
+    {
+      title: "Pipeline de Données E-commerce",
+      period: "2021–2022",
+      category: "Données / E-commerce",
+      description:
+        "Outil ETL Node.js + MongoDB convertissant les exports CSV retail en PostgreSQL, avec réconciliation automatique quotidienne dans plus de 50 magasins.",
+      technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
+      highlights: [
+        "50+ magasins réconciliés chaque jour",
+        "ETL automatisé & reprise sur erreur",
+        "Traitement serverless avec AWS Lambda",
+      ],
+      closedSource: true,
+      showOnResume: true,
+    },
+  ],
+};
