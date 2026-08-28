@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -17,6 +18,9 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <head>
   <!-- Theme init: runs before paint to prevent flash of wrong theme.
        Resolves light | dark | system -> applies .dark to <html>. -->
+  <!-- SPA-style navigation between pages with animated transitions. -->
+  <ViewTransitions />
+
   <script is:inline>
     (function () {
       var stored = null;
