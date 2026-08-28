@@ -3,7 +3,7 @@ import { Languages } from "lucide-astro";
 
 interface Props {
   lang: "en" | "it" | "fr";
-  links: { code: "en" | "it" | "fr"; href: string; label: string }[];
+  links: { code: string; href: string; label: string }[];
 }
 
 const { lang } = Astro.props;

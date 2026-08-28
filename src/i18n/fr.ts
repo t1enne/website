@@ -138,7 +138,7 @@ const fr: ResumeI18n & {
         "De l'architecture full-stack à l'optimisation des performances et au mentorat d'équipe, j'aide les équipes à livrer des logiciels fiables qui passent à l'échelle. Disponible pour des projets freelance, des collaborations à long terme et du conseil technique.",
       title: "Ce que je propose",
       deliverablesLabel: "Livrables",
-      cta: "Démarrer un projet",
+      cta: "Parlons-en",
       ctaHref: "mailto:nasir.taov@gmail.com",
       processTitle: "Comment je travaille",
       process: [
@@ -222,7 +222,7 @@ const fr: ResumeI18n & {
         "Une sélection de produits et d'outils que j'ai conçus et livrés dans les secteurs de la banque, du e-commerce, de l'IoT industriel et de l'open source.",
       title: "Travaux sélectionnés",
       projectCount: "projets",
-      cta: "Construisons quelque chose ensemble",
+      cta: "Parlons-en",
       ctaHref: "mailto:nasir.taov@gmail.com",
     },
     projects: PROJECTS.fr,

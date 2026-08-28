@@ -11,7 +11,7 @@
 :root {
   color-scheme: light;
   --primary: 220.9 39.3% 11%;
-  --primaryFg: 210 20% 98%;
+  --primary-fg: 210 20% 98%;
   --muted: 220 10% 45%;
 
   /* Theme tokens (light defaults) */
@@ -27,7 +27,7 @@
 .dark {
   color-scheme: dark;
   --primary: 220 30% 92%;
-  --primaryFg: 222 47% 11%;
+  --primary-fg: 222 47% 11%;
   --muted: 220 10% 65%;
 
   --bg-page: 225 18% 14%;
@@ -43,7 +43,7 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --primary: 220 30% 92%;
-    --primaryFg: 222 47% 11%;
+    --primary-fg: 222 47% 11%;
     --muted: 220 10% 65%;
 
     --bg-page: 225 18% 14%;
