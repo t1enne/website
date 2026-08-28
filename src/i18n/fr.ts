@@ -27,7 +27,6 @@ const fr: ResumeI18n & {
     citizenshipLabel: "Citoyenneté",
     contactLocation: "Lieu",
     contactEmail: "Email",
-    contactPhone: "Téléphone",
     contactLinkedin: "LinkedIn",
     contactGithub: "Github",
     location: "Padoue, Italie",

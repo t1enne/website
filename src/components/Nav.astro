@@ -2,7 +2,7 @@
 import type { NavLabels } from "../i18n/types";
 import ThemeToggle from "./ThemeToggle.astro";
 import LangToggle from "./LangToggle.astro";
-import { Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
+import { Linkedin, Mail, Printer, FileText, Github } from "lucide-astro";
 import IconButton from "./IconButton.astro";
 
 interface Props {
@@ -16,7 +16,6 @@ interface Props {
 const { lang, nav, active = "resume", name, title } = Astro.props;
 
 const email = "nasir.taov@gmail.com";
-const phone = "+39 328 1934728";
 const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
 const links = [
@@ -35,7 +34,6 @@ const langLinks = [
 
 const contactItems = [
   { href: `mailto:${email}`, icon: Mail, label: `mail: ${email}` },
-  { href: `tel:${phone.replace(/\s/g, "")}`, icon: Phone, label: `phone: ${phone}` },
 ];
 ---
 

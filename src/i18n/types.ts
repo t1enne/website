@@ -107,7 +107,6 @@ export interface ResumeLabels {
   citizenshipLabel: string;
   contactLocation: string;
   contactEmail: string;
-  contactPhone: string;
   contactLinkedin: string;
   contactGithub: string;
   location: string;

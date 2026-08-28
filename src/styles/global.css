@@ -104,6 +104,23 @@ body {
     color-scheme: light !important;
   }
 
+  /* Printed output must always use the dark-on-white palette. The theme
+     tokens above (--text, --muted, --primary, etc.) switch to light-on-dark
+     values when the site is in dark theme, which would render as light gray
+     text on the white print page. Reset every token to its light-mode value
+     so text, headings, and links print dark regardless of the active theme. */
+  :root,
+  :root.dark {
+    --primary: 220.9 39.3% 11%;
+    --primary-fg: 210 20% 98%;
+    --muted: 220 10% 45%;
+    --bg-page: 0 0% 100%;
+    --text: 220 30% 12%;
+    --muted-text: 220 10% 45%;
+    --border: 215 16% 90%;
+    --soft-bg: 214 16% 93%;
+  }
+
   body {
     background: white !important;
     font-size: 9.5pt;

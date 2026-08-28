@@ -22,7 +22,6 @@ const t = i18n.labels;
 
 const jobTitle = JOB_TITLE;
 const email = "nasir.taov@gmail.com";
-const phone = "+39 328 1934728";
 const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
 
@@ -36,7 +35,6 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
       name={NAME}
       jobTitle={jobTitle}
       email={email}
-      phone={phone}
       linkedin={linkedinUrl}
       skills={i18n.allSkills}
       languages={i18n.languages}
@@ -51,7 +49,6 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
     >
       <meta itemprop="jobTitle" content={jobTitle} />
       <meta itemprop="email" content={email} />
-      <meta itemprop="telephone" content={phone} />
 
       <!-- Header -->
       <div class="flex items-center justify-between">
@@ -65,21 +62,23 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
             <table class="ml-auto border-collapse text-xs">
               <tbody>
                 <tr>
-                  <td class="font-medium pr-3 text-left align-top whitespace-nowrap">{t.contactLocation}</td>
+                  <td class="font-medium pr-3 text-right align-top whitespace-nowrap">{t.contactLocation}</td>
                   <td class="text-muted text-left whitespace-nowrap">{t.location}</td>
-                  <td class="font-medium px-3 text-left align-top whitespace-nowrap">{t.contactEmail}</td>
-                  <td class="text-muted text-left whitespace-nowrap">{email}</td>
                 </tr>
                 <tr>
-                  <td class="font-medium pr-3 text-left align-top whitespace-nowrap pt-0.5">{t.contactPhone}</td>
-                  <td class="text-muted text-left whitespace-nowrap pt-0.5">{phone}</td>
-                  <td class="font-medium px-3 text-left align-top whitespace-nowrap pt-0.5">{t.contactGithub}</td>
+                  <td class="font-medium px-3 text-right align-top whitespace-nowrap pt-0.5">{t.contactEmail}</td>
+                  <td class="text-muted text-left whitespace-nowrap pt-0.5">{email}</td>
+                </tr>
+                <tr>
+                  <td class="font-medium pr-3 text-right align-top whitespace-nowrap pt-0.5">{t.contactLinkedin}</td>
+                  <td class="text-muted text-left whitespace-nowrap pt-0.5">linkedin.com/in/nasir-taov</td>
+                </tr>
+                <tr>
+                  <td class="font-medium px-3 text-right align-top whitespace-nowrap pt-0.5">{t.contactGithub}</td>
                   <td class="text-muted text-left whitespace-nowrap pt-0.5">github.com/t1enne</td>
                 </tr>
                 <tr>
-                  <td class="font-medium pr-3 text-left align-top whitespace-nowrap pt-0.5">{t.contactLinkedin}</td>
-                  <td class="text-muted text-left whitespace-nowrap pt-0.5">linkedin.com/in/nasir-taov</td>
-                  <td class="font-medium px-3 text-left align-top whitespace-nowrap pt-0.5">{t.citizenshipLabel}</td>
+                  <td class="font-medium pr-3 text-right align-top whitespace-nowrap pt-0.5">{t.citizenshipLabel}</td>
                   <td class="text-muted text-left whitespace-nowrap pt-0.5">{t.citizenship}</td>
                 </tr>
               </tbody>

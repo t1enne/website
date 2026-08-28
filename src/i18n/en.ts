@@ -27,7 +27,6 @@ const en: ResumeI18n & {
     citizenshipLabel: "Citizenship",
     contactLocation: "Location",
     contactEmail: "Email",
-    contactPhone: "Phone",
     contactLinkedin: "LinkedIn",
     contactGithub: "Github",
     location: "Padua, Italy",
