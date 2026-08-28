@@ -11,7 +11,7 @@ import LanguageItem from "./LanguageItem.astro";
 import SkillsSection from "./SkillsSection.astro";
 import ResumeJsonLd from "./ResumeJsonLd.astro";
 import { Linkedin, Phone, Mail, Printer, FileText, Github } from "lucide-astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, NAME, JOB_TITLE } from "../consts";
 
 interface Props {
   lang: "en" | "it" | "fr";
@@ -22,7 +22,7 @@ interface Props {
 const { lang, i18n, navLabels } = Astro.props;
 const t = i18n.labels;
 
-const jobTitle = "Full Stack Developer";
+const jobTitle = JOB_TITLE;
 const email = "nasir.taov@gmail.com";
 const phone = "+39 328 1934728";
 const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
@@ -38,7 +38,7 @@ const contactItems = [
   <head>
     <BaseHead title={`${SITE_TITLE} - Resume`} description={SITE_DESCRIPTION} />
     <ResumeJsonLd
-      name="Nasir Taov"
+      name={NAME}
       jobTitle={jobTitle}
       email={email}
       phone={phone}
@@ -48,24 +48,24 @@ const contactItems = [
     />
   </head>
   <body class="print:bg-white text-ink">
-    <Nav lang={lang} nav={navLabels} active="resume" />
+    <Nav lang={lang} nav={navLabels} active="resume" name={NAME} title={jobTitle} />
     <main
-      class="p-6 max-w-3xl mx-auto my-8 text-base print:bg-white print:p-8 print:my-0"
+      class="p-6 max-w-3xl mx-auto my-2 text-base print:bg-white print:p-8 print:my-0"
       itemscope
       itemtype="https://schema.org/Person"
     >
-      <meta itemprop="name" content="Nasir Taov" />
       <meta itemprop="jobTitle" content={jobTitle} />
       <meta itemprop="email" content={email} />
       <meta itemprop="telephone" content={phone} />
 
       <!-- Header -->
       <div class="flex items-center justify-between print:mb-2">
+        <div class="w-full hidden print:block">
+          <span class="block font-bold text-2xl print:text-black">{NAME}</span>
+          <span class="block text-sm text-muted font-medium print:text-base print:text-black">{jobTitle}</span>
+        </div>
+        <h1 class="sr-only print:hidden">{NAME}</h1>
         <div class="pr-4">
-          <h1 class="font-bold text-3xl print:text-2xl print:mb-0">Nasir Taov</h1>
-          <div class="py-1" />
-          <span class="text-sm text-muted font-medium block print:text-base print:text-black">{jobTitle}</span>
-          <div class="py-2" />
           <div class="flex items-center gap-2 print:hidden">
             {contactItems.map((item) => (
               <IconButton href={item.href}><item.icon size={18} /></IconButton>
@@ -86,14 +86,6 @@ const contactItems = [
             <p class="text-xs text-muted">{t.contactLocation}: {t.location} &nbsp;|&nbsp; {t.contactEmail}: {email} &nbsp;|&nbsp; {t.contactPhone}: {phone}</p>
             <p class="text-xs text-muted">{t.contactLinkedin}: linkedin.com/in/nasir-taov &nbsp;|&nbsp; {t.contactGithub}: github.com/t1enne &nbsp;|&nbsp; {t.citizenshipLabel}: {t.citizenship}</p>
           </div>
-        </div>
-        <div class="overflow-hidden rounded-lg hidden">
-          <img
-            class="max-w-none w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
-            src="../self_2.jpeg"
-            alt="Nasir Taov"
-            itemprop="image"
-          />
         </div>
       </div>
 

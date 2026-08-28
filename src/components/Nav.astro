@@ -7,9 +7,11 @@ interface Props {
   lang: "en" | "it" | "fr";
   nav: NavLabels;
   active?: "resume" | "services" | "portfolio";
+  name: string;
+  title: string;
 }
 
-const { lang, nav, active = "resume" } = Astro.props;
+const { lang, nav, active = "resume", name, title } = Astro.props;
 
 const links = [
   { key: "resume", label: nav.resume, href: `/${lang}/` },
@@ -27,29 +29,46 @@ const langLinks = [
 ---
 
 <nav
-  class="print:hidden max-w-3xl mx-auto mt-8 flex items-center justify-between gap-4 px-6"
+  class="print:hidden max-w-3xl mx-auto mt-8 px-6 flex flex-col gap-5"
   aria-label="Main navigation"
 >
-  <ul class="flex flex-wrap items-center gap-1 text-sm font-mono">
-    {links.map((link) => (
-      <li>
-        <a
-          href={link.href}
-          class={`px-2 py-1 rounded-md transition border ${
-            active === link.key
-              ? "bg-soft border-line text-primary"
-              : "border-transparent text-muted hover:text-ink hover:bg-soft"
-          }`}
-          aria-current={active === link.key ? "page" : undefined}
-        >
-          {link.label}
-        </a>
-      </li>
-    ))}
-  </ul>
 
-  <div class="flex items-center gap-2">
-    <ThemeToggle />
-    <LangToggle lang={lang} links={langLinks} />
+  <div class="w-full flex items-center justify-between gap-4">
+    <div class="flex flex-col">
+      <span class="font-bold text-lg leading-tight">{name}</span>
+      <span class="text-sm text-muted font-mono">{title}</span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <img
+        src="/self-ascii.png"
+        class="nav-avatar h-14 w-14 rounded-full object-cover"
+        alt=""
+      />
+      <div class="flex items-center gap-2">
+        <ThemeToggle />
+        <LangToggle lang={lang} links={langLinks} />
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex justify-between">
+    <ul class="flex flex-wrap items-center gap-1 text-sm font-mono">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class={`px-2 py-1 rounded-md transition border ${
+              active === link.key
+                ? "bg-soft border-line text-primary"
+                : "border-transparent text-muted hover:text-ink hover:bg-soft"
+            }`}
+            aria-current={active === link.key ? "page" : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
   </div>
 </nav>

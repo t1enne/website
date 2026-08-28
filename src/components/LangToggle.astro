@@ -33,7 +33,7 @@ const current = links.find((l) => l.code === lang);
     aria-label="Change language"
   >
     <Languages size={14} />
-    <span class="text-xs font-medium uppercase">{current?.code ?? lang}</span>
+    <span class="text-xs font-medium uppercase min-w-[2ch] text-center">{current?.code ?? lang}</span>
   </button>
 
   <ul
@@ -55,7 +55,7 @@ const current = links.find((l) => l.code === lang);
           }`}
           aria-current={l.code === lang ? "true" : undefined}
         >
-          <span class="uppercase text-xs font-semibold">{l.code}</span>
+          <span class="uppercase text-xs font-semibold min-w-[2ch] text-center">{l.code}</span>
           <span class="text-muted">{l.label}</span>
         </a>
       </li>

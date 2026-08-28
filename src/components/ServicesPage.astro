@@ -10,7 +10,7 @@ import {
   ArrowRight,
   Check,
 } from "lucide-astro";
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE, NAME, JOB_TITLE } from "../consts";
 
 interface Props {
   lang: "en" | "it" | "fr";
@@ -30,10 +30,9 @@ const iconMap = { LayoutGrid, Cpu, Smartphone, Users } as const;
     <BaseHead title={`${SITE_TITLE} - ${t.pageTitle}`} description={t.intro} />
   </head>
   <body>
-    <Nav lang={lang} nav={navLabels} active="services" />
-    <main class="p-6 max-w-3xl mx-auto my-8">
+    <Nav lang={lang} nav={navLabels} active="services" name={NAME} title={JOB_TITLE} />
+    <main class="p-6 max-w-3xl mx-auto my-4">
       <header class="mb-10">
-        <h1 class="font-bold text-3xl print:text-2xl mb-3">{t.pageTitle}</h1>
         <p class="text-muted font-mono text-sm leading-relaxed max-w-2xl">
           {t.intro}
         </p>

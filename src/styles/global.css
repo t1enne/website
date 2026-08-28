@@ -8,6 +8,21 @@
   display: none !important;
 }
 
+/* Continuous pulsing background animation for the nav avatar */
+@keyframes nav-avatar-pulse {
+  0%,
+  100% {
+    background-color: #94a3b8; /* slate-400 */
+  }
+  50% {
+    background-color: #64748b; /* slate-500 */
+  }
+}
+
+.nav-avatar {
+  animation: nav-avatar-pulse 4s ease-in-out infinite;
+}
+
 :root {
   color-scheme: light;
   --primary: 220.9 39.3% 11%;

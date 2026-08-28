@@ -9,7 +9,8 @@
     "postbuild": "npx playwright install chromium && npm run generate-pdfs",
     "preview": "astro preview",
     "astro": "astro",
-    "generate-pdfs": "tsx scripts/generate-pdfs.ts"
+    "generate-pdfs": "tsx scripts/generate-pdfs.ts",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/alpinejs": "^1.0.0",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "playwright": "^1.59.1",
+    "prettier": "^3.5.0",
     "tsx": "^4.21.0"
   }
 }
