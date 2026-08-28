@@ -137,7 +137,7 @@ const en: ResumeI18n & {
         "From full-stack architecture to performance tuning and team mentoring, I help teams ship reliable software that scales. Available for freelance projects, long-term engagements, and technical consulting.",
       title: "What I offer",
       deliverablesLabel: "Deliverables",
-      cta: "Let's talk",
+      cta: "Get in touch",
       ctaHref: "mailto:nasir.taov@gmail.com",
       processTitle: "How I work",
       process: [
@@ -221,7 +221,7 @@ const en: ResumeI18n & {
         "A selection of products and tools I've designed and shipped across banking, e-commerce, industrial IoT, and open source.",
       title: "Selected work",
       projectCount: "projects",
-      cta: "Let's talk",
+      cta: "Get in touch",
       ctaHref: "mailto:nasir.taov@gmail.com",
     },
     projects: PROJECTS.en,

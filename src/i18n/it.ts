@@ -134,7 +134,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         "Dall'architettura full-stack all'ottimizzazione delle performance e al mentoring di team, aiuto i team a consegnare software affidabile che scala. Disponibile per progetti freelance, collaborazioni a lungo termine e consulenza tecnica.",
       title: "Cosa offro",
       deliverablesLabel: "Deliverable",
-      cta: "Parliamone",
+      cta: "Contattami",
       ctaHref: "mailto:nasir.taov@gmail.com",
       processTitle: "Come lavoro",
       process: [
@@ -218,7 +218,7 @@ Implementato linee guida visual merchandising e coordinato logistica riforniment
         "Una selezione di prodotti e strumenti che ho progettato e rilasciato nei settori bancario, e-commerce, IoT industriale e open source.",
       title: "Lavori selezionati",
       projectCount: "progetti",
-      cta: "Parliamone",
+      cta: "Contattami",
       ctaHref: "mailto:nasir.taov@gmail.com",
     },
     projects: PROJECTS.it,
