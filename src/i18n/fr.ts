@@ -41,7 +41,7 @@ const fr: ResumeI18n & {
 - Principal interlocuteur entre les parties prenantes métier et l'ingénierie
 - Conteneurisé les applications avec Docker et mis en place la pipeline CI/CD Jenkins on-premise
 - Nettoyé le processus de build pour que la CI ne soit plus le goulot d'étranglement
-- Mission d'architecte frontend sur site chez Nexi Group (voir ci-dessous)
+- Mission d'architecte frontend sur site auprès d'une grande banque européenne, sous NDA (voir ci-dessous)
 - TypeScript et Node à travers la stack, de l'interface aux services`,
       dates: "Mars 2022 – Présent",
       tags: [
@@ -55,10 +55,10 @@ const fr: ResumeI18n & {
       ],
     },
     {
-      company: "Nexi Group",
+      company: "Client Banking / Fintech",
       location: "Vérone, Italie",
       title: "Architecte Frontend",
-      description: `- Mission client sur site réalisée pendant mon emploi chez Raintonic (avec ID et matériel Nexi fournis)
+      description: `- Mission client sur site réalisée pendant mon emploi chez Raintonic, sous NDA du client
 - Dirigé le développement frontend de logiciels ATM pour une grande banque italienne, déployé en Europe sur 600K+ ATM
 - Migré l'interface pilotée par le backend JSP vers une architecture moderne orientée événements en TypeScript
 - Développé des widgets et services personnalisés, utilisables depuis un DSL sur mesure basé sur JSON

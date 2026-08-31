@@ -11,7 +11,7 @@ import type { Project } from "../i18n/types";
 export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
   en: [
     {
-      title: "ATM Software - Nexi Group",
+      title: "ATM Software - Banking / Fintech",
       period: "2022–2024",
       category: "Fintech / Frontend Architecture",
       description:
@@ -115,7 +115,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
   ],
   it: [
     {
-      title: "Software ATM - Nexi Group",
+      title: "Software ATM - Banking / Fintech",
       period: "2022–2024",
       category: "Fintech / Architettura Frontend",
       description:
@@ -219,7 +219,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
   ],
   fr: [
     {
-      title: "Logiciel ATM - Nexi Group",
+      title: "Logiciel ATM - Banking / Fintech",
       period: "2022–2024",
       category: "Fintech / Architecture Frontend",
       description:

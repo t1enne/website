@@ -41,7 +41,7 @@ const en: ResumeI18n & {
 - Main bridge between business stakeholders and engineering
 - Containerized applications with Docker and set up the on-premise Jenkins CI/CD pipeline
 - Cleaned up the build process so CI stops being the bottleneck
-- On-site frontend-architect engagement at Nexi Group (see below)
+- On-site frontend-architect engagement with a major European banking client, under NDA (see below)
 - TypeScript and Node across the stack, from UI to services`,
       dates: "Mar 2022 – Present",
       tags: [
@@ -55,11 +55,11 @@ const en: ResumeI18n & {
       ],
     },
     {
-      company: "Nexi Group",
+      company: "Banking / Fintech Client",
       location: "Verona, Italy",
       title: "Frontend Architect",
-      description: `- On-site client engagement delivered while employed at Raintonic (issued Nexi ID and hardware)
-- Led frontend development of ATM software for a leading Italian bank, deployed across Europe on 600K+ ATMs
+      description: `- On-site client engagement delivered while employed at Raintonic, under the client's NDA
+- Led frontend development of ATM software for a major European bank, deployed across Europe on 600K+ ATMs
 - Ported JSP backend driven UI to a modern TypeScript event driven architecture
 - Developed custom widgets + services, usable from a custom DSL based on JSON
 - Deep integration with the existing ATM KAL layer

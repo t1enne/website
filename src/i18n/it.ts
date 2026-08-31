@@ -41,7 +41,7 @@ Technical lead per un team focalizzato, con responsabilità sull'intero ciclo, d
 Interfaccia principale tra stakeholder di business e ingegneria.
 Containerizzate applicazioni con Docker e configurata la pipeline Jenkins CI/CD on-premise.
 Sistemato il processo di build così la CI smette di essere il collo di bottiglia.
-Engagement on-site di architettura frontend presso Nexi Group (vedi sotto).
+Engagement on-site di architettura frontend con un'importante banca europea, sotto NDA (vedi sotto).
 TypeScript e Node trasversali allo stack, dalla UI ai servizi.`,
       dates: "Mar 2022 – Presente",
       tags: [
@@ -55,11 +55,11 @@ TypeScript e Node trasversali allo stack, dalla UI ai servizi.`,
       ],
     },
     {
-      company: "Nexi Group",
+      company: "Cliente Banking / Fintech",
       location: "Verona, Italia",
       title: "Architetto Frontend",
-      description: `Engagement on-site per conto del cliente, svolto mentre ero assunto presso Raintonic (ho ricevuto ID e hardware Nexi).
-Guidato lo sviluppo frontend di software ATM per una grande banca italiana, distribuito in Europa su 600K+ ATM.
+      description: `Engagement on-site per conto del cliente, svolto mentre ero assunto presso Raintonic, sotto NDA del cliente.
+Guidato lo sviluppo frontend di software ATM per un'importante banca europea, distribuito in Europa su 600K+ ATM.
 Migrata l'interfaccia guidata dal backend JSP a una moderna architettura event-driven in TypeScript.
 Sviluppati widget e servizi custom, utilizzabili da un DSL custom basato su JSON.
 Integrazione profonda con l'allocatore KAL esistente degli ATM.
