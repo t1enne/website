@@ -16,24 +16,24 @@ const { title, company, location, dates, description, tags = [] } = Astro.props;
 const bullets = description.trim().split('\n').filter(line => line.trim());
 ---
 
-<li class="mb-6" itemscope itemtype="https://schema.org/OrganizationRole">
+<li class="work-entry mb-6 print:mb-[9pt]" itemscope itemtype="https://schema.org/OrganizationRole">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
-    <h3 class="font-bold text-lg print:text-sm" itemprop="roleName">{title}</h3>
-    <time class="text-muted font-mono text-xs">{dates}</time>
+    <h3 class="entry-title font-bold text-lg" itemprop="roleName">{title}</h3>
+    <time class="entry-meta text-muted font-mono text-xs" datetime={dates}>{dates}</time>
   </div>
-  <h5 class="text-sm text-muted mb-1">
-    <span itemprop="name">{company}</span> - {location}
+  <h5 class="entry-sub text-sm text-muted mb-1">
+    <span itemprop="name">{company}</span><span class="print:hidden"> - {location}</span><span class="hidden print:inline print:text-muted"> &middot; {location}</span>
   </h5>
   <!-- Tag chips (screen) -->
   <div class="print:hidden flex flex-wrap gap-1 my-2.5">
     {tags.map(tag => <Tag text={tag} />)}
   </div>
-  <!-- Tag chips (print) -->
-  <p class="hidden print:block text-xs text-muted font-mono my-2 print:italic">
-    {tags.join(' · ')}
+  <!-- Tag list (print) -->
+  <p class="entry-tags hidden print:block">
+    {tags.join('  ·  ')}
   </p>
   <!-- Bullets -->
-  <ul class="list-disc list-outside ml-4 space-y-2">
+  <ul class="bullets list-disc list-outside ml-4 space-y-2 print:ml-0 print:space-y-0">
     {bullets.map(bullet => (
       <li class="font-mono text-muted text-xs leading-relaxed">
         {bullet.replace(/^[-•]\s*/, '').trim()}

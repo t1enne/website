@@ -90,7 +90,7 @@ body {
 /* Print optimization for ATS and PDF generation */
 @media print {
   @page {
-    margin: 0.4in 0.35in;
+    margin: 0.34in 0.6in;
     size: A4;
   }
 
@@ -123,8 +123,8 @@ body {
 
   body {
     background: white !important;
-    font-size: 9.5pt;
-    line-height: 1.35;
+    font-size: 9.6pt;
+    line-height: 1.5;
     color: #000;
   }
 
@@ -151,11 +151,218 @@ body {
   /* Work items can break but try to keep together */
   li {
     page-break-inside: avoid;
-    margin-bottom: 0.25rem;
   }
 
   /* Avoid widowed section headings at bottom of page */
   h2 {
     page-break-before: auto;
+  }
+
+  /* ----------------------------------------------------------------
+     Resume / print design system
+     Minimal, mono-accented, mirrors the site's typographic feel.
+     ---------------------------------------------------------------- */
+  .resume {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none;
+    font-size: 9.6pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+
+  /* Masthead */
+  .resume-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16pt;
+    padding-bottom: 8pt;
+    margin-bottom: 12pt;
+    border-bottom: 0.9pt solid #111;
+  }
+
+  .resume-name {
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: #000;
+    margin: 0;
+  }
+
+  .resume-role {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 7.4pt;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #5a5a5a;
+    margin: 4pt 0 0;
+  }
+
+  .resume-contact {
+    border-collapse: collapse;
+    font-size: 7.4pt;
+    line-height: 1.5;
+  }
+
+  .resume-contact th {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #999;
+    text-align: right;
+    padding: 0 6pt 0 0;
+    white-space: nowrap;
+  }
+
+  .resume-contact td {
+    color: #1a1a1a;
+    text-align: left;
+    white-space: nowrap;
+    padding: 0;
+  }
+
+  .resume-summary {
+    font-size: 9.6pt;
+    line-height: 1.45;
+    color: #333;
+    margin: 0 0 12pt;
+  }
+
+  /* Section headings: mono, tracked, hairline rule */
+  .resume .sec-title {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 7.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    color: #111;
+    border-bottom: 0.5pt solid #d0d0d0;
+    padding-bottom: 3pt;
+    margin: 0 0 8.5pt;
+  }
+
+  .resume section {
+    margin-bottom: 10pt;
+  }
+
+  /* Entry headers */
+  .resume .entry-title {
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #000;
+  }
+
+  .resume .entry-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 7.4pt;
+    color: #666;
+  }
+
+  .resume .entry-sub {
+    font-size: 8.6pt;
+    color: #555;
+    margin: 1pt 0 0;
+  }
+
+  /* Tech list: inline mono, set apart by a hairline instead of italic */
+  .resume .entry-tags {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 7.4pt;
+    color: #8f8f8f;
+    letter-spacing: 0.015em;
+    margin: 2.5pt 0 3.5pt;
+  }
+
+  .resume .entry-desc {
+    font-size: 8.9pt;
+    line-height: 1.44;
+    color: #333;
+    margin: 0;
+  }
+
+  .resume ul.bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .resume ul.bullets > li {
+    position: relative;
+    padding-left: 9pt;
+    margin: 0 0 2pt;
+    font-size: 8.9pt;
+    line-height: 1.37;
+    color: #333;
+  }
+
+  .resume ul.bullets > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.52em;
+    width: 2.6pt;
+    height: 2.6pt;
+    background: #b0b0b0;
+    border-radius: 0.5pt;
+  }
+
+  .resume .skills-grid {
+    display: grid;
+    grid-template-columns: 8.4em 1fr;
+    column-gap: 8pt;
+    row-gap: 2.5pt;
+    margin: 0;
+    font-size: 8.9pt;
+    line-height: 1.5;
+  }
+
+  .resume .skills-grid dt {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 7.4pt;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #666;
+    padding-top: 0.6pt;
+  }
+
+  .resume .skills-grid dd {
+    margin: 0;
+    color: #222;
+  }
+
+  .resume .skills-grid > div {
+    display: contents;
+  }
+
+  /* Work entries may flow across pages so no page ends half-empty;
+     the title block stays with its first bullets. */
+  .resume .work-entry {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .resume .work-entry > h3,
+  .resume .work-entry > h5 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .resume .work-entry > ul {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  .resume .keep-together {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume .cols-2 {
+    column-count: 2;
+    column-gap: 18pt;
   }
 }

@@ -13,23 +13,24 @@ interface Props {
 const { title, degree, location, dates, summary, score } = Astro.props;
 ---
 
-<li class="mb-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+<li class="keep-together mb-6 print:mb-0" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
-    <h3 class="font-bold text-lg print:text-sm" itemprop="credentialCategory">{title}</h3>
-    <time class="text-muted font-mono text-xs">{dates}</time>
+    <h3 class="entry-title font-bold text-lg" itemprop="credentialCategory">{title}</h3>
+    <time class="entry-meta text-muted font-mono text-xs">{dates}</time>
   </div>
-  <p class="text-sm text-muted mb-1">
+  <p class="entry-sub text-sm text-muted">
     {degree && <span class="text-ink/80" itemprop="educationalLevel">{degree}</span>}
     {degree && <span class="text-muted/50" aria-hidden="true"> · </span>}
     <span itemprop="recognizedBy">{location}</span>
   </p>
   {
     score && (
-      <div class="flex flex-wrap gap-1 my-2.5 print:my-1">
+      <div class="my-2.5 flex print:my-1 print:hidden">
         <Tag text={score} />
       </div>
     )
   }
+  {score && <p class="entry-meta hidden print:block print:mt-[1.5pt]">{score}</p>}
   {
     summary && (
       <p class="font-mono text-muted text-xs leading-relaxed">{summary}</p>

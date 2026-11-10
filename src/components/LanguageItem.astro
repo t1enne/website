@@ -14,8 +14,8 @@ const bars = [1, 2, 3, 4, 5, 6];
 const heights = ['h-0.5', 'h-1', 'h-1.5', 'h-2', 'h-2.5', 'h-3'];
 ---
 
-<li class="py-2.5 print:py-1 flex items-baseline justify-between gap-4">
-  <span class="font-semibold text-sm print:text-xs">{name}</span>
+<li class="py-2.5 print:py-0 print:flex print:items-baseline print:gap-2 flex items-baseline justify-between gap-4">
+  <span class="font-semibold text-sm print:text-[8.8pt] print:font-medium">{name}</span>
   <span class="flex items-center gap-2.5 shrink-0">
     {
       filled > 0 && (
@@ -32,7 +32,7 @@ const heights = ['h-0.5', 'h-1', 'h-1.5', 'h-2', 'h-2.5', 'h-3'];
         </span>
       )
     }
-    <span class="text-muted font-mono text-xs print:text-[10px]">
+    <span class="text-muted font-mono text-xs print:text-[7.6pt]">
       {label}{code && <span class="text-muted/70"> · {code}</span>}
     </span>
   </span>

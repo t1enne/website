@@ -23,6 +23,7 @@ const t = i18n.labels;
 const jobTitle = JOB_TITLE;
 const email = "nasir.taov@gmail.com";
 const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
+const githubUrl = "https://github.com/t1enne";
 
 
 ---
@@ -43,7 +44,7 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
   <body class="print:bg-white text-ink">
     <Nav lang={lang} nav={navLabels} active="resume" name={NAME} title={jobTitle} />
     <main
-      class="p-6 max-w-3xl mx-auto my-4 text-base print:bg-white print:p-8 print:my-0"
+      class="resume p-6 max-w-3xl mx-auto my-4 text-base print:bg-white"
       itemscope
       itemtype="https://schema.org/Person"
     >
@@ -54,32 +55,32 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
       <div class="flex items-center justify-between">
         <div class="pr-4 print:w-full print:pr-0">
 
-          <div class="hidden print:flex print:items-start print:justify-between print:gap-8 print:pb-3 print:mb-3 print:border-b-2 print:border-line">
+          <div class="resume-header hidden print:flex">
             <div class="shrink-0">
-              <h1 class="font-bold text-2xl text-black">{NAME}</h1>
-              <p class="text-sm text-ink mt-1 font-medium">{jobTitle}</p>
+              <h1 class="resume-name">{NAME}</h1>
+              <p class="resume-role">{jobTitle}</p>
             </div>
-            <table class="ml-auto border-collapse text-xs">
+            <table class="resume-contact ml-auto">
               <tbody>
                 <tr>
-                  <td class="font-medium pr-3 text-right align-top whitespace-nowrap">{t.contactLocation}</td>
-                  <td class="text-muted text-left whitespace-nowrap">{t.location}</td>
+                  <th scope="row">{t.contactLocation}</th>
+                  <td>{t.location}</td>
                 </tr>
                 <tr>
-                  <td class="font-medium px-3 text-right align-top whitespace-nowrap pt-0.5">{t.contactEmail}</td>
-                  <td class="text-muted text-left whitespace-nowrap pt-0.5">{email}</td>
+                  <th scope="row">{t.contactEmail}</th>
+                  <td>{email}</td>
                 </tr>
                 <tr>
-                  <td class="font-medium pr-3 text-right align-top whitespace-nowrap pt-0.5">{t.contactLinkedin}</td>
-                  <td class="text-muted text-left whitespace-nowrap pt-0.5">linkedin.com/in/nasir-taov</td>
+                  <th scope="row">{t.contactLinkedin}</th>
+                  <td>{linkedinUrl}</td>
                 </tr>
                 <tr>
-                  <td class="font-medium px-3 text-right align-top whitespace-nowrap pt-0.5">{t.contactGithub}</td>
-                  <td class="text-muted text-left whitespace-nowrap pt-0.5">github.com/t1enne</td>
+                  <th scope="row">{t.contactGithub}</th>
+                  <td>{githubUrl}</td>
                 </tr>
                 <tr>
-                  <td class="font-medium pr-3 text-right align-top whitespace-nowrap pt-0.5">{t.citizenshipLabel}</td>
-                  <td class="text-muted text-left whitespace-nowrap pt-0.5">{t.citizenship}</td>
+                  <th scope="row">{t.citizenshipLabel}</th>
+                  <td>{t.citizenship}</td>
                 </tr>
               </tbody>
             </table>
@@ -92,14 +93,14 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
       <!-- Summary -->
 
       <header class="mb-10">
-        <p class="text-muted font-mono text-sm leading-relaxed max-w-2xl">
+        <p class="resume-summary text-muted font-mono text-sm leading-relaxed max-w-2xl">
           {t.aboutContent}
         </p>
       </header>
 
       <!-- Work Experience -->
       <section aria-labelledby="work-heading" class="mb-12">
-        <h2 id="work-heading" class="font-bold text-2xl print:text-lg mb-6">{t.workTitle}</h2>
+        <h2 id="work-heading" class="sec-title font-bold text-2xl mb-6">{t.workTitle}</h2>
         <ul class="w-full">
           {i18n.workExperience.map((exp) => (
             <WorkExperienceItem
@@ -116,8 +117,8 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
       <!-- Projects (only visible when printing / exporting PDF) -->
       <section aria-labelledby="projects-heading" class="hidden print:block mb-12">
-        <h2 id="projects-heading" class="font-bold text-2xl print:text-lg mb-6">{t.projectsTitle}</h2>
-        <ul class="w-full space-y-2">
+        <h2 id="projects-heading" class="sec-title font-bold text-2xl mb-6">{t.projectsTitle}</h2>
+        <ul class="w-full space-y-2 print:space-y-0">
           {i18n.projects.map((proj) => (
             <ProjectItem
               title={proj.title}
@@ -137,8 +138,8 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
       </section>
 
       <!-- Education -->
-      <section aria-labelledby="education-heading" class="mb-12 print:mb-2">
-        <h2 id="education-heading" class="font-bold text-2xl mb-6 print:text-lg">{t.educationTitle}</h2>
+      <section aria-labelledby="education-heading" class="mb-12">
+        <h2 id="education-heading" class="sec-title font-bold text-2xl mb-6">{t.educationTitle}</h2>
         <ul class="w-full">
           {i18n.education.map((edu) => (
             <EducationItem
@@ -155,8 +156,8 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
       <!-- Courses -->
       <section aria-labelledby="courses-heading" class="mb-12">
-        <h2 id="courses-heading" class="font-bold text-2xl print:text-lg mb-6">{t.coursesTitle}</h2>
-        <ul class="w-full divide-y divide-line">
+        <h2 id="courses-heading" class="sec-title font-bold text-2xl mb-6">{t.coursesTitle}</h2>
+        <ul class="w-full divide-y divide-line print:divide-y-0 cols-2">
           {i18n.courses.map((course) => (
             <CourseItem title={course.title} provider={course.provider} dates={course.dates} summary={course.summary} />
           ))}
@@ -165,8 +166,8 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
       <!-- Languages -->
       <section aria-labelledby="languages-heading" class="mb-12">
-        <h2 id="languages-heading" class="font-bold text-2xl print:text-lg mb-6">{t.langsTitle}</h2>
-        <ul class="w-full divide-y divide-line" itemprop="knowsLanguage">
+        <h2 id="languages-heading" class="sec-title font-bold text-2xl mb-6">{t.langsTitle}</h2>
+        <ul class="w-full divide-y divide-line print:flex print:flex-wrap print:gap-x-5 print:gap-y-[2pt] print:divide-y-0" itemprop="knowsLanguage">
           {i18n.languages.map((langEntry) => (
             <LanguageItem name={langEntry.name} level={langEntry.level} />
           ))}
