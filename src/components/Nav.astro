@@ -70,9 +70,11 @@ const contactItems = [
 		<IconButton href="https://github.com/t1enne" target="_blank" title="GitHub"
 			><Github size={18} /></IconButton
 		>
-		<IconButton onclick="window.print()" title="Press to print"
-			><Printer size={18} /></IconButton
-		>
+		{active === "resume" && (
+			<IconButton onclick="window.print()" title="Press to print"
+				><Printer size={18} /></IconButton
+			>
+		)}
 		<IconButton href={`/resume-${lang}.pdf`} title="Download PDF"
 			><FileText size={18} /></IconButton
 		>
