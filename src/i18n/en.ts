@@ -97,7 +97,8 @@ const en: ResumeI18n & {
   education: [
     {
       location: "IULM University - Milan",
-      title: "Bachelor's Degree in Linguistic Mediation (Translation)",
+      title: "Linguistic Mediation",
+      degree: "Bachelor's Degree",
       dates: "2011 - 2014",
       score: "Score: 110/110",
     },

@@ -9,11 +9,18 @@ interface Props {
 const { title, provider, dates, summary } = Astro.props;
 ---
 
-<li class="mb-3">
+<li class="py-3 print:py-1 first:pt-0 last:pb-0">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
     <h3 class="font-semibold text-sm print:text-xs">{title}</h3>
-    <time class="text-muted font-mono text-xs print:text-xs">{dates}</time>
+    <time class="text-muted font-mono text-xs shrink-0">{dates}</time>
   </div>
-  <p class="text-sm print:text-xs text-muted">{provider}</p>
-  {summary && <p class="text-muted text-sm print:text-xs mt-1">{summary}</p>}
+  <p class="text-muted font-mono text-xs mt-1 flex items-center gap-1.5">
+    <span class="w-1 h-1 rounded-full bg-muted/60 shrink-0" aria-hidden="true"></span>
+    <span>{provider}</span>
+  </p>
+  {
+    summary && (
+      <p class="font-mono text-muted text-xs leading-relaxed mt-1">{summary}</p>
+    )
+  }
 </li>

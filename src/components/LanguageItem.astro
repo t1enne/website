@@ -5,9 +5,35 @@ interface Props {
 }
 
 const { name, level } = Astro.props;
+
+const CEFR: Record<string, number> = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
+const code = level.match(/\b([ABC][12])\b/)?.[1];
+const filled = /native/i.test(level) ? 6 : code ? CEFR[code] : 0;
+const label = level.replace(/\s*\(?[ABC][12]\)?\s*/, '').trim();
+const bars = [1, 2, 3, 4, 5, 6];
+const heights = ['h-0.5', 'h-1', 'h-1.5', 'h-2', 'h-2.5', 'h-3'];
 ---
 
-<li class="py-2 print:py-0.5 grid grid-cols-2 gap-2">
+<li class="py-2.5 print:py-1 flex items-baseline justify-between gap-4">
   <span class="font-semibold text-sm print:text-xs">{name}</span>
-  <span class="text-muted text-sm print:text-xs">{level}</span>
+  <span class="flex items-center gap-2.5 shrink-0">
+    {
+      filled > 0 && (
+        <span class="flex items-end gap-0.5 print:hidden" aria-hidden="true">
+          {bars.map((i) => (
+            <span
+              class:list={[
+                'w-1 rounded-sm',
+                i <= filled ? 'bg-ink/70' : 'bg-line',
+                heights[i - 1],
+              ]}
+            />
+          ))}
+        </span>
+      )
+    }
+    <span class="text-muted font-mono text-xs print:text-[10px]">
+      {label}{code && <span class="text-muted/70"> · {code}</span>}
+    </span>
+  </span>
 </li>

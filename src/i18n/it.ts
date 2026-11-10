@@ -96,7 +96,8 @@ Gestione del rapporto con i clienti tramite CRM e servizio in boutique.`,
   education: [
     {
       location: "IULM University - Milan",
-      title: "Laurea in Mediazione Linguistica (Traduzione)",
+      title: "Mediazione Linguistica",
+      degree: "Laurea triennale",
       dates: "2011 - 2014",
       score: "Voto: 110/110",
     },

@@ -1,21 +1,38 @@
 ---
+import Tag from './Tag.astro';
+
 interface Props {
   title: string;
+  degree?: string;
   location: string;
   dates: string;
   summary?: string;
   score?: string;
 }
 
-const { title, location, dates, summary, score} = Astro.props;
+const { title, degree, location, dates, summary, score } = Astro.props;
 ---
 
-<li class="mb-3" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+<li class="mb-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
   <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
-    <h3 class="font-semibold text-sm print:text-xs" itemprop="credentialCategory">{title}</h3>
-    <time class="text-muted font-mono text-xs print:text-xs">{dates}</time>
+    <h3 class="font-bold text-lg print:text-sm" itemprop="credentialCategory">{title}</h3>
+    <time class="text-muted font-mono text-xs">{dates}</time>
   </div>
-  <p class="text-sm print:text-xs text-muted" itemprop="recognizedBy">{location}</p>
-  <p class="text-sm print:text-xs text-muted">{score}</p>
-  {summary && <p class="text-muted text-sm print:text-xs mt-1">{summary}</p>}
+  <p class="text-sm text-muted mb-1">
+    {degree && <span class="text-ink/80" itemprop="educationalLevel">{degree}</span>}
+    {degree && <span class="text-muted/50" aria-hidden="true"> · </span>}
+    <span itemprop="recognizedBy">{location}</span>
+  </p>
+  {
+    score && (
+      <div class="flex flex-wrap gap-1 my-2.5 print:my-1">
+        <Tag text={score} />
+      </div>
+    )
+  }
+  {
+    summary && (
+      <p class="font-mono text-muted text-xs leading-relaxed">{summary}</p>
+    )
+  }
 </li>

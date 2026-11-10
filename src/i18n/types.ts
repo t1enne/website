@@ -12,8 +12,10 @@ export interface WorkExperienceI18n {
 export interface EducationI18n {
   location: string;
   title: string;
+  degree?: string;
   dates: string;
   score?: string;
+  summary?: string;
 }
 
 export interface CourseI18n {

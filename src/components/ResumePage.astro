@@ -143,9 +143,11 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
           {i18n.education.map((edu) => (
             <EducationItem
               title={edu.title}
+              degree={edu.degree}
               location={edu.location}
               dates={edu.dates}
               score={edu.score}
+              summary={edu.summary}
             />
           ))}
         </ul>
@@ -154,7 +156,7 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
       <!-- Courses -->
       <section aria-labelledby="courses-heading" class="mb-12">
         <h2 id="courses-heading" class="font-bold text-2xl print:text-lg mb-6">{t.coursesTitle}</h2>
-        <ul class="w-full space-y-2">
+        <ul class="w-full divide-y divide-line">
           {i18n.courses.map((course) => (
             <CourseItem title={course.title} provider={course.provider} dates={course.dates} summary={course.summary} />
           ))}

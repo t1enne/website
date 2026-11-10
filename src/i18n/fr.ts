@@ -96,7 +96,8 @@ const fr: ResumeI18n & {
   education: [
     {
       location: "Université IULM - Milan",
-      title: "Licence en Médiation Linguistique (Traduction)",
+      title: "Médiation Linguistique",
+      degree: "Licence",
       dates: "2011 - 2014",
       score: "Note : 110/110",
     },
