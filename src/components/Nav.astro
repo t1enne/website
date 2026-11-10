@@ -8,7 +8,7 @@ import IconButton from "./IconButton.astro";
 interface Props {
   lang: "en" | "it" | "fr";
   nav: NavLabels;
-  active?: "resume" | "services" | "portfolio";
+  active?: "resume" | "portfolio";
   name: string;
   title: string;
 }
@@ -20,7 +20,6 @@ const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 
 const links = [
   { key: "resume", label: nav.resume, href: `/${lang}/` },
-  { key: "services", label: nav.services, href: `/${lang}/services/` },
   { key: "portfolio", label: nav.portfolio, href: `/${lang}/portfolio/` },
 ] as const;
 

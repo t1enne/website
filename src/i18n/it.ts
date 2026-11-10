@@ -1,6 +1,5 @@
 import type {
   ResumeI18n,
-  ServicesI18n,
   PortfolioI18n,
   NavLabels,
 } from "./types";
@@ -8,7 +7,6 @@ import { SKILLS, ALL_SKILLS } from "../data/skills";
 import { PROJECTS } from "../data/projects";
 
 const it: ResumeI18n & {
-  services: ServicesI18n;
   portfolio: PortfolioI18n;
   nav: NavLabels;
 } = {
@@ -130,92 +128,7 @@ Gestione del rapporto con i clienti tramite CRM e servizio in boutique.`,
   allSkills: ALL_SKILLS,
   nav: {
     resume: "Curriculum",
-    services: "Servizi",
     portfolio: "Portfolio",
-  },
-  services: {
-    labels: {
-      pageTitle: "Servizi",
-      intro:
-        "Architettura full stack, ottimizzazione delle performance, mentoring. Costruisco software che dura, e sono disponibile per progetti freelance, collaborazioni lunghe e consulenza.",
-      title: "Cosa offro",
-      deliverablesLabel: "Deliverable",
-      cta: "Contattami",
-      ctaHref: "mailto:nasir.taov@gmail.com",
-      processTitle: "Come lavoro",
-      process: [
-        {
-          title: "Prima parliamo, poi scriviamo codice",
-          description:
-            "Prima di costruire qualcosa, parliamone. Voglio capire cosa conta davvero: il budget, gli obiettivi, i punti su cui hai dei dubbi. A volte la risposta onesta è che è meglio aspettare, e preferisco dirtelo subito invece che a lavoro pagato.",
-        },
-        {
-          title: "Pensato per reggere",
-          description:
-            "Ho passato anni a costruire software che gira su oltre 600.000 ATM: lì un fermo non è un'opzione, e si impara a progettare pensando all'affidabilità fin dall'inizio, invece di scoprire i problemi in produzione.",
-        },
-        {
-          title: "Passi piccoli, sempre visibili",
-          description:
-            "Consegno a blocchi e ti mostro il lavoro man mano: vedi le cose funzionare e puoi cambiare direzione finché costa poco. Niente colpi di scena alla fine.",
-        },
-        {
-          title: "Resto anche dopo la consegna",
-          description:
-            "Finito il progetto non sparisco: lo seguo, sistemo quello che si rompe e scrivo la documentazione, così chi lo prende in mano riesce a capirlo e a mandarlo avanti.",
-        },
-      ],
-    },
-    services: [
-      {
-        icon: "LayoutGrid",
-        title: "Sviluppo Web Full Stack",
-        description:
-          "Frontend moderni in React e Angular, backend in Node.js e NestJS (TypeScript).",
-        features: [
-          "App web e SaaS, dashboard e API",
-          "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB e modellazione dei dati",
-          "Python per tooling, automazione e lavoro sui dati",
-        ],
-      },
-      {
-        icon: "Cpu",
-        title: "Architettura di Sistemi e DevOps",
-        description:
-          "Sistemi che restano in piedi e pipeline che li tengono in salute. Cerco build veloci, rilasci stabili e meno sorprese in produzione.",
-        features: [
-          "Revisione dell'architettura e modernizzazione",
-          "Pipeline CI/CD (Jenkins, GitHub Actions)",
-          "Container Docker e orchestrazione",
-          "Ottimizzazione delle performance e affidabilità",
-        ],
-      },
-      {
-        icon: "Smartphone",
-        title: "Frontend Mobile ed Embedded",
-        description:
-          "Gira su oltre 600.000 ATM in produzione. Costruisco interfacce event-driven con vincoli stretti di sicurezza e risorse, che devono reggere su larga scala.",
-        features: [
-          "Framework UI e design system su misura",
-          "Interfacce event-driven, utilizzabili anche offline",
-          "Riscrittura di sistemi legacy (da JSP a TypeScript)",
-          "Build indurite per sicurezza e compatibilità",
-        ],
-      },
-      {
-        icon: "Users",
-        title: "Leadership di Team e Mentoring",
-        description:
-          "Ho guidato team piccoli come ponte tra business e sviluppo. Faccio mentoring, revisione del codice e tengo il ritmo della consegna.",
-        features: [
-          "Technical lead e mentoring",
-          "Revisione del codice e standard di sviluppo",
-          "Coordinamento di team cross-funzionali",
-          "Cerimonie agile e pianificazione",
-        ],
-      },
-    ],
   },
   portfolio: {
     labels: {

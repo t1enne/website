@@ -1,6 +1,5 @@
 import type {
   ResumeI18n,
-  ServicesI18n,
   PortfolioI18n,
   NavLabels,
 } from "./types";
@@ -8,7 +7,6 @@ import { SKILLS, ALL_SKILLS } from "../data/skills";
 import { PROJECTS } from "../data/projects";
 
 const fr: ResumeI18n & {
-  services: ServicesI18n;
   portfolio: PortfolioI18n;
   nav: NavLabels;
 } = {
@@ -130,92 +128,7 @@ const fr: ResumeI18n & {
   allSkills: ALL_SKILLS,
   nav: {
     resume: "CV",
-    services: "Services",
     portfolio: "Portfolio",
-  },
-  services: {
-    labels: {
-      pageTitle: "Services",
-      intro:
-        "Architecture full stack, optimisation des performances, mentorat. Je construis des logiciels qui durent, et je suis disponible pour des projets freelance, des collaborations longues et du conseil.",
-      title: "Ce que je propose",
-      deliverablesLabel: "Livrables",
-      cta: "Contactez-moi",
-      ctaHref: "mailto:nasir.taov@gmail.com",
-      processTitle: "Comment je travaille",
-      process: [
-        {
-          title: "On parle avant le code",
-          description:
-            "Avant de construire quoi que ce soit, parlons-en. Je veux comprendre ce qui compte vraiment pour vous : le budget, les objectifs, les points qui vous inquiètent. Parfois la réponse honnête, c'est qu'il vaut mieux attendre encore, et je préfère vous le dire tout de suite plutôt qu'une fois la facture passée.",
-        },
-        {
-          title: "Conçu pour tenir",
-          description:
-            "J'ai passé des années à construire un logiciel qui tourne sur plus de 600 000 distributeurs : là, l'arrêt n'est pas une option, et on apprend à concevoir pour la fiabilité dès le départ au lieu de découvrir les problèmes en production.",
-        },
-        {
-          title: "Par petits pas, toujours visibles",
-          description:
-            "Je livre par petits blocs et je vous montre le travail au fur et à mesure : vous voyez ce qui fonctionne et vous pouvez changer de cap tant que ça coûte encore peu. Pas d'effet d'annonce, pas de surprise au lancement.",
-        },
-        {
-          title: "Je reste après la livraison",
-          description:
-            "Une fois le projet livré, je ne disparais pas : je le suis, je répare ce qui casse et je documente, pour que ceux qui reprennent le projet puissent réellement le comprendre et le faire tourner.",
-        },
-      ],
-    },
-    services: [
-      {
-        icon: "LayoutGrid",
-        title: "Développement Web Full Stack",
-        description:
-          "Des frontends modernes en React et Angular, des backends en Node.js et NestJS (TypeScript).",
-        features: [
-          "Applications web et SaaS, tableaux de bord et API",
-          "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB et modélisation des données",
-          "Python pour l'outillage, l'automatisation et les données",
-        ],
-      },
-      {
-        icon: "Cpu",
-        title: "Architecture et DevOps",
-        description:
-          "Des systèmes qui tiennent dans la durée, et des pipelines qui les gardent en bonne santé. Des builds rapides, des déploiements stables et moins de surprises en production.",
-        features: [
-          "Revue d'architecture et modernisation",
-          "Pipelines CI/CD (Jenkins, GitHub Actions)",
-          "Conteneurs Docker et orchestration",
-          "Optimisation des performances et fiabilité",
-        ],
-      },
-      {
-        icon: "Smartphone",
-        title: "Frontends Mobile et Embarqués",
-        description:
-          "Ça tourne sur plus de 600 000 distributeurs en production. Je construis des interfaces événementielles avec de fortes contraintes de sécurité et de ressources, qui doivent tenir à grande échelle.",
-        features: [
-          "Frameworks UI et design systems sur mesure",
-          "Interfaces événementielles, utilisables hors ligne",
-          "Réécriture de systèmes legacy (de JSP vers TypeScript)",
-          "Builds durcis pour la sécurité et la compatibilité",
-        ],
-      },
-      {
-        icon: "Users",
-        title: "Encadrement d'Équipe et Mentorat",
-        description:
-          "J'ai encadré de petites équipes, en faisant le lien entre le métier et le développement. Je fais du mentorat, je relis le code et je fais avancer la livraison.",
-        features: [
-          "Lead technique et mentorat",
-          "Revue de code et standards de développement",
-          "Coordination d'équipes transverses",
-          "Cérémonies agiles et planification",
-        ],
-      },
-    ],
   },
   portfolio: {
     labels: {

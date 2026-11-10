@@ -1,6 +1,5 @@
 import type {
   ResumeI18n,
-  ServicesI18n,
   PortfolioI18n,
   NavLabels,
 } from "./types";
@@ -8,7 +7,6 @@ import { SKILLS, ALL_SKILLS } from "../data/skills";
 import { PROJECTS } from "../data/projects";
 
 const en: ResumeI18n & {
-  services: ServicesI18n;
   portfolio: PortfolioI18n;
   nav: NavLabels;
 } = {
@@ -131,92 +129,7 @@ const en: ResumeI18n & {
   allSkills: ALL_SKILLS,
   nav: {
     resume: "Resume",
-    services: "Services",
     portfolio: "Portfolio",
-  },
-  services: {
-    labels: {
-      pageTitle: "Services",
-      intro:
-        "Full-stack architecture, performance tuning, team mentoring. I build software that keeps working, and I'm available for freelance projects, longer engagements, and consulting.",
-      title: "What I offer",
-      deliverablesLabel: "Deliverables",
-      cta: "Get in touch",
-      ctaHref: "mailto:nasir.taov@gmail.com",
-      processTitle: "How I work",
-      process: [
-        {
-          title: "Talk before code",
-          description:
-            "Let's talk before anything gets built. I want to understand what actually matters to you - the budget, the goals, the parts that scare you. Sometimes the honest answer is that you shouldn't build it yet, and I'd rather say that now than after you've paid for it.",
-        },
-        {
-          title: "Resilient",
-          description:
-            "I spent years building software that runs on 600,000+ ATMs. When downtime isn't an option, you learn to design for reliability from the start instead of discovering problems in production.",
-        },
-        {
-          title: "Small pieces, shown as I go",
-          description:
-            "I ship in small chunks and show my work continuously, so you can see things working and change direction while it's cheap. No big reveals, no surprises at the end.",
-        },
-        {
-          title: "I stick around after launch",
-          description:
-            "When the project ships I don't vanish. I monitor it, fix what breaks, and write things down so the people who take it over can actually understand and run it.",
-        },
-      ],
-    },
-    services: [
-      {
-        icon: "LayoutGrid",
-        title: "Full Stack Web Development",
-        description:
-          "Modern frontends with React & Angular, and backends in Node.js and NestJS (TypeScript).",
-        features: [
-          "Web & SaaS apps, dashboards, and APIs",
-          "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB, and data modeling",
-          "Python for tooling, automation, and data work",
-        ],
-      },
-      {
-        icon: "Cpu",
-        title: "System Architecture & DevOps",
-        description:
-          "Systems that stay up, and pipelines that keep them healthy. I focus on fast builds, stable deployments, and fewer production surprises.",
-        features: [
-          "Architecture reviews & modernization",
-          "CI/CD pipelines (Jenkins, GitHub Actions)",
-          "Docker containerization & orchestration",
-          "Performance tuning and reliability engineering",
-        ],
-      },
-      {
-        icon: "Smartphone",
-        title: "Mobile & Embedded Frontends",
-        description:
-          "Runs on 600,000+ ATMs in production. I build constrained, high-security, event-driven UIs that need to keep working at scale.",
-        features: [
-          "Custom UI frameworks & design systems",
-          "Event-driven, offline-capable interfaces",
-          "Legacy system rewrites (JSP → modern TS)",
-          "Security & compatibility-hardened builds",
-        ],
-      },
-      {
-        icon: "Users",
-        title: "Team Leadership & Mentoring",
-        description:
-          "I've led small, focused teams as the bridge between business and engineering. I mentor, review code, and keep delivery moving.",
-        features: [
-          "Technical lead & mentoring",
-          "Code review and engineering standards",
-          "Cross-functional team coordination",
-          "Agile ceremonies & planning",
-        ],
-      },
-    ],
   },
   portfolio: {
     labels: {

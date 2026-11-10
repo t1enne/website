@@ -46,31 +46,6 @@ export interface LanguageI18n {
   level: string;
 }
 
-/* ---- Services page ---- */
-
-export interface ServiceI18n {
-  icon: string; // lucide icon key
-  title: string;
-  description: string;
-  features: string[];
-}
-
-export interface ServiceLabels {
-  pageTitle: string;
-  intro: string;
-  title: string;
-  deliverablesLabel: string;
-  cta: string;
-  ctaHref: string;
-  processTitle: string;
-  process: { title: string; description: string }[];
-}
-
-export interface ServicesI18n {
-  labels: ServiceLabels;
-  services: ServiceI18n[];
-}
-
 /* ---- Portfolio page ---- */
 
 export interface PortfolioLabels {
@@ -91,7 +66,6 @@ export interface PortfolioI18n {
 
 export interface NavLabels {
   resume: string;
-  services: string;
   portfolio: string;
 }
 
