@@ -119,12 +119,12 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2022–2024",
       category: "Fintech / Architettura Frontend",
       description:
-        "Architettura frontend per software ATM distribuito su 600K ATM in Europa per una grande banca italiana. Migrata l'interfaccia JSP a una moderna architettura event-driven in TypeScript.",
+        "Architettura frontend per il software ATM di una grande banca italiana, installato su oltre 600.000 sportelli in Europa. L'interfaccia generata dal backend JSP è stata sostituita da un'architettura event-driven in TypeScript.",
       technologies: ["TypeScript", "DSL custom", "Event-driven", "KAL"],
       highlights: [
-        "600K ATM in produzione",
-        "Widget custom & DSL basato su JSON",
-        "Build compatibili IE e indurite",
+        "Oltre 600.000 ATM in produzione",
+        "Widget su misura e DSL basato su JSON",
+        "Build compatibili con IE e indurite per la sicurezza",
       ],
       closedSource: true,
     },
@@ -133,7 +133,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2023–2024",
       category: "IoT Industriale",
       description:
-        "Dashboard live e analytics che integrano device IoT tramite i protocolli Modbus e OPC UA per il monitoraggio industriale.",
+        "Dashboard in tempo reale e analisi dati, con dispositivi IoT integrati tramite i protocolli Modbus e OPC UA per il monitoraggio degli impianti.",
       technologies: [
         "Angular",
         "Nest.js",
@@ -143,9 +143,9 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "OPC UA",
       ],
       highlights: [
-        "Telemetria device in tempo reale",
-        "Integrazione protocolli Modbus & OPC UA",
-        "Deployment basato su Docker",
+        "Telemetria dei dispositivi in tempo reale",
+        "Integrazione dei protocolli Modbus e OPC UA",
+        "Rilascio su Docker",
       ],
       closedSource: true,
       showOnResume: true,
@@ -155,12 +155,12 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2026–presente",
       category: "Open Source",
       description:
-        "Motore runtime open-source per form condizionali e schemi cross-framework. Definizioni serializzabili con grafo delle dipendenze, risoluzione della visibilità e backend di validazione intercambiabili (arktype/zod). Node.js + browser. Integrazioni per React Hook Form, Angular e HTML5.",
+        "Motore open source per la gestione di form condizionali e schemi validi su più framework. Le definizioni dei form sono serializzabili e gestiscono grafo delle dipendenze e visibilità dei campi, con validatori intercambiabili (arktype/zod). Gira su Node.js e nel browser, con integrazioni per React Hook Form, Angular e HTML5.",
       technologies: ["TypeScript", "Vitest", "arktype", "Zod", "Node.js"],
       highlights: [
-        "Grafo delle dipendenze & risoluzione visibilità",
-        "Validator intercambiabili arktype / zod",
-        "Integrazioni React Hook Form, Angular & HTML5",
+        "Grafo delle dipendenze e risoluzione della visibilità",
+        "Validatori intercambiabili arktype / zod",
+        "Integrazioni con React Hook Form, Angular e HTML5",
       ],
       url: "https://github.com/t1enne/formbaker",
       showOnResume: true,
@@ -170,12 +170,12 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2026–presente",
       category: "Open Source / Orchestrazione AI",
       description:
-        "Orchestrazione di componenti multi-agente su Pi + tmux, distribuita come pacchetto Python gestito con uv. Esegue pipeline sequenziali architect → coder → reviewer, isolando ogni attività nel proprio worktree git (cell), tracciando lo stato in status.json e gestendo le sessioni via tmux con permessi strumento basati sul ruolo.",
+        "Orchestrazione multi-agente su Pi e tmux, distribuita come pacchetto Python gestito con uv. Esegue in sequenza le pipeline architect, coder e reviewer, isolando ogni attività nel proprio worktree git (cell), tenendo traccia dello stato in status.json e pilotando le sessioni tmux con permessi sugli strumenti legati al ruolo.",
       technologies: ["Python", "tmux", "Git worktree", "CLI"],
       highlights: [
-        "Pipeline sequenziale architect → coder → reviewer",
-        "Isolamento per-cell tramite git worktree",
-        "Permessi strumento applicati per ruolo",
+        "Pipeline sequenziale architect, coder, reviewer",
+        "Isolamento di ogni cell nel proprio worktree git",
+        "Permessi sugli strumenti applicati per ruolo",
       ],
       url: "https://github.com/t1enne/nswarm",
       showOnResume: false,
@@ -185,7 +185,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2025–presente",
       category: "Trading Quantitativo",
       description:
-        "Toolkit quantitativo componibile per trading: sincronizzazione dati IBKR, indicatori tecnici (filtri di Kalman, rilevamento regime HMM) e un motore di backtesting puramente funzionale. Workflow CLI configurabili in JSON con validazione IS/OOS walk-forward, sweep/ottimizzazione degli iperparametri e multiprocessing.",
+        "Libreria modulare per il trading quantitativo: sincronizzazione dei dati IBKR, indicatori tecnici (filtri di Kalman, rilevamento del regime HMM) e un motore di backtesting interamente funzionale. I flussi di lavoro da CLI si configurano in JSON, con validazione walk-forward IS/OOS, sweep e ottimizzazione degli iperparametri e multiprocessing.",
       technologies: [
         "Python",
         "IBKR REST API",
@@ -194,9 +194,9 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Multiprocessing",
       ],
       highlights: [
-        "Motore di backtest puramente funzionale con stato immutabile",
-        "Validazione IS/OOS walk-forward & sweep/ottimizzazione parametri",
-        "Parallelismo su processi per sweep e fold",
+        "Motore di backtest funzionale con stato immutabile",
+        "Validazione walk-forward IS/OOS con sweep e ottimizzazione dei parametri",
+        "Parallelismo su più processi per sweep e fold",
       ],
       url: "https://github.com/t1enne/ibkr",
       showOnResume: true,
@@ -206,11 +206,11 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2021–2022",
       category: "Dati / E-commerce",
       description:
-        "Tool ETL Node.js + MongoDB che converte gli export CSV retail in PostgreSQL, con riconciliazione automatica giornaliera su oltre 50 negozi.",
+        "Strumento ETL in Node.js e MongoDB che converte gli export CSV dei negozi in PostgreSQL, con riconciliazione automatica dell'inventario ogni giorno su oltre 50 punti vendita.",
       technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
       highlights: [
-        "50+ negozi riconciliati ogni giorno",
-        "ETL automatico & recovery dagli errori",
+        "Oltre 50 punti vendita riconciliati ogni giorno",
+        "ETL automatico e recupero dagli errori",
         "Elaborazione serverless con AWS Lambda",
       ],
       closedSource: true,
@@ -223,12 +223,12 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2022–2024",
       category: "Fintech / Architecture Frontend",
       description:
-        "Architecture frontend pour un logiciel ATM déployé sur 600K ATM en Europe pour une grande banque italienne. Migration de l'interface JSP vers une architecture moderne événementielle en TypeScript.",
+        "Architecture frontend pour le logiciel ATM d'une grande banque italienne, installé sur plus de 600 000 distributeurs en Europe. L'interface générée par le backend JSP a été remplacée par une architecture événementielle en TypeScript.",
       technologies: ["TypeScript", "DSL personnalisé", "Événementiel", "KAL"],
       highlights: [
-        "600K ATM en production",
-        "Widgets personnalisés & DSL basé sur JSON",
-        "Builds compatibles IE et durcis",
+        "Plus de 600 000 ATM en production",
+        "Widgets sur mesure et DSL basé sur JSON",
+        "Builds compatibles IE et durcis pour la sécurité",
       ],
       closedSource: true,
     },
@@ -237,7 +237,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2023–2024",
       category: "IoT Industriel",
       description:
-        "Tableaux de bord en direct et analytique intégrant des dispositifs IoT via les protocoles Modbus et OPC UA pour le monitoring industriel.",
+        "Tableaux de bord en temps réel et analyse de données, avec des dispositifs IoT intégrés via les protocoles Modbus et OPC UA pour le suivi des installations.",
       technologies: [
         "Angular",
         "Nest.js",
@@ -247,9 +247,9 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "OPC UA",
       ],
       highlights: [
-        "Télémétrie en temps réel",
-        "Intégration des protocoles Modbus & OPC UA",
-        "Déploiement basé sur Docker",
+        "Télémétrie des dispositifs en temps réel",
+        "Intégration des protocoles Modbus et OPC UA",
+        "Mise en production via Docker",
       ],
       closedSource: true,
       showOnResume: true,
@@ -259,12 +259,12 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2026–présent",
       category: "Open Source",
       description:
-        "Moteur d'exécution open-source pour formulaires conditionnels et schémas multi-frameworks. Définitions sérialisables avec graphe de dépendances, résolution de visibilité et backends de validation interchangeables (arktype/zod). Node.js + browser. Intégrations pour React Hook Form, Angular et HTML5.",
+        "Moteur open source pour la gestion de formulaires conditionnels et de schémas valables sur plusieurs frameworks. Les définitions de formulaires sont sérialisables et gèrent le graphe de dépendances ainsi que la visibilité des champs, avec des validateurs interchangeables (arktype/zod). Fonctionne sur Node.js et dans le navigateur, avec des intégrations pour React Hook Form, Angular et HTML5.",
       technologies: ["TypeScript", "Vitest", "arktype", "Zod", "Node.js"],
       highlights: [
-        "Graphe de dépendances & résolution de visibilité",
+        "Graphe de dépendances et résolution de la visibilité",
         "Validateurs interchangeables arktype / zod",
-        "Intégrations React Hook Form, Angular & HTML5",
+        "Intégrations avec React Hook Form, Angular et HTML5",
       ],
       url: "https://github.com/t1enne/formbaker",
       showOnResume: true,
@@ -274,12 +274,12 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2026–présent",
       category: "Open Source / Orchestration IA",
       description:
-        "Orchestration de composants multi-agents sur Pi + tmux, distribuée comme package Python géré par uv. Exécute des pipelines séquentiels architect → coder → reviewer, isole chaque tâche dans son propre worktree git (cell), suit l'état dans status.json et pilote les sessions via tmux avec des permissions d'outils selon le rôle.",
+        "Orchestration multi-agents sur Pi et tmux, distribuée comme paquet Python géré avec uv. Exécute en séquence les pipelines architect, coder et reviewer, en isolant chaque tâche dans son propre worktree git (cell), en suivant l'état dans status.json et en pilotant les sessions tmux avec des permissions d'outils liées au rôle.",
       technologies: ["Python", "tmux", "Worktrees git", "CLI"],
       highlights: [
-        "Pipeline séquentiel architect → coder → reviewer",
-        "Isolation par cell via git worktree",
-        "Permissions d'outils appliquées par rôle",
+        "Pipeline séquentiel architect, coder, reviewer",
+        "Isolation de chaque cell dans son propre worktree git",
+        "Permissions d'outils appliquées selon le rôle",
       ],
       url: "https://github.com/t1enne/nswarm",
       showOnResume: false,
@@ -289,7 +289,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2025–présent",
       category: "Trading Quantitatif",
       description:
-        "Toolkit de trading quantitatif composable : synchronisation de données IBKR, indicateurs techniques (filtres de Kalman, détection de régime HMM) et moteur de backtesting purement fonctionnel. Workflows CLI configurables en JSON avec validation IS/OOS walk-forward, balayage/optimisation d'hyperparamètres et multiprocessing.",
+        "Bibliothèque modulaire pour le trading quantitatif : synchronisation des données IBKR, indicateurs techniques (filtres de Kalman, détection de régime HMM) et moteur de backtesting entièrement fonctionnel. Les workflows en ligne de commande se configurent en JSON, avec validation walk-forward IS/OOS, balayage et optimisation des hyperparamètres et multiprocessing.",
       technologies: [
         "Python",
         "IBKR REST API",
@@ -298,9 +298,9 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Multiprocessing",
       ],
       highlights: [
-        "Moteur de backtest purement fonctionnel à état immuable",
-        "Validation IS/OOS walk-forward & balayage/optimisation de paramètres",
-        "Parallélisme par processus pour sweeps et folds",
+        "Moteur de backtest fonctionnel à état immuable",
+        "Validation walk-forward IS/OOS avec balayage et optimisation des paramètres",
+        "Parallélisme multi-processus pour les sweeps et les folds",
       ],
       url: "https://github.com/t1enne/ibkr",
       showOnResume: true,
@@ -310,11 +310,11 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
       period: "2021–2022",
       category: "Données / E-commerce",
       description:
-        "Outil ETL Node.js + MongoDB convertissant les exports CSV retail en PostgreSQL, avec réconciliation automatique quotidienne dans plus de 50 magasins.",
+        "Outil ETL en Node.js et MongoDB qui convertit les exports CSV des boutiques en PostgreSQL, avec réconciliation automatique des stocks chaque jour sur plus de 50 points de vente.",
       technologies: ["Node.js", "MongoDB", "PostgreSQL", "AWS Lambda"],
       highlights: [
-        "50+ magasins réconciliés chaque jour",
-        "ETL automatisé & reprise sur erreur",
+        "Plus de 50 points de vente réconciliés chaque jour",
+        "ETL automatisé et reprise sur erreur",
         "Traitement serverless avec AWS Lambda",
       ],
       closedSource: true,

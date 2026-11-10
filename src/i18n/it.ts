@@ -15,7 +15,7 @@ const it: ResumeI18n & {
   labels: {
     aboutTitle: "Profilo Professionale",
     aboutContent:
-      "Sviluppatore full-stack senior e technical lead con oltre 5 anni di esperienza nel costruire software a 360 gradi. Ho lavorato a un framework UI che gira su oltre 600.000 ATM per una banca europea, e ho pubblicato un motore di form open source (FormBaker) e un toolkit di backtesting quant. Nel quotidiano uso TypeScript, React, Angular, Node e Python, con Docker e Linux a portata di mano. Fluente in italiano, inglese, francese e russo. Preferisco soluzioni semplici che continuano a funzionare.",
+      "Sviluppatore full stack e technical lead con più di cinque anni di esperienza, abituato a seguire un progetto dall'inizio alla fine. Ho lavorato a un framework di interfaccia usato su oltre 600.000 ATM di una banca europea e ho pubblicato un motore di form open source (FormBaker) e una libreria per il backtesting quantitativo. Nel lavoro di tutti i giorni uso TypeScript, React, Angular, Node e Python, con Docker e Linux. Parlo italiano, inglese, francese e russo. Preferisco soluzioni semplici, che reggono nel tempo.",
     workTitle: "Esperienza Professionale",
     educationTitle: "Formazione",
     educationScore: "Voto",
@@ -37,12 +37,12 @@ const it: ResumeI18n & {
       location: "Padova, Italia",
       title: "Sviluppatore Full Stack",
       description: `
-Technical lead per un team focalizzato, con responsabilità sull'intero ciclo, dai requisiti alla consegna.
-Interfaccia principale tra stakeholder di business e ingegneria.
-Containerizzate applicazioni con Docker e configurata la pipeline Jenkins CI/CD on-premise.
-Sistemato il processo di build così la CI smette di essere il collo di bottiglia.
-Engagement on-site di architettura frontend con un'importante banca europea, sotto NDA (vedi sotto).
-TypeScript e Node trasversali allo stack, dalla UI ai servizi.`,
+Referente tecnico per un team ristretto, dalla raccolta dei requisiti alla consegna.
+Punto di contatto tra le esigenze del business e il lavoro di sviluppo.
+Applicazioni containerizzate con Docker e pipeline CI/CD Jenkins installata on-premise.
+Ho snellito il processo di build, che rallentava tutta la CI.
+Consulenza on-site sull'architettura frontend per una grande banca europea, sotto NDA (dettagli sotto).
+TypeScript e Node lungo tutto lo stack, dall'interfaccia ai servizi.`,
       dates: "Mar 2022 – Presente",
       tags: [
         "Angular",
@@ -58,12 +58,12 @@ TypeScript e Node trasversali allo stack, dalla UI ai servizi.`,
       company: "Cliente Banking / Fintech",
       location: "Verona, Italia",
       title: "Architetto Frontend",
-      description: `Engagement on-site per conto del cliente, svolto mentre ero assunto presso Raintonic, sotto NDA del cliente.
-Guidato lo sviluppo frontend di software ATM per un'importante banca europea, distribuito in Europa su 600K+ ATM.
-Migrata l'interfaccia guidata dal backend JSP a una moderna architettura event-driven in TypeScript.
-Sviluppati widget e servizi custom, utilizzabili da un DSL custom basato su JSON.
-Integrazione profonda con l'allocatore KAL esistente degli ATM.
-Creato un bundle custom e un processo di build per la compatibilità IE e severi requisiti di sicurezza.`,
+      description: `Consulenza on-site per il cliente, svolta mentre ero in Raintonic e coperta dal suo NDA.
+Ho guidato lo sviluppo frontend del software ATM di una grande banca europea, installato su oltre 600.000 sportelli in Europa.
+Ho sostituito l'interfaccia generata dal backend JSP con un'architettura event-driven in TypeScript.
+Ho sviluppato widget e servizi su misura, richiamabili da un DSL basato su JSON.
+Integrazione con il layer KAL già presente sugli ATM.
+Ho realizzato un bundle e un processo di build dedicati, per la compatibilità con IE e i requisiti di sicurezza della banca.`,
       dates: "Mar 2022 – Gen 2024",
       tags: ["Project Management", "TypeScript", "DevOps"],
     },
@@ -71,24 +71,24 @@ Creato un bundle custom e un processo di build per la compatibilità IE e severi
       company: "Cortek",
       location: "Perugia, Italia",
       title: "Sviluppatore Full Stack",
-      description: `Gestita infrastruttura e-commerce, principalmente tramite Shopify.
-Creati tool Node.js e Next.js per le operazioni quotidiane, incluse migrazioni CSV-SQL.
-App frontend per negozi retail con integrazione live ai sistemi di cassa.
-Strategia contenuti per i marketplace Amazon e Meta.
-Pipelines ETL automatizzate per portare i dati negozio da CSV a PostgreSQL.`,
+      description: `Gestione dell'infrastruttura e-commerce, in gran parte su Shopify.
+Strumenti in Node.js e Next.js per le attività quotidiane, comprese le migrazioni dati da CSV a SQL.
+Applicazioni frontend per i punti vendita, integrate in tempo reale con i sistemi di cassa.
+Gestione dei contenuti per i marketplace Amazon e Meta.
+Pipeline ETL automatiche per portare i dati dei negozi da CSV a PostgreSQL.`,
       dates: "Gen 2020 – Feb 2022",
       tags: ["Node.js", "Next.js", "React", "PostgreSQL", "MongoDB", "AWS"],
     },
     {
       company: "Brunello Cucinelli",
       location: "Solomeo, Italia",
-      title: "Coordinatore di Boutique & CRM Specialist",
-      description: `Transizione autodidatta verso il software: automatizzavo le operazioni retail quotidiane con script, ed è da lì che è partita la mia carriera da ingegnere.
-Create automazioni CRM AS400 e Salesforce per il lavoro di tutti i giorni.
-Supporto tecnico per i sistemi point-of-sale e la gestione inventario.
-Condotte visite private degli impianti in italiano, inglese, russo e francese.
-Gestito visual merchandising e coordinato i rifornimenti con lo store manager.
-Seguiti i rapporti con i clienti attraverso la gestione CRM personale e il servizio in negozio.`,
+      title: "Coordinatore Boutique e Specialista CRM",
+      description: `Passaggio al software da autodidatta: automatizzavo con degli script le attività retail di ogni giorno, ed è così che è iniziato il mio percorso da sviluppatore.
+Automazioni CRM su AS400 e Salesforce per il lavoro quotidiano.
+Supporto tecnico ai sistemi di cassa e alla gestione dell'inventario.
+Visite guidate agli stabilimenti in italiano, inglese, russo e francese.
+Visual merchandising e coordinamento dei rifornimenti con lo store manager.
+Gestione del rapporto con i clienti tramite CRM e servizio in boutique.`,
       dates: "Mar 2017 – Dic 2019",
       tags: ["AS400", "Salesforce", "Retail Operations", "CRM"],
     },
@@ -136,7 +136,7 @@ Seguiti i rapporti con i clienti attraverso la gestione CRM personale e il servi
     labels: {
       pageTitle: "Servizi",
       intro:
-        "Architettura full-stack, ottimizzazione delle performance, mentoring di team. Costruisco software che continua a funzionare, e sono disponibile per progetti freelance, collaborazioni più lunghe e consulenza.",
+        "Architettura full stack, ottimizzazione delle performance, mentoring. Costruisco software che dura, e sono disponibile per progetti freelance, collaborazioni lunghe e consulenza.",
       title: "Cosa offro",
       deliverablesLabel: "Deliverable",
       cta: "Contattami",
@@ -144,24 +144,24 @@ Seguiti i rapporti con i clienti attraverso la gestione CRM personale e il servi
       processTitle: "Come lavoro",
       process: [
         {
-          title: "Parliamone prima di scrivere codice",
+          title: "Prima parliamo, poi scriviamo codice",
           description:
-            "Prima di costruire qualcosa, parliamone. Voglio capire cosa conta davvero per te: il budget, gli obiettivi, le parti che ti preoccupano. A volte la risposta onesta è che non dovresti ancora costruirlo, e preferisco dirtelo subito piuttosto che dopo averlo pagato.",
+            "Prima di costruire qualcosa, parliamone. Voglio capire cosa conta davvero: il budget, gli obiettivi, i punti su cui hai dei dubbi. A volte la risposta onesta è che è meglio aspettare, e preferisco dirtelo subito invece che a lavoro pagato.",
         },
         {
-          title: "Pensato per non fermarsi",
+          title: "Pensato per reggere",
           description:
-            "Ho passato anni a costruire software che funziona su oltre 600.000 ATM. Quando lo stop non è un'opzione, impari a progettare per l'affidabilità fin dall'inizio, invece di scoprire i problemi in produzione.",
+            "Ho passato anni a costruire software che gira su oltre 600.000 ATM: lì un fermo non è un'opzione, e si impara a progettare pensando all'affidabilità fin dall'inizio, invece di scoprire i problemi in produzione.",
         },
         {
-          title: "Piccoli passi, sempre visibili",
+          title: "Passi piccoli, sempre visibili",
           description:
-            "Ti consegno in piccoli blocchi e ti mostro il lavoro strada facendo: vedi le cose funzionare e cambi direzione finché è ancora conveniente. Niente grandi annunci, niente sorprese dopo il lancio.",
+            "Consegno a blocchi e ti mostro il lavoro man mano: vedi le cose funzionare e puoi cambiare direzione finché costa poco. Niente colpi di scena alla fine.",
         },
         {
-          title: "Resto anche dopo il lancio",
+          title: "Resto anche dopo la consegna",
           description:
-            "Quando il progetto esce non sparisco. Lo monitoro, sistemo ciò che si rompe e lo documento, così chi lo prende in mano riesce davvero a capirlo e a farlo funzionare.",
+            "Finito il progetto non sparisco: lo seguo, sistemo quello che si rompe e scrivo la documentazione, così chi lo prende in mano riesce a capirlo e a mandarlo avanti.",
         },
       ],
     },
@@ -170,48 +170,48 @@ Seguiti i rapporti con i clienti attraverso la gestione CRM personale e il servi
         icon: "LayoutGrid",
         title: "Sviluppo Web Full Stack",
         description:
-          "Frontend moderni con React e Angular, backend in Node.js e NestJS (TypeScript).",
+          "Frontend moderni in React e Angular, backend in Node.js e NestJS (TypeScript).",
         features: [
-          "App web & SaaS, dashboard e API",
+          "App web e SaaS, dashboard e API",
           "React, Angular, TypeScript, Node.js, NestJS",
-          "PostgreSQL, MongoDB e data modeling",
+          "PostgreSQL, MongoDB e modellazione dei dati",
           "Python per tooling, automazione e lavoro sui dati",
         ],
       },
       {
         icon: "Cpu",
-        title: "Architettura di Sistemi & DevOps",
+        title: "Architettura di Sistemi e DevOps",
         description:
-          "Sistemi che restano su, e pipeline che li tengono sani. Punto su build veloci, deployment stabili e meno sorprese in produzione.",
+          "Sistemi che restano in piedi e pipeline che li tengono in salute. Cerco build veloci, rilasci stabili e meno sorprese in produzione.",
         features: [
-          "Revisioni architetturali & modernizzazione",
+          "Revisione dell'architettura e modernizzazione",
           "Pipeline CI/CD (Jenkins, GitHub Actions)",
-          "Contenitorizzazione Docker & orchestrazione",
-          "Ottimizzazione delle performance & reliability engineering",
+          "Container Docker e orchestrazione",
+          "Ottimizzazione delle performance e affidabilità",
         ],
       },
       {
         icon: "Smartphone",
-        title: "Frontend Mobile & Embedded",
+        title: "Frontend Mobile ed Embedded",
         description:
-          "Gira su oltre 600.000 ATM in produzione. Costruisco UI event-driven con vincoli di sicurezza e risorse, che devono continuare a funzionare su larga scala.",
+          "Gira su oltre 600.000 ATM in produzione. Costruisco interfacce event-driven con vincoli stretti di sicurezza e risorse, che devono reggere su larga scala.",
         features: [
-          "Framework UI custom & design system",
-          "Interfacce event-driven e offline-ready",
-          "Riscritture di sistemi legacy (JSP → TS moderno)",
+          "Framework UI e design system su misura",
+          "Interfacce event-driven, utilizzabili anche offline",
+          "Riscrittura di sistemi legacy (da JSP a TypeScript)",
           "Build indurite per sicurezza e compatibilità",
         ],
       },
       {
         icon: "Users",
-        title: "Leadership di Team & Mentoring",
+        title: "Leadership di Team e Mentoring",
         description:
-          "Ho guidato team piccoli e focalizzati come ponte tra business e ingegneria. Faccio mentoring, rivedo il codice e tengo la delivery in movimento.",
+          "Ho guidato team piccoli come ponte tra business e sviluppo. Faccio mentoring, revisione del codice e tengo il ritmo della consegna.",
         features: [
-          "Technical lead & mentoring",
-          "Code review e standard di ingegneria",
-          "Coordinamento team cross-funzionali",
-          "Cerimonie agile & pianificazione",
+          "Technical lead e mentoring",
+          "Revisione del codice e standard di sviluppo",
+          "Coordinamento di team cross-funzionali",
+          "Cerimonie agile e pianificazione",
         ],
       },
     ],
@@ -220,7 +220,7 @@ Seguiti i rapporti con i clienti attraverso la gestione CRM personale e il servi
     labels: {
       pageTitle: "Portfolio",
       intro:
-        "Prodotti e strumenti che ho costruito nei settori bancario, e-commerce, IoT industriale e open source.",
+        "Prodotti e strumenti realizzati tra banking, e-commerce, IoT industriale e open source.",
       title: "Lavori selezionati",
       projectCount: "progetti",
       cta: "Contattami",
