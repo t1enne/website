@@ -22,6 +22,17 @@ export const SKILLS: SkillCategory[] = [
     skills: ["Node.js", "NestJS", "Python"],
   },
   {
+    category: "AI Tooling",
+    skills: [
+      "pi coding agent",
+      "Skill authoring (SKILL.md)",
+      "Agent workflows",
+      "Subagent orchestration",
+      "Prompt & context engineering",
+      "Headless / scripted agents",
+    ],
+  },
+  {
     category: "Databases",
     skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
   },

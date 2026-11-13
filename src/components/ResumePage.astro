@@ -9,7 +9,7 @@ import ProjectItem from "./ProjectItem.astro";
 import LanguageItem from "./LanguageItem.astro";
 import SkillsSection from "./SkillsSection.astro";
 import ResumeJsonLd from "./ResumeJsonLd.astro";
-import { SITE_TITLE, SITE_DESCRIPTION, NAME, JOB_TITLE } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, NAME } from "../consts";
 
 interface Props {
   lang: "en" | "it" | "fr";
@@ -20,7 +20,7 @@ interface Props {
 const { lang, i18n, navLabels } = Astro.props;
 const t = i18n.labels;
 
-const jobTitle = JOB_TITLE;
+const jobTitle = t.jobTitle;
 const email = "nasir.taov@gmail.com";
 const linkedinUrl = "https://www.linkedin.com/in/nasir-taov";
 const githubUrl = "https://github.com/t1enne";
@@ -60,30 +60,28 @@ const githubUrl = "https://github.com/t1enne";
               <h1 class="resume-name">{NAME}</h1>
               <p class="resume-role">{jobTitle}</p>
             </div>
-            <table class="resume-contact ml-auto">
-              <tbody>
-                <tr>
-                  <th scope="row">{t.contactLocation}</th>
-                  <td>{t.location}</td>
-                </tr>
-                <tr>
-                  <th scope="row">{t.contactEmail}</th>
-                  <td>{email}</td>
-                </tr>
-                <tr>
-                  <th scope="row">{t.contactLinkedin}</th>
-                  <td>{linkedinUrl}</td>
-                </tr>
-                <tr>
-                  <th scope="row">{t.contactGithub}</th>
-                  <td>{githubUrl}</td>
-                </tr>
-                <tr>
-                  <th scope="row">{t.citizenshipLabel}</th>
-                  <td>{t.citizenship}</td>
-                </tr>
-              </tbody>
-            </table>
+            <ul class="resume-contact">
+              <li>
+                <span class="resume-contact-label">{t.contactLocation}</span>
+                <span class="resume-contact-value">{t.location}</span>
+              </li>
+              <li>
+                <span class="resume-contact-label">{t.contactEmail}</span>
+                <span class="resume-contact-value">{email}</span>
+              </li>
+              <li>
+                <span class="resume-contact-label">{t.contactLinkedin}</span>
+                <span class="resume-contact-value">{linkedinUrl}</span>
+              </li>
+              <li>
+                <span class="resume-contact-label">{t.contactGithub}</span>
+                <span class="resume-contact-value">{githubUrl}</span>
+              </li>
+              <li>
+                <span class="resume-contact-label">{t.citizenshipLabel}</span>
+                <span class="resume-contact-value">{t.citizenship}</span>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -92,7 +90,7 @@ const githubUrl = "https://github.com/t1enne";
 
       <!-- Summary -->
 
-      <header class="mb-10">
+      <header class="mb-10 print:mb-0">
         <p class="resume-summary text-muted font-mono text-sm leading-relaxed max-w-2xl">
           {t.aboutContent}
         </p>
@@ -173,6 +171,7 @@ const githubUrl = "https://github.com/t1enne";
           ))}
         </ul>
       </section>
+      <div class="print-only print-footer">{NAME} &middot; {email}</div>
     </main>
   </body>
 </html>

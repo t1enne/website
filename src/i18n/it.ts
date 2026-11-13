@@ -11,9 +11,10 @@ const it: ResumeI18n & {
   nav: NavLabels;
 } = {
   labels: {
+    jobTitle: "Sviluppatore Full Stack Senior orientato al Frontend",
     aboutTitle: "Profilo Professionale",
     aboutContent:
-      "Sviluppatore full stack e technical lead con più di cinque anni di esperienza, abituato a seguire un progetto dall'inizio alla fine. Ho lavorato a un framework di interfaccia usato su oltre 600.000 ATM di una banca europea e ho pubblicato un motore di form open source (FormBaker) e una libreria per il backtesting quantitativo. Nel lavoro di tutti i giorni uso TypeScript, React, Angular, Node e Python, con Docker e Linux. Parlo italiano, inglese, francese e russo. Preferisco soluzioni semplici, che reggono nel tempo.",
+      "Sviluppatore full stack orientato al frontend, oltre cinque anni di esperienza nella costruzione di software end to end. Ho lavorato a un framework di interfaccia usato su oltre 600.000 ATM di una banca europea e ho pubblicato il motore di form open source FormBaker e una libreria di backtesting quantitativo. Ogni giorno lavoro in TypeScript, React, Angular, Node e Python, con Docker e Linux. Seguo i developer junior e mi appoggio ai flussi di lavoro assistiti dall'AI: il mio quotidiano passa dal pi coding agent, con skill file personalizzati e workflow di agenti scriptati. Parlo inglese, francese, italiano e russo. Preferisco soluzioni semplici, che continuano a funzionare.",
     workTitle: "Esperienza Professionale",
     educationTitle: "Formazione",
     educationScore: "Voto",
@@ -33,14 +34,14 @@ const it: ResumeI18n & {
     {
       company: "Raintonic",
       location: "Padova, Italia",
-      title: "Sviluppatore Full Stack",
+      title: "Sviluppatore Full Stack Senior",
       description: `
-Referente tecnico per un team ristretto, dalla raccolta dei requisiti alla consegna.
-Punto di contatto tra le esigenze del business e il lavoro di sviluppo.
-Applicazioni containerizzate con Docker e pipeline CI/CD Jenkins installata on-premise.
-Ho snellito il processo di build, che rallentava tutta la CI.
-Consulenza on-site sull'architettura frontend per una grande banca europea, sotto NDA (dettagli sotto).
-TypeScript e Node lungo tutto lo stack, dall'interfaccia ai servizi.`,
+Sviluppo full stack orientato al frontend in TypeScript e Node, dall'interfaccia ai servizi.
+Ho seguito 3 sviluppatori junior: onboarding, code review e pair programming.
+Tempi di build della CI ridotti da circa 3 minuti a circa 30 secondi, ripulendo la pipeline.
+Applicazioni containerizzate con Docker e pipeline CI/CD Jenkins on-premise.
+Flussi di sviluppo assistiti dall'AI con il pi coding agent: skill file personalizzati e workflow di agenti scriptati, condivisi nei miei dotfiles (github.com/t1enne/dotfiles).
+Architettura frontend on-site per un cliente bancario (vedi sotto).`,
       dates: "Mar 2022 – Presente",
       tags: [
         "Angular",
@@ -56,23 +57,22 @@ TypeScript e Node lungo tutto lo stack, dall'interfaccia ai servizi.`,
       company: "Cliente Banking / Fintech",
       location: "Verona, Italia",
       title: "Architetto Frontend",
-      description: `Consulenza on-site per il cliente, svolta mentre ero in Raintonic e coperta dal suo NDA.
-Ho guidato lo sviluppo frontend del software ATM di una grande banca europea, installato su oltre 600.000 sportelli in Europa.
-Ho sostituito l'interfaccia generata dal backend JSP con un'architettura event-driven in TypeScript.
-Ho sviluppato widget e servizi su misura, richiamabili da un DSL basato su JSON.
+      description: `Sviluppo frontend del software ATM di una banca europea, su oltre 600.000 sportelli.
+Interfaccia generata dal backend JSP sostituita da un'architettura event-driven in TypeScript.
+Widget e servizi su misura, richiamabili da un DSL basato su JSON.
 Integrazione con il layer KAL già presente sugli ATM.
-Ho realizzato un bundle e un processo di build dedicati, per la compatibilità con IE e i requisiti di sicurezza della banca.`,
+Bundle e processo di build dedicati, per la compatibilità IE e la sicurezza della banca.`,
       dates: "Mar 2022 – Gen 2024",
-      tags: ["Project Management", "TypeScript", "DevOps"],
+      tags: ["TypeScript", "Angular", "Build Tooling", "DSL"],
     },
     {
       company: "Cortek",
       location: "Perugia, Italia",
       title: "Sviluppatore Full Stack",
       description: `Gestione dell'infrastruttura e-commerce, in gran parte su Shopify.
-Strumenti in Node.js e Next.js per le attività quotidiane, comprese le migrazioni dati da CSV a SQL.
-Applicazioni frontend per i punti vendita, integrate in tempo reale con i sistemi di cassa.
-Gestione dei contenuti per i marketplace Amazon e Meta.
+Strumenti Node.js e Next.js per le attività quotidiane, incluse le migrazioni dati CSV-SQL.
+App frontend per i punti vendita, integrate in tempo reale con i sistemi di cassa.
+Strategia di contenuti per i marketplace Amazon e Meta.
 Pipeline ETL automatiche per portare i dati dei negozi da CSV a PostgreSQL.`,
       dates: "Gen 2020 – Feb 2022",
       tags: ["Node.js", "Next.js", "React", "PostgreSQL", "MongoDB", "AWS"],
@@ -81,12 +81,12 @@ Pipeline ETL automatiche per portare i dati dei negozi da CSV a PostgreSQL.`,
       company: "Brunello Cucinelli",
       location: "Solomeo, Italia",
       title: "Coordinatore Boutique e Specialista CRM",
-      description: `Passaggio al software da autodidatta: automatizzavo con degli script le attività retail di ogni giorno, ed è così che è iniziato il mio percorso da sviluppatore.
-Automazioni CRM su AS400 e Salesforce per il lavoro quotidiano.
-Supporto tecnico ai sistemi di cassa e alla gestione dell'inventario.
+      description: `Passaggio al software da autodidatta, automatizzando le attività retail con degli script: così è iniziato il mio percorso.
+Automazioni CRM su AS400 e Salesforce per il lavoro di ogni giorno.
+Supporto ai sistemi di cassa e alla gestione dell'inventario.
 Visite guidate agli stabilimenti in italiano, inglese, russo e francese.
 Visual merchandising e coordinamento dei rifornimenti con lo store manager.
-Gestione del rapporto con i clienti tramite CRM e servizio in boutique.`,
+Gestione dei clienti tramite CRM e servizio in boutique.`,
       dates: "Mar 2017 – Dic 2019",
       tags: ["AS400", "Salesforce", "Retail Operations", "CRM"],
     },
@@ -132,6 +132,7 @@ Gestione del rapporto con i clienti tramite CRM e servizio in boutique.`,
   },
   portfolio: {
     labels: {
+      jobTitle: "Sviluppatore Full Stack Senior orientato al Frontend",
       pageTitle: "Portfolio",
       intro:
         "Prodotti e strumenti realizzati tra banking, e-commerce, IoT industriale e open source.",

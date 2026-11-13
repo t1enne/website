@@ -11,9 +11,10 @@ const en: ResumeI18n & {
   nav: NavLabels;
 } = {
   labels: {
+    jobTitle: "Senior Frontend-Focused Full Stack Developer",
     aboutTitle: "Professional Summary",
     aboutContent:
-      "Senior full-stack developer and tech lead with 5+ years building software end to end. I've worked on a UI framework that runs on 600,000+ ATMs at a European bank, and shipped an open-source form engine (FormBaker) and a quant backtesting toolkit. Day to day I work in TypeScript, React, Angular, Node, and Python, with Docker and Linux close by. Fluent in English, French, Italian, and Russian. I prefer boring solutions that keep working.",
+      "Frontend-focused full-stack developer with 5+ years building software end to end. I've worked on a UI framework that runs on 600,000+ ATMs at a European bank, and shipped an open-source form engine (FormBaker) and a quant backtesting toolkit. Day to day I work in TypeScript, React, Angular, Node, and Python, with Docker and Linux close by. I mentor junior developers, and I lean heavily on AI-assisted workflows — my daily work runs through the pi coding agent with custom skill files and scripted agent workflows. Fluent in English, French, Italian, and Russian. I prefer boring solutions that keep working.",
     workTitle: "Work Experience",
     educationTitle: "Education",
     educationScore: "Score",
@@ -33,14 +34,14 @@ const en: ResumeI18n & {
     {
       company: "Raintonic",
       location: "Padua, Italy",
-      title: "Full Stack Developer",
+      title: "Senior Full Stack Developer",
       description: `
-- Technical lead for a focused team, owning the full cycle from requirements to delivery
-- Main bridge between business stakeholders and engineering
+- Frontend-focused full stack work in TypeScript and Node, from UI to services
+- Mentored 3 junior developers through onboarding, code review, and pairing
+- Cut CI build times from ~3 minutes to ~30 seconds by cleaning up the build pipeline
 - Containerized applications with Docker and set up the on-premise Jenkins CI/CD pipeline
-- Cleaned up the build process so CI stops being the bottleneck
-- On-site frontend-architect engagement with a major European banking client, under NDA (see below)
-- TypeScript and Node across the stack, from UI to services`,
+- Built AI-assisted development workflows with the pi coding agent: custom skill files and scripted agent workflows, shared in my dotfiles (github.com/t1enne/dotfiles)
+- On-site frontend architecture work for a banking client (see below)`,
       dates: "Mar 2022 – Present",
       tags: [
         "Angular",
@@ -56,24 +57,23 @@ const en: ResumeI18n & {
       company: "Banking / Fintech Client",
       location: "Verona, Italy",
       title: "Frontend Architect",
-      description: `- On-site client engagement delivered while employed at Raintonic, under the client's NDA
-- Led frontend development of ATM software for a major European bank, deployed across Europe on 600K+ ATMs
+      description: `- Led frontend development of ATM software for a major European bank, deployed across Europe on 600K+ ATMs
 - Ported JSP backend driven UI to a modern TypeScript event driven architecture
 - Developed custom widgets + services, usable from a custom DSL based on JSON
 - Deep integration with the existing ATM KAL layer
 - Built custom bundle and build process for IE compat and strict security requirements
 `,
       dates: "Mar 2022 – Jan 2024",
-      tags: ["Project Management", "TypeScript", "DevOps"],
+      tags: ["TypeScript", "Angular", "Build Tooling", "DSL"],
     },
     {
       company: "Cortek",
       location: "Perugia, Italy",
       title: "Full Stack Developer",
-      description: `- Ran e-commerce infrastructure, largely on Shopify
+      description: `- Owned e-commerce infrastructure, largely on Shopify
 - Built Node.js and Next.js tools for daily operations, including CSV-to-SQL data migrations
-- Frontend apps for retail stores with live integration to the cash register systems
-- Content strategy for Amazon and Meta marketplaces
+- Built frontend apps for retail stores with live integration to point-of-sale systems
+- Set content strategy for Amazon and Meta marketplaces
 - Automated ETL pipelines to get store data from CSV into PostgreSQL`,
       dates: "Jan 2020 – Feb 2022",
       tags: ["Node.js", "Next.js", "React", "PostgreSQL", "MongoDB", "AWS"],
@@ -84,7 +84,7 @@ const en: ResumeI18n & {
       title: "Boutique Coordinator & CRM Specialist",
       description: `- Self-taught pivot into software: automated daily retail operations with scripts, which kicked off my engineering career
 - Built AS400 and Salesforce CRM automations for day-to-day work
-- Technical support for point-of-sale systems and inventory management
+- Supported point-of-sale systems and inventory management
 - Led private tours of the production facilities in Italian, English, Russian, and French
 - Handled visual merchandising and coordinated restocking with the store manager
 - Looked after client relationships through personal CRM management and store service`,
@@ -133,6 +133,7 @@ const en: ResumeI18n & {
   },
   portfolio: {
     labels: {
+      jobTitle: "Senior Frontend-Focused Full Stack Developer",
       pageTitle: "Portfolio",
       intro:
         "Products and tools I've built across banking, e-commerce, industrial IoT, and open source.",

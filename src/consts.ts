@@ -1,7 +1,6 @@
 export const SITE_TITLE =
-  "Nasir Taov - Senior Full Stack Developer & Tech Lead";
+  "Nasir Taov - Senior Frontend-Focused Full Stack Developer";
 
 export const NAME = "Nasir Taov";
-export const JOB_TITLE = "Senior Full Stack Developer & Tech Lead";
 export const SITE_DESCRIPTION =
-  "Senior Full Stack Developer & Technical Lead. React, Angular, Node.js, TypeScript. 4 languages. UI framework powering 600,000+ ATMs.";
+  "Senior Frontend-Focused Full Stack Developer. React, Angular, TypeScript, Node.js. AI-assisted workflows with the pi coding agent. 4 languages. UI framework powering 600,000+ ATMs.";

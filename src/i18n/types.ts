@@ -49,6 +49,8 @@ export interface LanguageI18n {
 /* ---- Portfolio page ---- */
 
 export interface PortfolioLabels {
+  /** Localized headline shown in the nav bar. */
+  jobTitle: string;
   pageTitle: string;
   intro: string;
   title: string;
@@ -70,6 +72,8 @@ export interface NavLabels {
 }
 
 export interface ResumeLabels {
+  /** Localized headline shown in the masthead, nav, and structured data. */
+  jobTitle: string;
   aboutTitle: string;
   aboutContent: string;
   workTitle: string;

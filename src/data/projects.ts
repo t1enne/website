@@ -44,7 +44,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Docker-based deployment",
       ],
       closedSource: true,
-      showOnResume: true,
+      showOnResume: false,
     },
     {
       title: "FormBaker",
@@ -74,7 +74,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Role-enforced tool permissions",
       ],
       url: "https://github.com/t1enne/nswarm",
-      showOnResume: false,
+      showOnResume: true,
     },
     {
       title: "IBKR Quant Toolkit",
@@ -110,7 +110,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "AWS Lambda serverless processing",
       ],
       closedSource: true,
-      showOnResume: true,
+      showOnResume: false,
     },
   ],
   it: [
@@ -148,7 +148,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Rilascio su Docker",
       ],
       closedSource: true,
-      showOnResume: true,
+      showOnResume: false,
     },
     {
       title: "FormBaker",
@@ -178,7 +178,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Permessi sugli strumenti applicati per ruolo",
       ],
       url: "https://github.com/t1enne/nswarm",
-      showOnResume: false,
+      showOnResume: true,
     },
     {
       title: "Quant Toolkit IBKR",
@@ -214,7 +214,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Elaborazione serverless con AWS Lambda",
       ],
       closedSource: true,
-      showOnResume: true,
+      showOnResume: false,
     },
   ],
   fr: [
@@ -252,7 +252,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Mise en production via Docker",
       ],
       closedSource: true,
-      showOnResume: true,
+      showOnResume: false,
     },
     {
       title: "FormBaker",
@@ -282,7 +282,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Permissions d'outils appliquées selon le rôle",
       ],
       url: "https://github.com/t1enne/nswarm",
-      showOnResume: false,
+      showOnResume: true,
     },
     {
       title: "Boîte à outils IBKR",
@@ -318,7 +318,7 @@ export const PROJECTS: Record<"en" | "it" | "fr", Project[]> = {
         "Traitement serverless avec AWS Lambda",
       ],
       closedSource: true,
-      showOnResume: true,
+      showOnResume: false,
     },
   ],
 };

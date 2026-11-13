@@ -8,6 +8,11 @@
   display: none !important;
 }
 
+/* Rendered only by the print stylesheet (e.g. the running page footer). */
+.print-only {
+  display: none;
+}
+
 /* Continuous pulsing background animation for the nav avatar */
 @keyframes nav-avatar-pulse {
   0%,
@@ -174,9 +179,9 @@ body {
   /* Masthead */
   .resume-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16pt;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
     padding-bottom: 8pt;
     margin-bottom: 12pt;
     border-bottom: 0.9pt solid #111;
@@ -201,34 +206,36 @@ body {
   }
 
   .resume-contact {
-    border-collapse: collapse;
+    list-style: none;
+    margin: 6pt 0 0;
+    padding: 0;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 7.4pt;
     line-height: 1.5;
   }
 
-  .resume-contact th {
-    font-family: "IBM Plex Mono", monospace;
+  .resume-contact li {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .resume-contact-label {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.09em;
     color: #999;
-    text-align: right;
-    padding: 0 6pt 0 0;
-    white-space: nowrap;
+    padding: 0 2pt 0 0;
   }
 
-  .resume-contact td {
+  .resume-contact-value {
     color: #1a1a1a;
-    text-align: left;
-    white-space: nowrap;
-    padding: 0;
   }
 
   .resume-summary {
     font-size: 9.6pt;
     line-height: 1.45;
     color: #333;
-    margin: 0 0 12pt;
+    margin: 0 0 10pt;
   }
 
   /* Section headings: mono, tracked, hairline rule */
@@ -362,7 +369,24 @@ body {
   }
 
   .resume .cols-2 {
-    column-count: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 18pt;
+    row-gap: 0;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 7pt;
+    line-height: 1.5;
+    color: #999;
   }
 }
